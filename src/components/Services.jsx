@@ -16,7 +16,6 @@ const Subcard = ({title, text, index, scrollDiv})=>{
 
   return(
     <motion.div
-      className='subcard'
       ref = {ref}
       style={{
         padding:'2rem', 
