@@ -15,7 +15,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
   const translateY = useTransform(scrollYProgress, [0, 1], [600, 0])
 
   return(
-    <div
+    <motion.div
       ref = {ref}
       style={{
         padding:'2rem', 
@@ -33,7 +33,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
     >
       <div style={{fontSize:'1.5rem', marginBottom:'1rem'}}>{title}</div>
       <div>{text}</div>
-    </div>
+    </motion.div>
   )
 }
 
