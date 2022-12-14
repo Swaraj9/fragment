@@ -1,10 +1,10 @@
-import React, {useContext, useRef} from 'react'
+import React, {createRef} from 'react'
 import Button from './Button'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import '../app.css'
 
 const Subcard = ({title, text, index, scrollDiv})=>{
-  const myRef = useRef(null)
+  const myRef = createRef(null)
   const { scrollYProgress } = useScroll({
     container: scrollDiv,
     target: myRef,
@@ -27,8 +27,8 @@ const Subcard = ({title, text, index, scrollDiv})=>{
         marginTop:`${index*5}rem`,
         lineHeight:'1.75rem',
         letterSpacing:'0.075rem',
-        translateY,
-        opacity
+        opacity,
+        translateY
       }}
     >
       <div style={{fontSize:'1.5rem', marginBottom:'1rem'}}>{title}</div>
@@ -57,9 +57,7 @@ const Card = ({main, sub, style, scrollDiv}) => {
 }
 
 
-const Services = ({ScrollDivContext}) => {
-  const scrollDiv = useContext(ScrollDivContext);
-  
+const Services = ({scrollDiv}) => {  
   return (
     <div id='services' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
