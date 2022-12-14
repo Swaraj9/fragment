@@ -27,7 +27,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
         marginTop:`${index*5}rem`,
         lineHeight:'1.75rem',
         letterSpacing:'0.075rem',
-        opacity
+        translateY,
       }}
     >
       <div style={{fontSize:'1.5rem', marginBottom:'1rem'}}>{title}</div>
