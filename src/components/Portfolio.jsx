@@ -68,22 +68,22 @@ const Portfolio = () => {
         letterSpacing:'0.075rem',
         borderWidth:'0.05rem',
         borderStyle:'solid',
-        maxWidth:'500px',
+        maxWidth:'400px',
         textAlign:'center'
       }}>
         <div style={{fontSize:'2rem', marginBottom:'1rem'}}>Recieve a Quote</div>
         <div style={{fontSize:'2rem', marginBottom:'2rem'}}>$0</div>
-        <div style={{marginBottom:'2rem'}}>
-          Custom Solutions<br/>
-          Community Management<br/>
-          Multiplatform Marketing Plan<br/>
-          Global Moderation Team<br/>
-          Server Setup/Development<br/>
-          Event Hosting<br/>
-          Growth Optimization<br/>
-          Partnership/Collaboration Management<br/>
-          Bot Development<br/>
-          Security Audits
+        <div style={{marginBottom:'2rem', textAlign:'start', paddingLeft:'3rem'}}>
+          - Custom Solutions<br/>
+          - Community Management<br/>
+          - Multiplatform Marketing Plan<br/>
+          - Global Moderation Team<br/>
+          - Server Setup/Development<br/>
+          - Event Hosting<br/>
+          - Growth Optimization<br/>
+          - Partnership/Collaboration Management<br/>
+          - Bot Development<br/>
+          - Security Audits
         </div>
         <Button>Get Started</Button>
       </div>

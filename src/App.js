@@ -55,7 +55,7 @@ function App() {
   }
 
   return (
-    <div className="App" ref={myRef} style={{color:'rgb(235,235,235)', height:'100vh', width:'100w', overflow:'hidden'}} >
+    <div className="App" ref={myRef} style={{color:'rgb(235,235,235)', height:'100vh', overflow:'hidden'}} >
       <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{width:'100%', display:'flex', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
         <div style={{flex:'1'}}>
           <Navbar/>
