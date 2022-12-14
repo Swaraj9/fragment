@@ -8,7 +8,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
   const { scrollYProgress } = useScroll({
     container: scrollDiv,
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end 0.75"]
   })
 
   const opacity = useTransform(scrollYProgress, [0,1], [0,1])
