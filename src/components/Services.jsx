@@ -8,7 +8,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
   const { scrollYProgress } = useScroll({
     container: scrollDiv,
     target: ref,
-    offset: ["start end", "end 0.75"]
+    offset: ["start end", "end start"]
   })
 
   const opacity = useTransform(scrollYProgress, [0,1], [0,1])
@@ -28,6 +28,7 @@ const Subcard = ({title, text, index, scrollDiv})=>{
         lineHeight:'1.75rem',
         letterSpacing:'0.075rem',
         translateY,
+        opacity
       }}
     >
       <div style={{fontSize:'1.5rem', marginBottom:'1rem'}}>{title}</div>
