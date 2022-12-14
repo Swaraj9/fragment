@@ -1,3 +1,21 @@
 .main::-webkit-scrollbar{
     display: none;
 }
+
+@media only screen and (max-width: 870px) {
+    .cards{
+        min-width: auto;
+    }
+
+    .subcardContainer {
+        flex-direction: column;
+    }
+
+    .homeTitle{
+        font-size: 3rem;
+    }
+
+    .homeSub{
+        color:'red'
+    }
+}
