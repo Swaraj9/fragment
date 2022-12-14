@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import HALO from 'vanta/dist/vanta.halo.min.js'
-import {useState, useRef, useEffect} from 'react'
+import {useState, useRef, useEffect, createContext} from 'react'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Services from './components/Services';
@@ -11,6 +11,8 @@ import Portfolio from './components/Portfolio';
 import { motion, useScroll } from 'framer-motion';
 
 const backgroundColors = ['rgb(20,20,20,0.8)', 'rgb(72, 0, 89, 0.8)', 'rgb(24, 0, 71, 0.8)', 'rgb(0, 66, 63, 0.8)', 'rgb(64, 36, 0, 0.8)'];
+
+const ScrollDivContext = createContext(null);
 
 function App() {
   const [vantaEffect, setVantaEffect] = useState(null)
@@ -55,19 +57,21 @@ function App() {
   }
 
   return (
-    <div className="App" ref={myRef} style={{color:'rgb(235,235,235)', height:'100vh', width:'100w', overflow:'hidden'}} >
-        <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{width:'100%', display:'flex', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
-          <div style={{flex:'1'}}>
-            <Navbar/>
-            <Home/>
-            <Services scrollDiv={scrollDiv}/>
-            <Portfolio/>
-            <About/>
-            <Footer/>
+    <ScrollDivContext.Provider value={scrollDiv}>
+      <div className="App" ref={myRef} style={{color:'rgb(235,235,235)', height:'100vh', width:'100w', overflow:'hidden'}} >
+          <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{width:'100%', display:'flex', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
+            <div style={{flex:'1'}}>
+              <Navbar/>
+              <Home/>
+              <Services ScrollDivContext={ScrollDivContext}/>
+              <Portfolio/>
+              <About/>
+              <Footer/>
+            </div>
+            <motion.div style={{scaleY, position:"sticky", top:0, width:'0.5rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
           </div>
-          <motion.div style={{scaleY, position:"sticky", top:0, width:'0.5rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
         </div>
-      </div>
+    </ScrollDivContext.Provider>
   );
 }
 
