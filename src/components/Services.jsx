@@ -50,7 +50,7 @@ const Card = ({main, sub, style, scrollDiv}) => {
     }}>
       <div style={{fontSize:'2.5rem', paddingBottom:'2rem'}}>{main}</div>
       <div className='subcardContainer' style={{display:'flex', width:"100%", justifyContent:'space-evenly', alignItems:'flex-start'}}>
-        {sub.map((item, index) => <Subcard scrollDiv={scrollDiv} title={item[0]} text={item[1]} index={index}/>)}
+        {scrollDiv && sub.map((item, index) => <Subcard scrollDiv={scrollDiv} title={item[0]} text={item[1]} index={index}/>)}
       </div>
     </div>
   )
