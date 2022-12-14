@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import HALO from 'vanta/dist/vanta.halo.min.js'
-import {useState, useRef, useEffect, createRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Services from './components/Services';
@@ -18,7 +18,7 @@ function App() {
 
   const [currBackgroundColor, setCurrBackgroundColor] = useState(0);
 
-  const scrollDiv = createRef(null);
+  const scrollDiv = useRef(null);
   const {scrollYProgress} = useScroll({container: scrollDiv})
 
   const scaleY = scrollYProgress
@@ -61,7 +61,7 @@ function App() {
           <Navbar/>
           <Home/>
           <Services scrollDiv={scrollDiv}/>
-          <Portfolio/>
+          <Portfolio scrollDiv={scrollDiv}/>
           <About/>
           <Footer/>
         </div>
