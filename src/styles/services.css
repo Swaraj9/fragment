@@ -1,0 +1,25 @@
+.servicesTitle{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.servicesSub{
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .servicesTitle{
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .servicesSub{
+        font-size: 1.25rem;
+    }
+
+    .subCard{
+        padding-top: 0;
+    }
+}

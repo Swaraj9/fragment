@@ -1,0 +1,30 @@
+.aboutFounder{
+    background-color:rgb(235,235,235,0.1);
+    margin-bottom:7rem;
+    padding:2rem;
+    border-radius:0.25rem;
+    padding-bottom:2rem;
+    line-height:1.75rem;
+    letter-spacing:0.075rem;
+    border-width:0.05rem;
+    border-style: solid;
+    max-width:400px;
+    text-align: center;
+    margin-right:4rem;
+}
+
+.aboutFounders{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .aboutFounders{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .aboutFounder{
+        margin-right: 0rem;
+    }
+}

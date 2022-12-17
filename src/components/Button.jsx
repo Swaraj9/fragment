@@ -15,7 +15,6 @@ const Button = ({children, ...props}) => {
       style={{
         backgroundColor: hover ? 'rgb(235,235,235)': 'rgb(255,255,255,0.1)',
         borderColor:'rgb(235,235,235)',
-        borderRadius:'0.25rem',
         color: hover ? 'rgb(20,20,20)': 'rgb(235, 235,235)',
         boxShadow:'none',
         padding:'0.75rem',
@@ -23,7 +22,7 @@ const Button = ({children, ...props}) => {
         paddingLeft:'1.5rem',
         borderStyle:'solid',
         fontSize:'1.1rem',
-        fontFamily:'Comfortaa',
+        fontFamily:'Space Grotesk',
         borderWidth:'0.01rem',
         transitionProperty:'all',
         transitionDuration:'0.5s',

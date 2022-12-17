@@ -1,0 +1,20 @@
+.homeTitle{
+    margin-bottom: 3rem;
+    font-size: 5rem;
+}
+
+.homeSub{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 870px) {
+    .homeTitle{
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .homeSub{
+        font-size: 1.5rem;
+    }
+}

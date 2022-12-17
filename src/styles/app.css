@@ -18,4 +18,8 @@
     .homeSub{
         color:'red'
     }
+
+    .aboutFounders{
+        flex-direction: column;
+    }
 }
