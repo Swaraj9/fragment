@@ -59,7 +59,6 @@ const Subcard = ({title, text, index})=>{
       initial={{opacity:0, translateY: 300}}
       whileInView={{opacity:1, translateY: 0}}
       transition={{duration:0.5, delay:index*0.2}}
-      viewport={{once:'true'}}
       ref = {myRef}
       className='subCard'
       style={{
@@ -104,17 +103,9 @@ const Card = ({main, sub, style, active, deactive}) => {
 const Services = ({scrollRef}) => {  
 
   const [activeCircles, setActiveCircles] = useState([false,false,false,false]);
-  const [cardsHeight, setCardsHeight] = useState(0);
 
   const myRef = useRef(null);
   const cardsRef = useRef(null);
-
-  useEffect(()=>{
-    setCardsHeight(cardsRef.current.clientHeight)
-  })
-
-  const {scrollYProgress} = useScroll({container:scrollRef, target: myRef, offset:["start -0.5", "end start"]})
-  const translateY = useTransform(scrollYProgress, [0,1], [0, cardsHeight])
 
   const setCricle = (index, active=true) => {
     const newArr = activeCircles;
@@ -147,7 +138,7 @@ const Services = ({scrollRef}) => {
         <Button><a style={{color:'inherit', textDecoration:'none'}} href="#portfolio">Explore More</a></Button>
       </div>
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
-        <motion.div style={{translateY:translateY, marginRight:'2rem'}}>
+        <div style={{position:'sticky', top:'10rem', marginRight:'2rem'}}>
           <div style={{display:'flex'}}>
             <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Strategize</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
@@ -164,7 +155,7 @@ const Services = ({scrollRef}) => {
             <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Operate</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[3]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
           </div>
-        </motion.div>
+        </div>
         <div>
           <Card 
             active={() => {setCricle(0, true)}}

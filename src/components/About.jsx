@@ -58,7 +58,8 @@ const About = () => {
           borderWidth:'0.05rem',
           borderStyle:'solid',
           textAlign:'center',
-          display:'flex'
+          display:'flex',
+          justifyContent:'space-between'
       }}>
         <div style={{marginRight:'2rem'}}>
           <div>Have a project in mind?</div>

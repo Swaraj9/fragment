@@ -17,7 +17,7 @@ const Logo = ({index, src}) => {
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" style={{marginTop:'3rem', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'30rem'}}>
+    <div id="portfolio" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
       <div className='portfolioTitle'>Our Portfolio</div>
       <div className='portfolioSub' style={{width:'80%'}}>Check out a list of notable past client projects with niches including Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
       <motion.div 
