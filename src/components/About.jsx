@@ -13,7 +13,7 @@ const About = () => {
       <div className='aboutSubtitle' style={{textAlign:'center', fontSize:'1.5rem', maxWidth:'1000px', letterSpacing:'0.1', lineHeight:'2.5rem', marginBottom:'3rem'}}>Meet the team that makes the magic happen</div>
       <div className='aboutFounders'>
         <div className='aboutFounder'>
-          <img style={{borderRadius:'1rem'}} src={avatarJosh} alt="avatar"/>
+          <img style={{borderRadius:'0.5rem'}} src={avatarJosh} alt="avatar"/>
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Josh (JXSH)</div>
           <div style={{marginBottom:'1rem'}}>CEO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
@@ -29,7 +29,7 @@ const About = () => {
           </div>
         </div>
         <div className='aboutFounder'>
-          <img style={{borderRadius:'1rem'}} src={avatarAstlin} alt="avatar"/>
+          <img style={{borderRadius:'0.5rem'}} src={avatarAstlin} alt="avatar"/>
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Astlin</div>
           <div style={{marginBottom:'1rem'}}>COO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
@@ -50,7 +50,6 @@ const About = () => {
           width:'80%',
           marginBottom:'7rem',
           padding:'2rem', 
-          borderRadius:'0.25rem',
           paddingBottom:'2rem',
           backgroundColor:'rgb(235,235,235,0.1)',
           lineHeight:'1.75rem',

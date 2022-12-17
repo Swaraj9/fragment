@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import Button from './Button'
 import {
   motion,
@@ -43,9 +43,9 @@ function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
 
     return (
       <div style={{marginBottom:'3rem'}} className="parallax">
-        <motion.div className="scroller" style={{ x }}>
-          <span>{children} </span>
-          <span>{children} </span>
+        <motion.div className="scroller" style={{ x, display:'flex', width:'100%'}}>
+          <span style={{display:'flex', justifyContent:'space-between', width:'100%', marginRight:'2rem'}}>{children} </span>
+          <span style={{display:'flex', justifyContent:'space-between', width:'100%'}}>{children} </span>
         </motion.div>
       </div>
     );
@@ -83,6 +83,7 @@ const Card = ({main, sub, style, active, deactive}) => {
     <motion.div 
       onViewportEnter={()=>{active()}}
       onViewportLeave={()=>{deactive()}}
+      viewport={{margin:'-250px'}}
       style={{
         padding:'2rem', 
         borderRadius:'0.25rem',
@@ -128,9 +129,19 @@ const Services = ({scrollRef}) => {
 
   return (
     <div ref={myRef} id='services' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-      <div style={{width:'100%', fontSize:'3rem', marginBottom:'10rem'}}>
-        <ParallaxText scrollRef={scrollRef} baseVelocity={5}>Strategize Build Grow Operate</ParallaxText>
-        <ParallaxText scrollRef={scrollRef} baseVelocity={-5}>Grow Operate Strategize Build</ParallaxText>
+      <div style={{height:'100vh', display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', fontSize:'3rem', marginBottom:'10rem'}}>
+        <ParallaxText scrollRef={scrollRef} baseVelocity={-5}>
+          <a className='parallaxText1' href="#strategize">Strategize</a>  
+          <a className='parallaxText2' href="#build">Build</a>
+          <a className='parallaxText1' href="#grow">Grow</a> 
+          <a className='parallaxText2' href="#operate">Operate</a>
+        </ParallaxText>
+        <ParallaxText scrollRef={scrollRef} baseVelocity={5}>
+          <a className='parallaxText1' href="#strategize">Strategize</a>  
+          <a className='parallaxText2' href="#build">Build</a>
+          <a className='parallaxText1' href="#grow">Grow</a> 
+          <a className='parallaxText2' href="#operate">Operate</a>
+        </ParallaxText>
       </div>
       <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
         <div className='servicesTitle'>Our Services</div>
@@ -138,47 +149,47 @@ const Services = ({scrollRef}) => {
         <Button><a style={{color:'inherit', textDecoration:'none'}} href="#portfolio">Explore More</a></Button>
       </div>
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
-        <div style={{position:'sticky', top:'10rem', marginRight:'2rem'}}>
-          <div style={{display:'flex'}}>
-            <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Strategize</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
+        <div style={{position:'sticky', top:'4rem', marginRight:'2rem', height:'calc(100vh - 4rem)'}}>
+          <div id="strategize" style={{display:'flex'}}>
+            <div style={{marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Strategize</div>
+            <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div style={{display:'flex'}}>
-            <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Build</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[1]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
+          <div id="build" style={{display:'flex'}}>
+            <div style={{marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Build</div>
+            <div style={{transition:'all 0.5s', boxShadow:activeCircles[1]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div style={{display:'flex'}}>
-            <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Grow</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[2]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
+          <div id="grow" style={{display:'flex'}}>
+            <div style={{marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Grow</div>
+            <div style={{transition:'all 0.5s', boxShadow:activeCircles[2]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div style={{display:'flex'}}>
-            <div style={{marginRight:'1rem', width:'6.5rem', fontSize:'1.25rem'}}>Operate</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[3]?'0 0 14px 9px gray':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.5)', width:'1rem', height:'1rem', borderRadius:'50%', marginBottom:'5rem'}}></div>
+          <div id="operate" style={{display:'flex'}}>
+            <div style={{marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Operate</div>
+            <div style={{transition:'all 0.5s', boxShadow:activeCircles[3]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
           </div>
         </div>
         <div>
           <Card 
             active={() => {setCricle(0, true)}}
             deactive={() => {setCricle(0, false)}}
-            main="Strategize" 
+            main="Draft Your Battle Plan" 
             sub={[["Design","We analyze your product documents and marketing timeline to build a comprehensive, actionable plan tailored to your community-building needs."], ["Map", "We draw from our expertise working with top-tier projects to develop an innovative, cutting-edge plan of attack to access your audience, itemizing the steps from ideation to implementation."], ["Evolve", "We are your partner in early stage product building, staying flexible and agile to adapt your community strategy on the fly as you grow."]]}
           />
           <Card 
             active={() => {setCricle(1, true)}}
             deactive={() => {setCricle(1, false)}}
-            main="Build" 
+            main="Implement Your Vision" 
             sub={[["Identify","We find your power users and determine the value they can receive from your community."], ["Develop", "From onboarding flows, to ranking and progression, to referral programs, we design the perfect hangout for your audience."], ["Execute", "We install or build the technology required for a bespoke, world-class community experience."]]}
           />
           <Card 
             active={() => {setCricle(2, true)}}
             deactive={() => {setCricle(2, false)}}
-            main="Grow" 
+            main="Champion Your Growth" 
             sub={[["Create","We make and post shareable content that will champion your growth and heighten your product awareness."], ["Amplify", "We use organic growth strategies to boost your social presence."], ["Partner", "We promote your project through our vast network of communities, projects, and influencers."]]}
           />
           <Card 
             active={() => {setCricle(3, true)}}
             deactive={() => {setCricle(3, false)}}
-            main="Operate" 
+            main="Pilot Your Community" 
             sub={[["Moderate","We provide you with around the clock, white-glove moderation to keep your community safe."], ["Program", "We keep your community’s event calendar full of regular live programming events to drive engagement and camaraderie."], ["Measure", "We manage and measure the core metrics of your community’s health and engagement."]]}
           />
         </div>

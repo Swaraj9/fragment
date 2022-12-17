@@ -23,3 +23,25 @@
         padding-top: 0;
     }
 }
+
+.parallaxText1{
+    text-decoration:none; 
+    color:transparent;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color:rgb(200,200,200,0.8);
+    transition: all 0.5s;
+}
+
+.parallaxText2{
+    text-decoration:none; 
+    color:rgb(200,200,200,0.8);
+    transition: all 0.5s;
+}
+
+.parallaxText1:hover{
+    -webkit-text-stroke-color: white;
+}
+
+.parallaxText2:hover{
+    color:rgb(235,235,235);
+}

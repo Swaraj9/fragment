@@ -40,7 +40,6 @@ const Portfolio = () => {
       <div className='portfolioReferences' style={{
         marginBottom:'7rem',
         padding:'2rem', 
-        borderRadius:'0.25rem',
         paddingBottom:'2rem',
         backgroundColor:'rgb(235,235,235,0.1)',
         lineHeight:'1.75rem',
@@ -51,7 +50,7 @@ const Portfolio = () => {
         width:'80%',
         maxWidth:'700px'
       }}>
-        <img className='portfolioImage' src={avatar} alt="Avatar" style={{borderRadius:'1rem', marginRight:'2rem'}}/>
+        <img className='portfolioImage' src={avatar} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
         <div>
           <div>Josh is one of the most elite marketers in web3.</div>
           <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
@@ -64,7 +63,6 @@ const Portfolio = () => {
       <div style={{
         marginBottom:'7rem',
         padding:'2rem', 
-        borderRadius:'0.25rem',
         paddingBottom:'2rem',
         backgroundColor:'rgb(235,235,235,0.1)',
         lineHeight:'1.75rem',
