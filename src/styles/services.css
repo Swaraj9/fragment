@@ -22,6 +22,10 @@
     .subCard{
         padding-top: 0;
     }
+
+    .parallaxTextContainer{
+        display: none;
+    }
 }
 
 .parallaxText1{
@@ -44,4 +48,14 @@
 
 .parallaxText2:hover{
     color:rgb(235,235,235);
+}
+
+.parallaxTextContainer{
+    height:'100vh';
+    display:'flex';
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+    font-size:3rem;
+    margin-bottom:10rem;
 }
