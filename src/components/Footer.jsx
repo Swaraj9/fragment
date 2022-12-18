@@ -10,13 +10,13 @@ const Footer = () => {
           <div style={{fontSize:'2.5rem', marginBottom:'1rem'}}>Fragment Studios</div>
           <div style={{fontSize:'1.25rem', marginBottom:'4rem'}}>Your next solution for Discord Development</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xJxsh">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/Fragm3ntStudios">
               <BsTwitter/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/399266210442772480">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://fragmentstudios.xyz/#">
               <BsDiscord/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="josh@fragmentstudios.xyz">
+            <a style={{color:'inherit', textDecoration:'none'}} href="contact@fragmentstudios.xyz">
               <FaEnvelope/> 
             </a>
           </div>
