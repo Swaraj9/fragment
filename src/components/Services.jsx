@@ -92,6 +92,8 @@ const Card = ({main, sub, style, active, deactive}) => {
         transition:'all 0.5s',
         ...style
     }}>
+      <div style={{width:'70%', height:'70%', position:'absolute'}}>
+      </div>
       <div style={{fontSize:'2.5rem', paddingBottom:'2rem'}}>{main}</div>
       <div className='subcardContainer' style={{display:'flex', width:"100%", justifyContent:'space-evenly', alignItems:'flex-start'}}>
         {sub.map((item, index) => <Subcard title={item[0]} text={item[1]} index={index}/>)}

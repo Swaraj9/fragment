@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import './styles/app.css'
 import Portfolio from './components/Portfolio';
 import { motion, useScroll } from 'framer-motion';
+import loader from './images/fragment.gif';
 
 const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
 
@@ -52,6 +53,9 @@ const Floater = ({speed, children}) => {
 }
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
 
@@ -64,6 +68,11 @@ function App() {
 
 
   useEffect(() => {
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    }, 3200)
+
     if (!vantaEffect) {
       setVantaEffect(WAVES({
         el: myRef.current,
@@ -79,9 +88,12 @@ function App() {
         shininess: 80.00,
         waveHeight: 17.50,
         waveSpeed: 1.50,
-        zoom: 1.25
+        zoom: 0.9
       }))
     }
+
+
+
     return () => {
       if (vantaEffect) vantaEffect.destroy()
     }
@@ -95,50 +107,55 @@ function App() {
   }
 
   return (
-    <div className="App" ref={myRef} style={{width:'100%', color:'rgb(235,235,235)', height:'100vh', overflow:'hidden'}} >
-      <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{width:'100%', display:'flex', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
-        <div style={{position:'fixed', zIndex:-10}}>
-          <Floater speed={10}>
-            <motion.div
-              animate={{rotate:[0,360]}}
-              transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
-            >
-              <svg height="210" width="500">
-                <polygon points="200,10 250,190 160,210" style={{fill:'rgb(185,185,185,0.2)','stroke':'rgb(195,195,195,0.3)','stroke-width':2}} />
-              </svg>
-            </motion.div>
-          </Floater>
-          <Floater speed={30}>
-            <motion.div
-              animate={{rotate:[0,360]}}
-              transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
-            >
-              <svg height="210" width="500">
-                <polygon points="200,10 250,190 160,210 80,170" style={{fill:'rgb(185,185,185,0.2)','stroke':'rgb(195,195,195,0.3)','stroke-width':2}} />
-              </svg>
-            </motion.div>
-          </Floater>
-          <Floater speed={50}>
-            <motion.div
-              animate={{rotate:[0,360]}}
-              transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
-            >
-              <svg height="210" width="500">
-                <polygon points="250,190 160,210 80,130 20,80" style={{fill:'rgb(185,185,185,0.2)','stroke':'rgb(195,195,195,0.3)','stroke-width':2}} />
-              </svg>
-            </motion.div>
-          </Floater>
+    <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
+      {loading && <img style={{width: '100%', height:'100%'}} src={loader} alt="Loader GIF"/>}
+      <div className="App" ref={myRef} style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} >
+          <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
+            <div style={{position:'fixed', zIndex:-10}}>
+              <Floater speed={10}>
+                <motion.div
+                  animate={{rotate:[0,360]}}
+                  transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
+                >
+                  <svg height="210" width="500">
+                    <polygon points="200,10 250,190 160,210" style={{fill:'rgb(185,185,185,0.2)'}} />
+                  </svg>
+                </motion.div>
+              </Floater>
+              <Floater speed={30}>
+                <motion.div
+                  animate={{rotate:[0,360]}}
+                  transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
+                >
+                  <svg height="210" width="500">
+                    <polygon points="200,10 250,190 160,210 80,170" style={{fill:'rgb(185,185,185,0.2)'}} />
+                  </svg>
+                </motion.div>
+              </Floater>
+              <Floater speed={50}>
+                <motion.div
+                  animate={{rotate:[0,360]}}
+                  transition={{repeat:'Infinity', duration:7, ease:'linear', delay:0}}
+                >
+                  <svg height="210" width="500">
+                    <polygon points="250,190 160,210 80,130 20,80" style={{fill:'rgb(185,185,185,0.2)'}} />
+                  </svg>
+                </motion.div>
+              </Floater>
+            </div>
+            <div style={{flex:'1'}}>
+              <Navbar/>
+              <Home/>
+              <Services/>
+              <Portfolio/>
+              <About/>
+              <Footer/>
+            </div>
+            <motion.div style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
+          </div>
         </div>
-        <div style={{flex:'1'}}>
-          <Navbar/>
-          <Home/>
-          <Services/>
-          <Portfolio/>
-          <About/>
-          <Footer/>
-        </div>
-        <motion.div style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
-      </div>
+      
+
     </div>
   );
 }
