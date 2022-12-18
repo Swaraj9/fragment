@@ -10,6 +10,7 @@ import './styles/app.css'
 import Portfolio from './components/Portfolio';
 import { motion, useScroll } from 'framer-motion';
 import loader from './images/fragment.gif';
+import Contact from './components/Contact';
 
 const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
 
@@ -55,6 +56,7 @@ const Floater = ({speed, children}) => {
 function App() {
 
   const [loading, setLoading] = useState(false);
+  const [contact, setContact] = useState(false);
 
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
@@ -71,7 +73,7 @@ function App() {
     setLoading(true);
     setTimeout(()=>{
       setLoading(false);
-    }, 3200)
+    }, 3225)
 
     if (!vantaEffect) {
       setVantaEffect(WAVES({
@@ -108,7 +110,7 @@ function App() {
 
   return (
     <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
-      {loading && <img style={{width: '100%', height:'100%'}} src={loader} alt="Loader GIF"/>}
+      {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img style={{width: '60%', height:'60%'}} src={loader} alt="Loader GIF"/></div>}
       <div className="App" ref={myRef} style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} >
           <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
             <div style={{position:'fixed', zIndex:-10}}>
@@ -144,11 +146,15 @@ function App() {
               </Floater>
             </div>
             <div style={{flex:'1'}}>
-              <Navbar/>
-              <Home/>
-              <Services/>
-              <Portfolio/>
-              <About/>
+              <Navbar setContact={setContact} contact={contact}/>
+              { !contact ?
+                <div>
+                  <Home/>
+                  <Services/>
+                  <Portfolio setContact={setContact}/>
+                  <About setContact={setContact}/>
+                </div> : <Contact/>
+              }
               <Footer/>
             </div>
             <motion.div style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>

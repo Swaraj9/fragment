@@ -6,7 +6,7 @@ import {BsDiscord, BsTwitter} from 'react-icons/bs'
 import {FaEnvelope} from 'react-icons/fa'
 import '../styles/about.css'
 
-const About = () => {
+const About = ({setContact}) => {
   return (
     <div id="about" className='about' style={{marginTop:'3rem', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div className='aboutTitle' style={{fontSize:'3rem', marginBottom:'2rem'}}>Our Team</div>
@@ -47,7 +47,7 @@ const About = () => {
       </div>
       <div
         style={{
-          width:'80%',
+          width:'60%',
           marginBottom:'7rem',
           padding:'2rem', 
           paddingBottom:'2rem',
@@ -58,13 +58,14 @@ const About = () => {
           borderStyle:'solid',
           textAlign:'center',
           display:'flex',
-          justifyContent:'space-between'
+          justifyContent:'space-between',
+          borderRadius:'5px'
       }}>
         <div style={{marginRight:'2rem'}}>
           <div>Have a project in mind?</div>
           <div>Schedule a call to discuss onboarding our team</div>
         </div>
-        <Button>Get In Touch</Button>
+        <Button onClick={()=>setContact(true)}>Get In Touch</Button>
       </div>
     </div>
   )

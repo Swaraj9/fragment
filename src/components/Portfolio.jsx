@@ -6,8 +6,11 @@ import logo4 from '../images/pudgy-logo-puy3lpiupt30hsqorrcj6azbf7e5rxfimn7cvxvz
 import logo5 from '../images/warner-music-logo-puy3lpiwf7d83rvwvqeq6v70c3gk455v89xmnrf5d4.png'
 import {motion} from 'framer-motion'
 import Button from './Button'
-import avatar from '../images/luca-netz-pfp-1-e1663100654437.jpg'
+import avatar1 from '../images/luca-netz-pfp-1-e1663100654437.jpg'
+import avatar2 from '../images/a_c36209cce64bf47a55868e60352db44b-1-e1663101085141.gif'
 import '../styles/portfolio.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel} from 'react-responsive-carousel'
 
 const Logo = ({index, src}) => {
   return(
@@ -15,7 +18,7 @@ const Logo = ({index, src}) => {
   )
 }
 
-const Portfolio = () => {
+const Portfolio = ({setContact}) => {
   return (
     <div id="portfolio" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
       <div className='portfolioTitle'>Our Portfolio</div>
@@ -46,17 +49,30 @@ const Portfolio = () => {
         letterSpacing:'0.075rem',
         borderWidth:'0.05rem',
         borderStyle:'solid',
-        display:'flex',
         width:'80%',
-        maxWidth:'700px'
+        maxWidth:'700px',
+        borderRadius:'5px'
       }}>
-        <img className='portfolioImage' src={avatar} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
-        <div>
-          <div>Josh is one of the most elite marketers in web3.</div>
-          <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
-          <div>Luca Netz</div>
-          <div>CEO - Pudgy Penguins</div>
-        </div>
+        <Carousel infiniteLoop showThumbs={false} showStatus={false}>
+          <div style={{display:'flex'}}>
+            <img className='portfolioImage' src={avatar1} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
+            <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+              <div>Josh is one of the most elite marketers in web3.</div>
+              <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
+              <div>Luca Netz</div>
+              <div>CEO - Pudgy Penguins</div>
+            </div>
+          </div>
+          <div style={{display:'flex'}}>
+            <img className='portfolioImage' src={avatar2} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
+            <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+              <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
+              <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
+              <div>Jet</div>
+              <div>Owner - Jet's Dream World</div>
+            </div>
+          </div>
+        </Carousel>
       </div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>The Best Solutions for our clients</div>
       <div className='portfolioSub' style={{width:'80%', marginBottom:'2rem'}}>We offer a customizable approach to our clients based on project needs. Click below to schedule a call to discuss your interests and receive a quote for our services.</div>
@@ -70,7 +86,8 @@ const Portfolio = () => {
         borderWidth:'0.05rem',
         borderStyle:'solid',
         maxWidth:'400px',
-        textAlign:'center'
+        textAlign:'center',
+        borderRadius:'5px'
       }}>
         <div style={{fontSize:'2rem', marginBottom:'1rem'}}>Recieve a Quote</div>
         <div style={{fontSize:'2rem', marginBottom:'2rem'}}>$0</div>
@@ -86,7 +103,7 @@ const Portfolio = () => {
           - Bot Development<br/>
           - Security Audits
         </div>
-        <Button>Get Started</Button>
+        <Button onClick={() => setContact(true)}>Get Started</Button>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './Button'
 
 
-const Navbar = () => {
+const Navbar = ({contact, setContact}) => {
   return (
     <div style={{
       display:'flex',
@@ -12,7 +12,7 @@ const Navbar = () => {
       padding:'1.5rem'
     }}>
       <div style={{fontSize:'1.7rem', letterSpacing:'0.2rem'}}>Fragment</div>
-      <Button>Get In Touch</Button>
+      <Button onClick={() => setContact(!contact)}>{contact ? "Home" : "Get in Touch"}</Button>
     </div>
   )
 }

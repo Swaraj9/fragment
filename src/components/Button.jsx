@@ -26,6 +26,7 @@ const Button = ({children, ...props}) => {
         borderWidth:'0.01rem',
         transitionProperty:'all',
         transitionDuration:'0.5s',
+        borderRadius:'5px'
     }} {...props}>{children}</button>
   )
 }
