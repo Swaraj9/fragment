@@ -1,6 +1,6 @@
 import React from 'react'
-import {BsDiscord, BsTwitter} from 'react-icons/bs'
-import {FaEnvelope} from 'react-icons/fa'
+import {BsTwitter} from 'react-icons/bs'
+import {FaDiscord, FaEnvelope} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
               <BsTwitter/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="https://fragmentstudios.xyz/#">
-              <BsDiscord/>
+              <FaDiscord/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="contact@fragmentstudios.xyz">
               <FaEnvelope/> 

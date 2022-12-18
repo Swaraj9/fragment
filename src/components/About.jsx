@@ -2,8 +2,8 @@ import React from 'react'
 import Button from './Button'
 import avatarJosh from '../images/ezgif.com-gif-maker-300x300.webp'
 import avatarAstlin from '../images/astlin-300x300.gif'
-import {BsDiscord, BsTwitter} from 'react-icons/bs'
-import {FaEnvelope} from 'react-icons/fa'
+import {BsTwitter} from 'react-icons/bs'
+import {FaDiscord, FaEnvelope} from 'react-icons/fa'
 import '../styles/about.css'
 
 const About = ({setContact}) => {
@@ -21,7 +21,7 @@ const About = ({setContact}) => {
               <BsTwitter/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/399266210442772480">
-              <BsDiscord/>
+              <FaDiscord/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="josh@fragmentstudios.xyz">
               <FaEnvelope/> 
@@ -37,7 +37,7 @@ const About = ({setContact}) => {
               <BsTwitter/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/338586922081583104">
-              <BsDiscord/>
+              <FaDiscord/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="astlin@fragmentstudios.xyz">
               <FaEnvelope/> 
