@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/fragment/static/css/main.0fb8821b.css",
-    "main.js": "/fragment/static/js/main.d5f16b8f.js",
-    "static/media/fragment.gif": "/fragment/static/media/fragment.95c5d2e6075f7fc69c87.gif",
+    "main.css": "/fragment/static/css/main.6061bf5c.css",
+    "main.js": "/fragment/static/js/main.a8948f44.js",
+    "static/media/a_-1-e1663101085141.gif": "/fragment/static/media/a_c36209cce64bf47a55868e60352db44b-1-e1663101085141.e27c791e7391ca719eb3.gif",
+    "static/media/fragment.gif": "/fragment/static/media/fragment.d2b6078eb6a3131f4a1c.gif",
     "static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png": "/fragment/static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.8b05af233161c22331ca.png",
     "static/media/pudgy-logo-puy3lpiupt30hsqorrcj6azbf7e5rxfimn7cvxvzzc.png": "/fragment/static/media/pudgy-logo-puy3lpiupt30hsqorrcj6azbf7e5rxfimn7cvxvzzc.675e3f1d424cf1b0c5f2.png",
     "static/media/ezgif.com-gif-maker-300x300.webp": "/fragment/static/media/ezgif.com-gif-maker-300x300.909209584892a065cf3b.webp",
     "index.html": "/fragment/index.html",
-    "main.0fb8821b.css.map": "/fragment/static/css/main.0fb8821b.css.map",
-    "main.d5f16b8f.js.map": "/fragment/static/js/main.d5f16b8f.js.map"
+    "main.6061bf5c.css.map": "/fragment/static/css/main.6061bf5c.css.map",
+    "main.a8948f44.js.map": "/fragment/static/js/main.a8948f44.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fb8821b.css",
-    "static/js/main.d5f16b8f.js"
+    "static/css/main.6061bf5c.css",
+    "static/js/main.a8948f44.js"
   ]
 }
