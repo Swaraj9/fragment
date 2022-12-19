@@ -4,7 +4,7 @@ import Button from './Button'
 
 const Navbar = ({contact, setContact}) => {
   return (
-    <div style={{
+    <div id="navbar" style={{
       display:'flex',
       width:'calc(100% - 3rem)',
       flexDirection:'row',

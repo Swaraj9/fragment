@@ -17,13 +17,13 @@ const About = ({setContact}) => {
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Josh (JXSH)</div>
           <div style={{marginBottom:'1rem'}}>CEO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xJxsh">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/jxshdiscord" target="blank">
               <BsTwitter/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/399266210442772480">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/399266210442772480" target="blank">
               <FaDiscord/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="josh@fragmentstudios.xyz">
+            <a style={{color:'inherit', textDecoration:'none'}} href="josh@fragmentstudios.xyz" target="blank">
               <FaEnvelope/> 
             </a>
           </div>
@@ -33,13 +33,13 @@ const About = ({setContact}) => {
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Astlin</div>
           <div style={{marginBottom:'1rem'}}>COO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xAstlin">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xAstlin" target="blank">
               <BsTwitter/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/338586922081583104">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/338586922081583104" target="blank">
               <FaDiscord/>
             </a>
-            <a style={{color:'inherit', textDecoration:'none'}} href="astlin@fragmentstudios.xyz">
+            <a style={{color:'inherit', textDecoration:'none'}} href="astlin@fragmentstudios.xyz" target="blank">
               <FaEnvelope/> 
             </a>
           </div>
@@ -56,16 +56,15 @@ const About = ({setContact}) => {
           letterSpacing:'0.075rem',
           borderWidth:'0.05rem',
           borderStyle:'solid',
-          textAlign:'center',
           display:'flex',
           justifyContent:'space-between',
-          borderRadius:'5px'
+          borderRadius:'10px'
       }}>
         <div style={{marginRight:'2rem'}}>
           <div>Have a project in mind?</div>
           <div>Schedule a call to discuss onboarding our team</div>
         </div>
-        <Button onClick={()=>setContact(true)}>Get In Touch</Button>
+        <Button onClick={()=>setContact(true)}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Get In Touch</a></Button>
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81yd
 import logo3 from '../images/goat-society-logo-2-puy3lol0l5zjr36qn6zgpm5rvoqdhthkl3s4pqg95m.png'
 import logo4 from '../images/pudgy-logo-puy3lpiupt30hsqorrcj6azbf7e5rxfimn7cvxvzzc.png'
 import logo5 from '../images/warner-music-logo-puy3lpiwf7d83rvwvqeq6v70c3gk455v89xmnrf5d4.png'
+import logo6 from '../images/246x0w.webp'
 import {motion} from 'framer-motion'
 import Button from './Button'
 import avatar1 from '../images/luca-netz-pfp-1-e1663100654437.jpg'
@@ -14,7 +15,7 @@ import {Carousel} from 'react-responsive-carousel'
 
 const Logo = ({index, src}) => {
   return(
-    <motion.img whileHover={{scale:1.2, rotate:45}} src={src} alt={`Logo ${index}`}/>
+    <motion.img style={{height:'80px'}} whileHover={{scale:1.2, rotate:45}} src={src} alt={`Logo ${index}`}/>
   )
 }
 
@@ -37,6 +38,7 @@ const Portfolio = ({setContact}) => {
         <Logo index={2} src={logo3}/>
         <Logo index={3} src={logo4}/>
         <Logo index={4} src={logo5}/>
+        <Logo index={5} src={logo6}/>
       </motion.div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>What our clients say</div>
       <div className='portfolioSub' style={{marginBottom:'3rem'}}>See our impact on past projects by reading our client testimonials.</div>
@@ -51,7 +53,7 @@ const Portfolio = ({setContact}) => {
         borderStyle:'solid',
         width:'80%',
         maxWidth:'700px',
-        borderRadius:'5px'
+        borderRadius:'10px'
       }}>
         <Carousel infiniteLoop showThumbs={false} showStatus={false}>
           <div style={{display:'flex'}}>
@@ -87,7 +89,7 @@ const Portfolio = ({setContact}) => {
         borderStyle:'solid',
         maxWidth:'400px',
         textAlign:'center',
-        borderRadius:'5px'
+        borderRadius:'10px'
       }}>
         <div style={{fontSize:'2rem', marginBottom:'1rem'}}>Recieve a Quote</div>
         <div style={{fontSize:'2rem', marginBottom:'2rem'}}>$0</div>
@@ -103,7 +105,9 @@ const Portfolio = ({setContact}) => {
           - Bot Development<br/>
           - Security Audits
         </div>
-        <Button onClick={() => setContact(true)}>Get Started</Button>
+        <Button onClick={() => {
+          setContact(true);
+        }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Get Started</a></Button>
       </div>
     </div>
   )

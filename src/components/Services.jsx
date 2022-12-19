@@ -153,19 +153,19 @@ const Services = ({scrollRef}) => {
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
         <div style={{position:'sticky', top:'4rem', marginRight:'2rem', height:'calc(100vh - 4rem)'}}>
           <div id="strategize" style={{display:'flex'}}>
-            <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Strategize</div>
+            <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Strategize</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="build" style={{display:'flex'}}>
-            <div style={{color:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Build</div>
+            <div style={{color:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Build</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[1]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="grow" style={{display:'flex'}}>
-            <div style={{color:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Grow</div>
+            <div style={{color:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Grow</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[2]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="operate" style={{display:'flex'}}>
-            <div style={{color:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'9rem', fontSize:'1.75rem'}}>Operate</div>
+            <div style={{color:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Operate</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[3]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
           </div>
         </div>
