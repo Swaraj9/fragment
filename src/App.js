@@ -73,7 +73,7 @@ function App() {
     setLoading(true);
     setTimeout(()=>{
       setLoading(false);
-    }, 3225)
+    }, 2000)
 
     if (!vantaEffect) {
       setVantaEffect(WAVES({
