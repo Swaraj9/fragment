@@ -70,7 +70,7 @@ function App() {
 
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     setTimeout(()=>{
       setLoading(false);
     }, 2000)
@@ -111,7 +111,7 @@ function App() {
   return (
     <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
       {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img style={{width: '60%', height:'60%'}} src={loader} alt="Loader GIF"/></div>}
-      <div className="App" ref={myRef} style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} >
+      <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.8, repeat:1, ease:'linear'}} className="App" ref={myRef} style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} >
           <div ref={scrollDiv} onScroll={handleScroll} className='main' style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}>
             <div style={{position:'fixed', zIndex:-10}}>
               <Floater speed={10}>
@@ -159,7 +159,7 @@ function App() {
             </div>
             <motion.div style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
           </div>
-        </div>
+        </motion.div>
       
 
     </div>

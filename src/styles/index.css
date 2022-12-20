@@ -10,6 +10,7 @@ body {
   --black: 'rgb(20,20,20)';
   --grey: 'rgb(100,100,100)';
   --primary: 'red';
+  background-color: black;
 }
 
 code {

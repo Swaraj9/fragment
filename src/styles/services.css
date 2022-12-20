@@ -7,6 +7,14 @@
     font-size: 1.5rem;
     padding-bottom: 2rem;
     text-align: center;
+    width: 80%;
+}
+
+.servicesSticky{
+    position: sticky;
+    top:4rem;
+    margin-right:2rem;
+    height:calc(100vh - 4rem);
 }
 
 @media only screen and (max-width: 870px) {
@@ -19,12 +27,22 @@
         font-size: 1.25rem;
     }
 
-    .subCard{
-        padding-top: 0;
-    }
-
     .parallaxTextContainer{
         display: none;
+    }
+
+    .servicesSticky{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .subcardContainer {
+        flex-direction: column;
+    }
+    
+    .subCard{
+        padding-top: 0;
     }
 }
 
@@ -34,12 +52,14 @@
     -webkit-text-stroke-width:1px;
     -webkit-text-stroke-color:rgb(200,200,200,0.8);
     transition: all 0.5s;
+    margin-right: 1rem;
 }
 
 .parallaxText2{
     text-decoration:none; 
     color:rgb(200,200,200,0.8);
     transition: all 0.5s;
+    margin-right: 1rem;
 }
 
 .parallaxText1:hover{

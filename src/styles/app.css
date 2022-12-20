@@ -7,18 +7,6 @@
         min-width: auto;
     }
 
-    .subcardContainer {
-        flex-direction: column;
-    }
-
-    .homeTitle{
-        font-size: 3rem;
-    }
-
-    .homeSub{
-        color:'red'
-    }
-
     .aboutFounders{
         flex-direction: column;
     }

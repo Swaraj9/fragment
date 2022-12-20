@@ -25,7 +25,7 @@ const Portfolio = ({setContact}) => {
       <div className='portfolioTitle'>Our Portfolio</div>
       <div className='portfolioSub' style={{width:'80%'}}>Check out a list of notable past client projects with niches including Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
       <motion.div 
-        initial={{opacity:0, translateX:300}}
+        initial={{opacity:0, translateX:-300}}
         whileInView={{opacity:1, translateX:0}}
         transition={{duration:0.5}}
         className="portfolioClients"

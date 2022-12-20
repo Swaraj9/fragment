@@ -18,3 +18,14 @@
         font-size: 1.5rem;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .homeTitle{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .homeSub{
+        font-size: 1.25rem;
+    }
+}

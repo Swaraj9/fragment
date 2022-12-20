@@ -24,7 +24,7 @@ function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
     clamp: false
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-25, 25, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
@@ -42,7 +42,7 @@ function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
   });
 
     return (
-      <div style={{marginBottom:'3rem'}} className="parallax">
+      <div style={{marginBottom:'3rem', width:'calc(100vw - 50px)'}} className="parallax">
         <motion.div className="scroller" style={{ x, display:'flex', width:'100%'}}>
           <span style={{display:'flex', justifyContent:'space-between', width:'100%', marginRight:'2rem'}}>{children} </span>
           <span style={{display:'flex', justifyContent:'space-between', width:'100%'}}>{children} </span>
@@ -66,7 +66,7 @@ const Subcard = ({title, text, index})=>{
         paddingBottom:'2rem',
         marginRight:'1.5rem',
         marginLeft:'1.5rem',
-        paddingTop:`${index%2===0?0:10}rem`,
+        paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem',
         lineHeight:'1.75rem',
         letterSpacing:'0.075rem',
         position:'relative'
@@ -151,7 +151,7 @@ const Services = ({scrollRef}) => {
         <Button><a style={{color:'inherit', textDecoration:'none'}} href="#portfolio">Explore More</a></Button>
       </div>
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
-        <div style={{position:'sticky', top:'4rem', marginRight:'2rem', height:'calc(100vh - 4rem)'}}>
+        <div className='servicesSticky'>
           <div id="strategize" style={{display:'flex'}}>
             <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Strategize</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
