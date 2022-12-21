@@ -3,7 +3,7 @@ import {FaDiscord} from 'react-icons/fa'
 import '../styles/footer.css'
 import Button from './Button'
 
-const Footer = () => {
+const Footer = ({setContact}) => {
   return (
     <div style={{display:'flex', height:'100vh', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       {/*<div style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', width:'100%', marginBottom:'3rem'}}>

@@ -67,7 +67,7 @@ function App() {
                   <About setContact={setContact}/>
                 </div> : <Contact/>
               }
-              <Footer/>
+              <Footer setContact={setContact}/>
             </div>
             <motion.div style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
           </div>
