@@ -33,12 +33,12 @@ const Portfolio = ({setContact}) => {
       >
         <div style={{fontSize:'2rem', width:'15rem', textAlign: 'center'}}>43+ Trusted Clients</div>
         <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
-        <Logo index={1} src={logo2}/>
         <Logo index={0} src={logo1}/>
-        <Logo index={2} src={logo3}/>
-        <Logo index={3} src={logo4}/>
         <Logo index={4} src={logo5}/>
         <Logo index={5} src={logo6}/>
+        <Logo index={3} src={logo4}/>
+        <Logo index={1} src={logo2}/>
+        <Logo index={2} src={logo3}/>
       </motion.div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>What our clients say</div>
       <div className='portfolioSub' style={{marginBottom:'3rem'}}>See our impact on past projects by reading our client testimonials.</div>

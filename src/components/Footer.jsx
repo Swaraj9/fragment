@@ -37,7 +37,7 @@ const Footer = ({setContact}) => {
           setContact(true);
         }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>
       </div>
-      <a className='discordIcon' style={{color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+      <a className='discordIcon' style={{marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
         <FaDiscord/>
       </a>
     </div>
