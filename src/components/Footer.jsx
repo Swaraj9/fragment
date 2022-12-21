@@ -33,7 +33,9 @@ const Footer = () => {
       </div>*/}
       <div style={{flex:1, display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
         <div style={{fontSize:'3rem', marginBottom:'2rem'}}>Ready to get started?</div>
-        <Button>Schedule a Call</Button>
+        <Button onClick={() => {
+          setContact(true);
+        }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>
       </div>
       <a className='discordIcon' style={{color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
         <FaDiscord/>
