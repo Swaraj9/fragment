@@ -1,6 +1,7 @@
 import React from 'react'
 import {FaDiscord} from 'react-icons/fa'
 import '../styles/footer.css'
+import Button from './Button'
 
 const Footer = () => {
   return (
@@ -30,7 +31,11 @@ const Footer = () => {
       <div>
         Copyright © 2022 - Fragment Studios
       </div>*/}
-      <a className='discordIcon' style={{color:'inherit', textDecoration:'none', fontSize:'10rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+      <div style={{flex:1, display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <div style={{fontSize:'3rem', marginBottom:'2rem'}}>Ready to get started?</div>
+        <Button>Schedule a Call</Button>
+      </div>
+      <a className='discordIcon' style={{color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
         <FaDiscord/>
       </a>
     </div>

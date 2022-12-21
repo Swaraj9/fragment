@@ -1,5 +1,4 @@
 import React, {useRef, useState} from 'react'
-import Button from './Button'
 import {
   motion,
   useScroll,
@@ -72,7 +71,7 @@ const Subcard = ({title, text, index})=>{
         position:'relative'
       }}
     >
-      <div style={{fontSize:'1.5rem', marginBottom:'1rem'}}>{title}</div>
+      <div style={{fontSize:'2rem', marginBottom:'1.5rem'}}>{title}</div>
       <div>{text}</div>
     </motion.div>
   )
@@ -147,8 +146,7 @@ const Services = ({scrollRef}) => {
       </div>
       <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
         <div className='servicesTitle'>Our Services</div>
-        <div className='servicesSub'>Fragment Studios' multifaceted discord team can take care of all of your community's needs.</div>
-        <Button><a style={{color:'inherit', textDecoration:'none'}} href="#portfolio">Explore More</a></Button>
+        <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community' needs.</div>
       </div>
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
         <div className='servicesSticky'>
@@ -173,14 +171,14 @@ const Services = ({scrollRef}) => {
           <Card 
             active={() => {setCricle(0, true)}}
             deactive={() => {setCricle(0, false)}}
-            main="Draft Your Battle Plan" 
-            sub={[["Design","We analyze your product documents and marketing timeline to build a comprehensive, actionable plan tailored to your community-building needs."], ["Map", "We draw from our expertise working with top-tier projects to develop an innovative, cutting-edge plan of attack to access your audience, itemizing the steps from ideation to implementation."], ["Evolve", "We are your partner in early stage product building, staying flexible and agile to adapt your community strategy on the fly as you grow."]]}
+            main="Craft Your Road Map" 
+            sub={[["Assess","We analyze your product info, community/product roadmap, graphic assets, marketing materials, and community/product roadmap to build a rough draft of how the community will be organized and released."], ["Collaborate", "Meet with our team to discuss server goals, key performance indicators, and aesthetic preferences to align our visions and begin crafting the final community plan."], ["Map", ""]]}
           />
           <Card 
             active={() => {setCricle(1, true)}}
             deactive={() => {setCricle(1, false)}}
-            main="Implement Your Vision" 
-            sub={[["Identify","We find your power users and determine the value they can receive from your community."], ["Develop", "From onboarding flows, to ranking and progression, to referral programs, we design the perfect hangout for your audience."], ["Execute", "We install or build the technology required for a bespoke, world-class community experience."]]}
+            main="Build Out Your Community" 
+            sub={[["Structure","We create a skeleton of the community structure to build upon and aid in the creative process."], ["Develop", "Setup a role hierarchy and secure role/channel based permissions. Also introduce a bot structure for community security, general server needs, and increased engagement."], ["Design", "Using the community plan, we optimize and design the community structure to meet the desired aesthetic through graphic utilization, role/channel name customization, and introducing company specific channels"]]}
           />
           <Card 
             active={() => {setCricle(2, true)}}
@@ -191,8 +189,8 @@ const Services = ({scrollRef}) => {
           <Card 
             active={() => {setCricle(3, true)}}
             deactive={() => {setCricle(3, false)}}
-            main="Pilot Your Community" 
-            sub={[["Moderate","We provide you with around the clock, white-glove moderation to keep your community safe."], ["Program", "We keep your community’s event calendar full of regular live programming events to drive engagement and camaraderie."], ["Measure", "We manage and measure the core metrics of your community’s health and engagement."]]}
+            main="Launch Your Community" 
+            sub={[["Moderation","Bring on our experienced globally-based moderation team to engage with the community and keep the server safe."], ["Engage", "Have our event team create an event calendar and host regular server activities to nurture a tight knit community."], ["Analyze", "Our team will provide you 24/7 up-to-date analytics of community growth, engagement, and retention to adapt to shortcomings and increase the quality of the community."]]}
           />
         </div>
       </div>

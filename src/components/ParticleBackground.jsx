@@ -15,7 +15,7 @@ const ParticlesBackground = () => {
                 fpsLimit: 120,
                 particles: {
                   number: {
-                    value: 100,
+                    value: 120,
                     density: {
                       enable: true,
                       value_area: 800
@@ -55,7 +55,7 @@ const ParticlesBackground = () => {
                     }
                   },
                   size: {
-                    value: 3,
+                    value: 0,
                     random: true,
                     anim: {
                       enable: false,
@@ -66,7 +66,7 @@ const ParticlesBackground = () => {
                   },
                   line_linked: {
                     enable: true,
-                    distance: 100,
+                    distance: 90,
                     color: "random",
                     opacity: 0.4,
                     width: 1,
@@ -78,7 +78,7 @@ const ParticlesBackground = () => {
                   },
                   move: {
                     enable: true,
-                    speed: 6,
+                    speed: 4,
                     direction: "none",
                     random: false,
                     straight: false,
