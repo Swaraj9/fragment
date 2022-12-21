@@ -150,6 +150,7 @@ const Services = ({scrollRef}) => {
       </div>
       <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
         <div className='servicesSticky'>
+          <div style={{position:'absolute', height:'85%', width:'2px', backgroundColor:'rgb(135,135,135,0.25)', boxShadow:'0 0 21px 9px rgb(135,135,135,0.25)', marginLeft:'8.7rem', zIndex:-10}}></div>
           <div id="strategize" style={{display:'flex'}}>
             <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Strategize</div>
             <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
