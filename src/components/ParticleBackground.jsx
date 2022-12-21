@@ -12,7 +12,7 @@ const ParticlesBackground = () => {
             id="tsparticles"
             init={particlesInit}
             options={{
-                fpsLimit: 120,
+                fpsLimit: 150,
                 particles: {
                   number: {
                     value: 120,
@@ -25,7 +25,7 @@ const ParticlesBackground = () => {
                     value: "#ff0000",
                     animation: {
                       enable: true,
-                      speed: 20,
+                      speed: 10,
                       sync: true
                     }
                   },
@@ -38,11 +38,6 @@ const ParticlesBackground = () => {
                     polygon: {
                       nb_sides: 5
                     },
-                    image: {
-                      src: "https://cdn.matteobruni.it/images/particles/github.svg",
-                      width: 100,
-                      height: 100
-                    }
                   },
                   opacity: {
                     value: 0.5,
@@ -66,28 +61,31 @@ const ParticlesBackground = () => {
                   },
                   line_linked: {
                     enable: true,
-                    distance: 90,
+                    distance: 200,
                     color: "random",
                     opacity: 0.4,
                     width: 1,
                     triangles: {
-                      enable: true,
+                      enable: false,
                       color: "#ffffff",
-                      opacity: 0.1
+                      opacity: 0.1,
                     }
                   },
                   move: {
                     enable: true,
-                    speed: 4,
+                    speed: 2,
                     direction: "none",
                     random: false,
                     straight: false,
                     out_mode: "out",
+                    center:{
+                      x:400,
+                      y:400,
+                      radius:50
+                    },
                     attract: {
                       enable: false,
-                      rotateX: 600,
-                      rotateY: 1200
-                    }
+                    },
                   }
                 },
                 interactivity: {
@@ -95,7 +93,7 @@ const ParticlesBackground = () => {
                   events: {
                     onhover: {
                       enable: true,
-                      mode: "grab"
+                      mode: "bubble"
                     },
                     resize: true
                   },
@@ -106,15 +104,22 @@ const ParticlesBackground = () => {
                         opacity: 1
                       }
                     },
+                    connect:{
+                      distance:100,
+                      radius:40,
+                      links:{
+                        opacity:1
+                      }
+                    },
                     bubble: {
-                      distance: 400,
-                      size: 40,
+                      distance: 200,
+                      size: 15,
                       duration: 2,
                       opacity: 0.8,
                       speed: 3
                     },
                     repulse: {
-                      distance: 200
+                      distance: 50
                     },
                     remove: {
                       particles_nb: 2
@@ -129,7 +134,8 @@ const ParticlesBackground = () => {
                   position: "50% 50%",
                   repeat: "no-repeat",
                   size: "cover"
-                }
+                },
+                
             }}
         />
     )

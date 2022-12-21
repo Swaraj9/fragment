@@ -11,14 +11,13 @@ import loader from './images/fragment.gif';
 import Contact from './components/Contact';
 import ParticleBackground from './components/ParticleBackground';
 
-const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
+//const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
 
 function App() {
 
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(false);
 
-  const [currBackgroundColor, setCurrBackgroundColor] = useState(0);
 
   const scrollDiv = useRef(null);
   const {scrollYProgress} = useScroll({container: scrollDiv})
@@ -33,12 +32,12 @@ function App() {
 
   }, [])
 
-  const handleScroll = () => {
+  /*const handleScroll = () => {
     if(window.scrollY % 300 === 0){
       let bgColor = Math.floor(Math.random()*backgroundColors.length);
       setCurrBackgroundColor(bgColor);
     }
-  }
+  }*/
 
   return (
     <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
@@ -52,9 +51,8 @@ function App() {
       >
           <div 
             ref={scrollDiv} 
-            onScroll={handleScroll} 
             className='main' 
-            style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', backgroundColor:backgroundColors[currBackgroundColor], height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+            style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
           >
             <div style={{flex:'1'}}>
               <ParticleBackground/>
