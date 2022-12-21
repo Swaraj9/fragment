@@ -1,0 +1,7 @@
+.discordIcon:hover{
+    scale: 1.2;
+}
+
+.discordIcon{
+    transition: all 0.5s;
+}

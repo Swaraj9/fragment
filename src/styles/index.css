@@ -11,6 +11,12 @@ body {
   --grey: 'rgb(100,100,100)';
   --primary: 'red';
   background-color: black;
+  overflow: hidden;
+  cursor: none;
+}
+
+a{
+  cursor: none;
 }
 
 code {

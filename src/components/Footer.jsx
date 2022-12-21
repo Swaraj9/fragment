@@ -1,16 +1,16 @@
 import React from 'react'
-import {BsTwitter} from 'react-icons/bs'
-import {FaDiscord, FaEnvelope} from 'react-icons/fa'
+import {FaDiscord} from 'react-icons/fa'
+import '../styles/footer.css'
 
 const Footer = () => {
   return (
-    <div style={{paddingTop:'5rem', backgroundColor:'rgb(235,235,235,0.1)', display:'flex', flexDirection:'column', padding:'3rem', alignItems:'center'}}>
-      <div style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', width:'100%', marginBottom:'3rem'}}>
+    <div style={{display:'flex', height:'100vh', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+      {/*<div style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly', width:'100%', marginBottom:'3rem'}}>
         <div style={{}}>
           <div style={{fontSize:'2.5rem', marginBottom:'1rem'}}>Fragment Studios</div>
           <div style={{fontSize:'1.25rem', marginBottom:'4rem'}}>Your next solution for Discord Development</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/Fragm3ntStudios">
+            <a style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/fragm3ntstudios">
               <BsTwitter/>
             </a>
             <a style={{color:'inherit', textDecoration:'none'}} href="https://fragmentstudios.xyz/#">
@@ -29,7 +29,10 @@ const Footer = () => {
       </div>
       <div>
         Copyright © 2022 - Fragment Studios
-      </div>
+      </div>*/}
+      <a className='discordIcon' style={{color:'inherit', textDecoration:'none', fontSize:'10rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+        <FaDiscord/>
+      </a>
     </div>
   )
 }
