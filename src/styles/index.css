@@ -12,6 +12,11 @@ body {
   --primary: 'red';
   background-color: black;
   overflow: hidden;
+  cursor: none;
+}
+
+a{
+  cursor: none;
 }
 
 code {

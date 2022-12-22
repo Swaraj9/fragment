@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
+import { useCursorContext } from '../cursorContext';
 
 const Button = ({children, ...props}) => {
   const [hover, setHover] = useState(false);
+
+  const {activateCursor, deActivateCursor} = useCursorContext();
 
   return (
     <button
       onMouseEnter={()=>{
         setHover(true);
+        activateCursor();
       }}
       onMouseLeave={()=>{
         setHover(false);
+        deActivateCursor();
       }}
 
       style={{
@@ -27,6 +32,7 @@ const Button = ({children, ...props}) => {
         transitionProperty:'all',
         transitionDuration:'0.5s',
         borderRadius:'10px',
+        cursor:'none'
     }} {...props}>{children}</button>
   )
 }

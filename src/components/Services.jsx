@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import '../styles/services.css'
+import A from './A';
 
 function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
   const baseX = useMotionValue(0);
@@ -130,16 +131,16 @@ const Services = ({scrollRef}) => {
     <div ref={myRef} id='services' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div className='parallaxTextContainer'>
         <ParallaxText scrollRef={scrollRef} baseVelocity={-5}>
-          <a className='parallaxText1' href="#strategize">Strategize</a>  
-          <a className='parallaxText2' href="#build">Build</a>
-          <a className='parallaxText1' href="#grow">Grow</a> 
-          <a className='parallaxText2' href="#operate">Operate</a>
+          <A className='parallaxText1' href="#strategize">Strategize</A>  
+          <A className='parallaxText2' href="#build">Build</A>
+          <A className='parallaxText1' href="#grow">Grow</A> 
+          <A className='parallaxText2' href="#operate">Operate</A>
         </ParallaxText>
         <ParallaxText scrollRef={scrollRef} baseVelocity={5}>
-          <a className='parallaxText1' href="#strategize">Strategize</a>  
-          <a className='parallaxText2' href="#build">Build</a>
-          <a className='parallaxText1' href="#grow">Grow</a> 
-          <a className='parallaxText2' href="#operate">Operate</a>
+          <A className='parallaxText1' href="#strategize">Strategize</A>  
+          <A className='parallaxText2' href="#build">Build</A>
+          <A className='parallaxText1' href="#grow">Grow</A> 
+          <A className='parallaxText2' href="#operate">Operate</A>
         </ParallaxText>
       </div>
       <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>

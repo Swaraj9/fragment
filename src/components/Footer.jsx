@@ -1,6 +1,7 @@
 import React from 'react'
 import {FaDiscord} from 'react-icons/fa'
 import '../styles/footer.css'
+import A from './A'
 import Button from './Button'
 
 const Footer = ({setContact}) => {
@@ -37,9 +38,9 @@ const Footer = ({setContact}) => {
           setContact(true);
         }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>
       </div>
-      <a className='discordIcon' style={{marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+      <A className='discordIcon' style={{marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
         <FaDiscord/>
-      </a>
+      </A>
     </div>
   )
 }

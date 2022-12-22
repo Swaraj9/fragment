@@ -12,6 +12,7 @@ import avatar2 from '../images/a_c36209cce64bf47a55868e60352db44b-1-e16631010851
 import '../styles/portfolio.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
+import { useCursorContext } from '../cursorContext'
 
 const Logo = ({index, src}) => {
   return(
@@ -20,6 +21,9 @@ const Logo = ({index, src}) => {
 }
 
 const Portfolio = ({setContact}) => {
+
+  const {activateCursor, deActivateCursor} = useCursorContext();
+
   return (
     <div id="portfolio" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
       <div className='portfolioTitle'>Our Portfolio</div>
@@ -52,22 +56,32 @@ const Portfolio = ({setContact}) => {
               showStatus={false} 
               renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
-                    <button onClick={onClickHandler} title={label} style={{        
-                      borderColor:'rgb(235,235,235)',
-                      boxShadow:'none',
-                      padding:'0.75rem',
-                      paddingRight:'1.5rem',
-                      paddingLeft:'1.5rem',
-                      borderStyle:'solid',
-                      fontSize:'1.1rem',
-                      borderWidth:'0.01rem',
-                      borderRadius:'10px',
-                      backgroundColor:'rgb(235,235,235,0.1)',
-                      color:'white',
-                      position:'absolute',
-                      zIndex:2,
-                      top:'calc(50% - 1.1rem)',
-                      left:'10px'
+                    <button
+                      onClick={onClickHandler} 
+                      title={label} 
+                      onMouseEnter={()=>{
+                        activateCursor();
+                      }}
+                      onMouseLeave={()=>{
+                        deActivateCursor();
+                      }}
+                      style={{        
+                        borderColor:'rgb(235,235,235)',
+                        boxShadow:'none',
+                        padding:'0.75rem',
+                        paddingRight:'1.5rem',
+                        paddingLeft:'1.5rem',
+                        borderStyle:'solid',
+                        fontSize:'1.1rem',
+                        borderWidth:'0.01rem',
+                        borderRadius:'10px',
+                        backgroundColor:'rgb(235,235,235,0.1)',
+                        color:'white',
+                        position:'absolute',
+                        zIndex:2,
+                        top:'calc(50% - 1.1rem)',
+                        left:'10px',
+                        cursor:'none'
                     }}>
                         {"<"}
                     </button>
@@ -75,22 +89,32 @@ const Portfolio = ({setContact}) => {
               }
               renderArrowNext={(onClickHandler, hasNext, label) =>
                 hasNext && (
-                    <button onClick={onClickHandler} title={label} style={{        
-                      borderColor:'rgb(235,235,235)',
-                      boxShadow:'none',
-                      padding:'0.75rem',
-                      paddingRight:'1.5rem',
-                      paddingLeft:'1.5rem',
-                      borderStyle:'solid',
-                      fontSize:'1.1rem',
-                      borderWidth:'0.01rem',
-                      borderRadius:'10px',
-                      backgroundColor:'rgb(235,235,235,0.1)',
-                      color:'white',
-                      position:'absolute',
-                      zIndex:2,
-                      top:'calc(50% - 1.1rem)',
-                      right:'10px'
+                    <button 
+                      onClick={onClickHandler} 
+                      title={label} 
+                      onMouseEnter={()=>{
+                        activateCursor();
+                      }}
+                      onMouseLeave={()=>{
+                        deActivateCursor();
+                      }}
+                      style={{        
+                        borderColor:'rgb(235,235,235)',
+                        boxShadow:'none',
+                        padding:'0.75rem',
+                        paddingRight:'1.5rem',
+                        paddingLeft:'1.5rem',
+                        borderStyle:'solid',
+                        fontSize:'1.1rem',
+                        borderWidth:'0.01rem',
+                        borderRadius:'10px',
+                        backgroundColor:'rgb(235,235,235,0.1)',
+                        color:'white',
+                        position:'absolute',
+                        zIndex:2,
+                        top:'calc(50% - 1.1rem)',
+                        right:'10px',
+                        cursor:'none'
                     }}>
                         {">"}
                     </button>
