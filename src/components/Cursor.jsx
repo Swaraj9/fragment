@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import '../styles/cursor.css'
 import { motion } from 'framer-motion'
 import { useCursorContext } from '../cursorContext';
-import innerCursor from '../images/cursorInner.png' 
+import innerCursor from '../images/Inner.png' 
+import outerCursor from '../images/outer.png'
 
 const Cursor = () => {
     const [mousePos, setMousePos] = useState({x:0,y:0});
@@ -25,31 +26,33 @@ const Cursor = () => {
         default:{
             x:mousePos.x - 15,
             y:mousePos.y - 15,
-            backgroundColor:'rgb(0,0,0,0)'
+            backgroundColor:'rgb(135,135,135,0.3)',
+            scale: [1.7, 1.8, 1.7],
+            rotate:45
         },
         active:{
             x:mousePos.x - 15,
             y:mousePos.y - 15,
-            backgroundColor:'rgb(0,0,0,0.8)',
-            scale:1.5
+            backgroundColor:'rgb(135,135,135,0.5)',
+            scale: [2.2, 2.3, 2.2],
+            rotate: -45
         }
     }
 
     const innerVariants = {
         default:{
             rotate: 0,
-            width:'85%',
-            height:'85%'
+            scale:1
         },
         active:{
-            rotate: 135,
-            width:'85%',
-            height:'85%'
+            rotate: 180,
+            scale: 0.6
         }
     }
 
     return (
-        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', x:{duration:0.01}, y:{duration:0.01}}} className='cursor'>
+        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', x:{duration:0.01}, y:{duration:0.01}, scale:{repeat:'Infinity', duration:1}}} className='cursor'>
+            <img className="outerCursor" src={outerCursor} alt="outer"/>
             <motion.img variants={innerVariants} animate={cursorActive?"active":"default"} className='innerCursor' src={innerCursor} alt="cursor"/>
         </motion.div>
     )
