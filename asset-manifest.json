@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fragment/static/css/main.3bcaf4f5.css",
-    "main.js": "/fragment/static/js/main.a9ec51af.js",
+    "main.js": "/fragment/static/js/main.46a80ce7.js",
     "static/media/fragment.gif": "/fragment/static/media/fragment.dad89600fd4da7b6aad6.gif",
     "static/media/a_-1-e1663101085141.gif": "/fragment/static/media/a_c36209cce64bf47a55868e60352db44b-1-e1663101085141.e27c791e7391ca719eb3.gif",
     "static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png": "/fragment/static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.8b05af233161c22331ca.png",
@@ -10,10 +10,10 @@
     "static/media/246x0w.webp": "/fragment/static/media/246x0w.f34eea6ac186c75bb94a.webp",
     "index.html": "/fragment/index.html",
     "main.3bcaf4f5.css.map": "/fragment/static/css/main.3bcaf4f5.css.map",
-    "main.a9ec51af.js.map": "/fragment/static/js/main.a9ec51af.js.map"
+    "main.46a80ce7.js.map": "/fragment/static/js/main.46a80ce7.js.map"
   },
   "entrypoints": [
     "static/css/main.3bcaf4f5.css",
-    "static/js/main.a9ec51af.js"
+    "static/js/main.46a80ce7.js"
   ]
 }
