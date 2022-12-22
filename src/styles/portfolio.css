@@ -8,6 +8,7 @@
     text-align: center;
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
+    width: 80%;
 }
 
 @media only screen and (max-width: 870px) {
@@ -35,5 +36,9 @@
 
     .portfolioImage{
         margin-bottom: 2rem;
+    }
+
+    .portfolioReferenceContainer{
+        flex-direction: column ;
     }
 }

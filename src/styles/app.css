@@ -2,6 +2,11 @@
     display: none;
 }
 
+.particles{
+    position: fixed;
+    z-index: -10;
+}
+
 @media only screen and (max-width: 870px) {
     .cards{
         min-width: auto;

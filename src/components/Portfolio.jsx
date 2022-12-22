@@ -53,12 +53,12 @@ const Portfolio = ({setContact}) => {
             width:'80%',
             maxWidth:'700px',
             borderRadius:'10px',
-            marginBottom:'5rem',
-            marginLeft:'5rem',
-            padding:'2rem'
+            margin:'5rem',
+            padding:'2rem',
+            boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
           }}>
-            <div style={{display:'flex'}}>
-              <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+            <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
+              <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
               <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
                 <div>Josh is one of the most elite marketers in web3.</div>
                 <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
@@ -76,12 +76,12 @@ const Portfolio = ({setContact}) => {
             width:'80%',
             maxWidth:'700px',
             borderRadius:'10px',
-            marginBottom:'5rem',
-            marginLeft:'5rem',
-            padding:'2rem'
+            margin:'5rem',
+            padding:'2rem',
+            boxShadow:'10px -10px 20px 5px rgb(255,255,255,0.3)'
           }}>
-            <div style={{display:'flex'}}>
-              <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+            <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
+              <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
               <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
                 <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
                 <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
@@ -105,7 +105,8 @@ const Portfolio = ({setContact}) => {
         borderStyle:'solid',
         maxWidth:'400px',
         textAlign:'center',
-        borderRadius:'10px'
+        borderRadius:'10px',
+        boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
       }}>
         <div style={{fontSize:'2rem', marginBottom:'1rem'}}>Recieve a Quote</div>
         <div style={{fontSize:'2rem', marginBottom:'2rem'}}>$0</div>

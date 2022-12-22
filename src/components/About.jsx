@@ -58,7 +58,8 @@ const About = ({setContact}) => {
           borderStyle:'solid',
           display:'flex',
           justifyContent:'space-between',
-          borderRadius:'10px'
+          borderRadius:'10px',
+          boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
       }}>
         <div style={{marginRight:'2rem'}}>
           <div>Have a project in mind?</div>

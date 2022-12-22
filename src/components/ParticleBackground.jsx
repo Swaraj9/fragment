@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react'
 import Particles from 'react-tsparticles';
 import {loadFull} from 'tsparticles'
+import '../styles/app.css'
 
 const ParticlesBackground = () => {
     const particlesInit = useCallback(async (engine) => {
@@ -11,8 +12,9 @@ const ParticlesBackground = () => {
         <Particles
             id="tsparticles"
             init={particlesInit}
+            className='particles'
             options={{
-                fpsLimit: 150,
+                fpsLimit: 60,
                 particles: {
                   number: {
                     value: 120,
@@ -131,6 +133,7 @@ const ParticlesBackground = () => {
                     enable:true
                 },
                 background: {
+                  zIndex:-100,
                   position: "50% 50%",
                   repeat: "no-repeat",
                   size: "cover"
