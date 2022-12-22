@@ -63,7 +63,7 @@ const ParticlesBackground = () => {
                     enable: true,
                     distance: 200,
                     color: "random",
-                    opacity: 0.4,
+                    opacity: 0.6,
                     width: 1,
                     triangles: {
                       enable: false,
