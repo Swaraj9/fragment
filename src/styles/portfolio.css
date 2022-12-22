@@ -11,6 +11,21 @@
     width: 80%;
 }
 
+.portfolioReferenceContainer{
+    background-color:rgb(235,235,235,0.1);
+    line-height:1.75rem;
+    letter-spacing:0.075rem;
+    border-width:0.05rem;
+    border-style:solid;
+    width:80%;
+    border-radius:10px;
+    margin-bottom:3rem;
+    margin-top:3rem;
+    box-shadow:10px -10px 30px 5px rgb(255,255,255,0.32);
+    padding: 2rem;
+    margin-left: 6.5rem;
+}
+
 @media only screen and (max-width: 870px) {
     .portfolioClients{
         flex-direction: column;

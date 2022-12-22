@@ -42,56 +42,81 @@ const Portfolio = ({setContact}) => {
       </motion.div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>What our clients say</div>
       <div className='portfolioSub' style={{marginBottom:'3rem'}}>See our impact on past projects by reading our client testimonials.</div>
-      <div style={{display:'block', padding:'2rem', width:'80%', maxWidth:'700px'}}>
-        <Carousel infiniteLoop showThumbs={false} showStatus={false}>
           <div className='portfolioReferences' style={{
-            backgroundColor:'rgb(235,235,235,0.1)',
-            lineHeight:'1.75rem',
-            letterSpacing:'0.075rem',
-            borderWidth:'0.05rem',
-            borderStyle:'solid',
             width:'80%',
-            maxWidth:'700px',
-            borderRadius:'10px',
-            margin:'5rem',
-            padding:'2rem',
-            boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
+            maxWidth:'1000px'
           }}>
-            <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
-              <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
-              <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-                <div>Josh is one of the most elite marketers in web3.</div>
-                <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
-                <div>Luca Netz</div>
-                <div>CEO - Pudgy Penguins</div>
+            <Carousel 
+              infiniteLoop 
+              showThumbs={false} 
+              showStatus={false} 
+              renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                hasPrev && (
+                    <button onClick={onClickHandler} title={label} style={{        
+                      borderColor:'rgb(235,235,235)',
+                      boxShadow:'none',
+                      padding:'0.75rem',
+                      paddingRight:'1.5rem',
+                      paddingLeft:'1.5rem',
+                      borderStyle:'solid',
+                      fontSize:'1.1rem',
+                      borderWidth:'0.01rem',
+                      borderRadius:'10px',
+                      backgroundColor:'rgb(235,235,235,0.1)',
+                      color:'white',
+                      position:'absolute',
+                      zIndex:2,
+                      top:'calc(50% - 1.1rem)',
+                      left:'10px'
+                    }}>
+                        {"<"}
+                    </button>
+                )
+              }
+              renderArrowNext={(onClickHandler, hasNext, label) =>
+                hasNext && (
+                    <button onClick={onClickHandler} title={label} style={{        
+                      borderColor:'rgb(235,235,235)',
+                      boxShadow:'none',
+                      padding:'0.75rem',
+                      paddingRight:'1.5rem',
+                      paddingLeft:'1.5rem',
+                      borderStyle:'solid',
+                      fontSize:'1.1rem',
+                      borderWidth:'0.01rem',
+                      borderRadius:'10px',
+                      backgroundColor:'rgb(235,235,235,0.1)',
+                      color:'white',
+                      position:'absolute',
+                      zIndex:2,
+                      top:'calc(50% - 1.1rem)',
+                      right:'10px'
+                    }}>
+                        {">"}
+                    </button>
+                )
+              }
+            >
+              <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
+                <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+                <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                  <div>Josh is one of the most elite marketers in web3.</div>
+                  <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
+                  <div>Luca Netz</div>
+                  <div>CEO - Pudgy Penguins</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='portfolioReferences' style={{
-            backgroundColor:'rgb(235,235,235,0.1)',
-            lineHeight:'1.75rem',
-            letterSpacing:'0.075rem',
-            borderWidth:'0.05rem',
-            borderStyle:'solid',
-            width:'80%',
-            maxWidth:'700px',
-            borderRadius:'10px',
-            margin:'5rem',
-            padding:'2rem',
-            boxShadow:'10px -10px 20px 5px rgb(255,255,255,0.3)'
-          }}>
-            <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
-              <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
-              <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-                <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
-                <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
-                <div>Jet</div>
-                <div>Owner - Jet's Dream World</div>
+              <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
+                <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+                <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                  <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
+                  <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
+                  <div>Jet</div>
+                  <div>Owner - Jet's Dream World</div>
+                </div>
               </div>
-            </div>
+            </Carousel>
           </div>
-        </Carousel>
-      </div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>The Best Solutions for our clients</div>
       <div className='portfolioSub' style={{width:'80%', marginBottom:'2rem'}}>We offer a customizable approach to our clients based on project needs. Click below to schedule a call to discuss your interests and receive a quote for our services.</div>
       <div style={{

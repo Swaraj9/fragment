@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 import avatarJosh from '../images/ezgif.com-gif-maker-300x300.webp'
 import avatarAstlin from '../images/astlin-300x300.gif'
 import {BsTwitter} from 'react-icons/bs'
@@ -44,28 +43,6 @@ const About = ({setContact}) => {
             </a>
           </div>
         </div>
-      </div>
-      <div
-        style={{
-          width:'60%',
-          marginBottom:'7rem',
-          padding:'2rem', 
-          paddingBottom:'2rem',
-          backgroundColor:'rgb(235,235,235,0.1)',
-          lineHeight:'1.75rem',
-          letterSpacing:'0.075rem',
-          borderWidth:'0.05rem',
-          borderStyle:'solid',
-          display:'flex',
-          justifyContent:'space-between',
-          borderRadius:'10px',
-          boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
-      }}>
-        <div style={{marginRight:'2rem'}}>
-          <div>Have a project in mind?</div>
-          <div>Schedule a call to discuss onboarding our team</div>
-        </div>
-        <Button onClick={()=>setContact(true)}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Get In Touch</a></Button>
       </div>
     </div>
   )
