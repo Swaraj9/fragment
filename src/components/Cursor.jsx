@@ -27,14 +27,14 @@ const Cursor = () => {
             x:mousePos.x - 15,
             y:mousePos.y - 15,
             backgroundColor:'rgb(135,135,135,0.3)',
-            scale: [1.7, 1.8, 1.7],
+            scale: 1.3,
             rotate:45
         },
         active:{
             x:mousePos.x - 15,
             y:mousePos.y - 15,
             backgroundColor:'rgb(135,135,135,0.5)',
-            scale: [2.2, 2.3, 2.2],
+            scale: 1.8,
             rotate: -45
         }
     }
@@ -42,7 +42,7 @@ const Cursor = () => {
     const innerVariants = {
         default:{
             rotate: 0,
-            scale:1
+            scale: 1
         },
         active:{
             rotate: 180,
@@ -51,9 +51,9 @@ const Cursor = () => {
     }
 
     return (
-        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', x:{duration:0.01}, y:{duration:0.01}, scale:{repeat:'Infinity', duration:1}}} className='cursor'>
+        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.5, x:{duration:0.01}, y:{duration:0.01}, scale:{duration:0.5}}} className='cursor'>
             <img className="outerCursor" src={outerCursor} alt="outer"/>
-            <motion.img variants={innerVariants} animate={cursorActive?"active":"default"} className='innerCursor' src={innerCursor} alt="cursor"/>
+            <motion.img variants={innerVariants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.5}} className='innerCursor' src={innerCursor} alt="cursor"/>
         </motion.div>
     )
 }

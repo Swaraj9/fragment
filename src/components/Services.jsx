@@ -152,19 +152,19 @@ const Services = ({scrollRef}) => {
           <div style={{position:'absolute', height:'85%', width:'2px', backgroundColor:'rgb(135,135,135,0.25)', boxShadow:'0 0 21px 9px rgb(135,135,135,0.1)', marginLeft:'8.7rem', zIndex:-10}}></div>
           <div id="strategize" style={{display:'flex'}}>
             <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Strategize</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[0]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
+            <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[0]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="build" style={{display:'flex'}}>
             <div style={{color:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Build</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[1]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
+            <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[1]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="grow" style={{display:'flex'}}>
             <div style={{color:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Grow</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[2]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
+            <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[2]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
           <div id="operate" style={{display:'flex'}}>
             <div style={{color:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Operate</div>
-            <div style={{transition:'all 0.5s', boxShadow:activeCircles[3]?'0 0 14px 9px white':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
+            <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[3]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
           </div>
         </div>
         <div>
