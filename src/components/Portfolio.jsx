@@ -7,7 +7,7 @@ import logo5 from '../images/warner-music-logo-puy3lpiwf7d83rvwvqeq6v70c3gk455v8
 import logo6 from '../images/246x0w.webp'
 import {motion} from 'framer-motion'
 import Button from './Button'
-import avatar1 from '../images/luca-netz-pfp-1-e1663100654437.jpg'
+import avatar1 from '../images/luca.avif'
 import avatar2 from '../images/a_c36209cce64bf47a55868e60352db44b-1-e1663101085141.gif'
 import '../styles/portfolio.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -23,7 +23,7 @@ const Portfolio = ({setContact}) => {
   return (
     <div id="portfolio" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
       <div className='portfolioTitle'>Our Portfolio</div>
-      <div className='portfolioSub' style={{width:'80%'}}>Check out a list of notable past client projects with niches including Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+      <div className='portfolioSub' style={{width:'80%'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
       <motion.div 
         initial={{opacity:0, translateX:-300}}
         whileInView={{opacity:1, translateX:0}}
@@ -31,7 +31,7 @@ const Portfolio = ({setContact}) => {
         className="portfolioClients"
         style={{marginTop:'4rem', display:'flex', justifyContent:'space-evenly', width:'100%', alignItems:'center', marginBottom:'7rem'}}
       >
-        <div style={{fontSize:'2rem', width:'15rem', textAlign: 'center'}}>43+ Trusted Clients</div>
+        <div style={{fontSize:'2rem', width:'15rem', textAlign: 'center'}}>63+ Trusted Clients</div>
         <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
         <Logo index={0} src={logo1}/>
         <Logo index={4} src={logo5}/>
@@ -42,36 +42,52 @@ const Portfolio = ({setContact}) => {
       </motion.div>
       <div className='portfolioTitle' style={{textAlign:'center'}}>What our clients say</div>
       <div className='portfolioSub' style={{marginBottom:'3rem'}}>See our impact on past projects by reading our client testimonials.</div>
-      <div className='portfolioReferences' style={{
-        marginBottom:'7rem',
-        padding:'2rem', 
-        paddingBottom:'2rem',
-        backgroundColor:'rgb(235,235,235,0.1)',
-        lineHeight:'1.75rem',
-        letterSpacing:'0.075rem',
-        borderWidth:'0.05rem',
-        borderStyle:'solid',
-        width:'80%',
-        maxWidth:'700px',
-        borderRadius:'10px'
-      }}>
+      <div style={{display:'block', padding:'2rem', width:'80%', maxWidth:'700px'}}>
         <Carousel infiniteLoop showThumbs={false} showStatus={false}>
-          <div style={{display:'flex'}}>
-            <img className='portfolioImage' src={avatar1} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
-            <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-              <div>Josh is one of the most elite marketers in web3.</div>
-              <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
-              <div>Luca Netz</div>
-              <div>CEO - Pudgy Penguins</div>
+          <div className='portfolioReferences' style={{
+            backgroundColor:'rgb(235,235,235,0.1)',
+            lineHeight:'1.75rem',
+            letterSpacing:'0.075rem',
+            borderWidth:'0.05rem',
+            borderStyle:'solid',
+            width:'80%',
+            maxWidth:'700px',
+            borderRadius:'10px',
+            marginBottom:'5rem',
+            marginLeft:'5rem',
+            padding:'2rem'
+          }}>
+            <div style={{display:'flex'}}>
+              <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+              <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                <div>Josh is one of the most elite marketers in web3.</div>
+                <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
+                <div>Luca Netz</div>
+                <div>CEO - Pudgy Penguins</div>
+              </div>
             </div>
           </div>
-          <div style={{display:'flex'}}>
-            <img className='portfolioImage' src={avatar2} alt="Avatar" style={{borderRadius:'0.5rem', marginRight:'2rem'}}/>
-            <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-              <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
-              <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
-              <div>Jet</div>
-              <div>Owner - Jet's Dream World</div>
+          <div className='portfolioReferences' style={{
+            backgroundColor:'rgb(235,235,235,0.1)',
+            lineHeight:'1.75rem',
+            letterSpacing:'0.075rem',
+            borderWidth:'0.05rem',
+            borderStyle:'solid',
+            width:'80%',
+            maxWidth:'700px',
+            borderRadius:'10px',
+            marginBottom:'5rem',
+            marginLeft:'5rem',
+            padding:'2rem'
+          }}>
+            <div style={{display:'flex'}}>
+              <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+              <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
+                <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
+                <div>Jet</div>
+                <div>Owner - Jet's Dream World</div>
+              </div>
             </div>
           </div>
         </Carousel>
