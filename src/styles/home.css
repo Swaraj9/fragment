@@ -6,6 +6,8 @@
 .homeSub{
     margin-bottom: 2rem;
     font-size: 2rem;
+    width: 80%;
+    text-align: center;
 }
 
 @media only screen and (max-width: 870px) {
@@ -26,6 +28,6 @@
     }
 
     .homeSub{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }

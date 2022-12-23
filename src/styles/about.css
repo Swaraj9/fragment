@@ -22,10 +22,13 @@
 @media only screen and (max-width: 870px) {
     .aboutFounders{
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
     }
 
     .aboutFounder{
         margin-right: 0rem;
+        padding: 0.5rem;
+        box-shadow: none;
+        width: 80%;
     }
 }

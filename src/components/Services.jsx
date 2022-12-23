@@ -61,38 +61,23 @@ const Subcard = ({title, text, index})=>{
       transition={{duration:0.5, delay:index*0.2}}
       ref = {myRef}
       className='subCard'
-      style={{
-        padding:'2rem', 
-        paddingBottom:'2rem',
-        marginRight:'1.5rem',
-        marginLeft:'1.5rem',
-        paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem',
-        lineHeight:'1.75rem',
-        letterSpacing:'0.075rem',
-        position:'relative'
-      }}
+      style={{paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div style={{fontSize:'2rem', marginBottom:'1.5rem'}}>{title}</div>
-      <div>{text}</div>
+      <div className='subCardTitle'>{title}</div>
+      <div className='subCardText'>{text}</div>
     </motion.div>
   )
 }
 
-const Card = ({main, sub, style, active, deactive}) => {
+const Card = ({main, sub, active, deactive}) => {
   return (
     <motion.div 
       onViewportEnter={()=>{active()}}
       onViewportLeave={()=>{deactive()}}
-      viewport={{margin:'-250px'}}
-      style={{
-        padding:'2rem', 
-        borderRadius:'0.25rem',
-        paddingBottom:'2rem',
-        marginBottom:'1rem',
-        transition:'all 0.5s',
-        ...style
-    }}>
-      <div style={{fontSize:'2.5rem', paddingBottom:'2rem'}}>{main}</div>
+      viewport={{margin:window.innerWidth >= 870 ? '-250px' : '250px'}}
+      className='card'
+    >
+      <div className='cardTitle'>{main}</div>
       <div className='subcardContainer' style={{display:'flex', width:"100%", justifyContent:'space-evenly', alignItems:'flex-start'}}>
         {sub.map((item, index) => <Subcard title={item[0]} text={item[1]} index={index}/>)}
       </div>

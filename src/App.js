@@ -64,7 +64,7 @@ function App() {
                 { !contact ?
                   <div>
                     <Home/>
-                    <Services/>
+                    <Services scrollRef={scrollDiv}/>
                     <Portfolio setContact={setContact}/>
                     <About setContact={setContact}/>
                   </div> : <Contact/>

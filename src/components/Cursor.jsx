@@ -27,14 +27,14 @@ const Cursor = () => {
             x:mousePos.x - 15,
             y:mousePos.y - 15,
             backgroundColor:'rgb(135,135,135,0.3)',
-            scale: 1.3,
+            scale: 1,
             rotate:45
         },
         active:{
             x:mousePos.x - 15,
             y:mousePos.y - 15,
             backgroundColor:'rgb(135,135,135,0.5)',
-            scale: 1.8,
+            scale: 1.5,
             rotate: -45
         }
     }
@@ -51,7 +51,7 @@ const Cursor = () => {
     }
 
     return (
-        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.5, x:{duration:0.01}, y:{duration:0.01}, scale:{duration:0.5}}} className='cursor'>
+        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.1, x:{duration:0.01}, y:{duration:0.01}}} className='cursor'>
             <img className="outerCursor" src={outerCursor} alt="outer"/>
             <motion.img variants={innerVariants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.5}} className='innerCursor' src={innerCursor} alt="cursor"/>
         </motion.div>

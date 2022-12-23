@@ -25,7 +25,7 @@ const Portfolio = ({setContact}) => {
   const {activateCursor, deActivateCursor} = useCursorContext();
 
   return (
-    <div id="portfolio" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
+    <div id="portfolio" style={{width:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'5rem'}}>
       <div className='portfolioTitle'>Our Portfolio</div>
       <div className='portfolioSub' style={{width:'80%'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
       <motion.div 
@@ -44,12 +44,9 @@ const Portfolio = ({setContact}) => {
         <Logo index={1} src={logo2}/>
         <Logo index={2} src={logo3}/>
       </motion.div>
-      <div className='portfolioTitle' style={{textAlign:'center'}}>What our clients say</div>
-      <div className='portfolioSub' style={{marginBottom:'3rem'}}>See our impact on past projects by reading our client testimonials.</div>
-          <div className='portfolioReferences' style={{
-            width:'80%',
-            maxWidth:'1000px'
-          }}>
+      <div className='portfolioTitle'>What our clients say</div>
+      <div className='portfolioSub'>See our impact on past projects by reading our client testimonials.</div>
+          <div className='portfolioReferences'>
             <Carousel 
               infiniteLoop 
               showThumbs={false} 
@@ -65,7 +62,8 @@ const Portfolio = ({setContact}) => {
                       onMouseLeave={()=>{
                         deActivateCursor();
                       }}
-                      style={{        
+                      style={{
+                        display:window.innerWidth >= 870 ? 'block' : 'none',        
                         borderColor:'rgb(235,235,235)',
                         boxShadow:'none',
                         padding:'0.75rem',
@@ -81,7 +79,7 @@ const Portfolio = ({setContact}) => {
                         zIndex:2,
                         top:'calc(50% - 1.1rem)',
                         left:'10px',
-                        cursor:'none'
+                        cursor:'none',
                     }}>
                         {"<"}
                     </button>
@@ -98,7 +96,8 @@ const Portfolio = ({setContact}) => {
                       onMouseLeave={()=>{
                         deActivateCursor();
                       }}
-                      style={{        
+                      style={{
+                        display:window.innerWidth >= 870 ? 'block' : 'none',        
                         borderColor:'rgb(235,235,235)',
                         boxShadow:'none',
                         padding:'0.75rem',
@@ -114,15 +113,15 @@ const Portfolio = ({setContact}) => {
                         zIndex:2,
                         top:'calc(50% - 1.1rem)',
                         right:'10px',
-                        cursor:'none'
+                        cursor:'none',
                     }}>
                         {">"}
                     </button>
                 )
               }
             >
-              <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
-                <img className='portfolioImage' src={avatar1} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+              <div className='portfolioReferenceContainer'>
+                <img className='portfolioImage' src={avatar1} alt="Avatar"/>
                 <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
                   <div>Josh is one of the most elite marketers in web3.</div>
                   <div style={{marginBottom:'2rem'}}>His growth is different and he is nothing short of professional! Great management team as well!</div>
@@ -130,8 +129,8 @@ const Portfolio = ({setContact}) => {
                   <div>CEO - Pudgy Penguins</div>
                 </div>
               </div>
-              <div className='portfolioReferenceContainer' style={{alignItems:'center', display:'flex'}}>
-                <img className='portfolioImage' src={avatar2} alt="Avatar" style={{maxWidth:'220px', maxHeight:'300px', borderRadius:'0.5rem', marginRight:'2rem'}}/>
+              <div className='portfolioReferenceContainer'>
+                <img className='portfolioImage' src={avatar2} alt="Avatar"/>
                 <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
                   <div>Helped grow my 2 million member network and provided me hundreds of thousands of joins.</div>
                   <div style={{marginBottom:'2rem'}}>One of the best teams on the platform.</div>
@@ -140,26 +139,13 @@ const Portfolio = ({setContact}) => {
                 </div>
               </div>
             </Carousel>
-          </div>
-      <div className='portfolioTitle' style={{textAlign:'center'}}>The Best Solutions for our clients</div>
-      <div className='portfolioSub' style={{width:'80%', marginBottom:'2rem'}}>We offer a customizable approach to our clients based on project needs. Click below to schedule a call to discuss your interests and receive a quote for our services.</div>
-      <div style={{
-        marginBottom:'7rem',
-        padding:'2rem', 
-        paddingBottom:'2rem',
-        backgroundColor:'rgb(235,235,235,0.1)',
-        lineHeight:'1.75rem',
-        letterSpacing:'0.075rem',
-        borderWidth:'0.05rem',
-        borderStyle:'solid',
-        maxWidth:'400px',
-        textAlign:'center',
-        borderRadius:'10px',
-        boxShadow:'10px -10px 30px 5px rgb(255,255,255,0.32)'
-      }}>
-        <div style={{fontSize:'2rem', marginBottom:'1rem'}}>Recieve a Quote</div>
-        <div style={{fontSize:'2rem', marginBottom:'2rem'}}>$0</div>
-        <div style={{marginBottom:'2rem', textAlign:'start', paddingLeft:'3rem'}}>
+      </div>
+      <div className='portfolioTitle'>The Best Solutions for our clients</div>
+      <div className='portfolioSub'>We offer a customizable approach to our clients based on project needs. Click below to schedule a call to discuss your interests and receive a quote for our services.</div>
+      <div className='portfolioCard'>
+        <div className='portfolioTitle' style={{width:'100%'}}>Recieve a Quote</div>
+        <div className='portfolioTitle'>$0</div>
+        <div style={{marginBottom:'2rem', textAlign:'start'}}>
           - Custom Solutions<br/>
           - Community Management<br/>
           - Multiplatform Marketing Plan<br/>
