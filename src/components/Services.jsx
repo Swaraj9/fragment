@@ -56,9 +56,10 @@ const Subcard = ({title, text, index})=>{
 
   return(
     <motion.div
-      initial={{opacity:0, translateY: 300}}
+      initial={{opacity:0, translateY: 200}}
       whileInView={{opacity:1, translateY: 0}}
-      transition={{duration:0.5, delay:index*0.2}}
+      transition={{duration:0.5, delay: window.innerWidth >= 600 ? index*0.2 : 0}}
+      viewport={{margin:'400px'}}
       ref = {myRef}
       className='subCard'
       style={{paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
@@ -74,7 +75,7 @@ const Card = ({main, sub, active, deactive, id}) => {
     <motion.div 
       onViewportEnter={()=>{active()}}
       onViewportLeave={()=>{deactive()}}
-      viewport={{margin:window.innerWidth >= 870 ? '-250px' : '250px'}}
+      viewport={{}}
       className='card'
       id={id}
     >
@@ -155,10 +156,10 @@ const Services = ({scrollRef}) => {
           </div>
         </div>
         {inServices && <div className='servicesMobile'>
-          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Strategize</a></div>
-          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
-          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
-          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Operate</a></div>
+          <div className="servicesMobileButton" style={{backgroundColor:activeCircles[0]?'white':'transparent', color:activeCircles[0]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Strategize</a></div>
+          <div className="servicesMobileButton" style={{backgroundColor:activeCircles[1]?'white':'transparent', color:activeCircles[1]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
+          <div className="servicesMobileButton" style={{backgroundColor:activeCircles[2]?'white':'transparent', color:activeCircles[2]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
+          <div className="servicesMobileButton" style={{backgroundColor:activeCircles[3]?'white':'transparent', color:activeCircles[3]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Operate</a></div>
         </div>}
         <div>
           <Card
@@ -188,7 +189,7 @@ const Services = ({scrollRef}) => {
             deactive={() => {setCricle(3, false)}}
             main="Launch Your Community" 
             sub={[["Moderation","Bring on our experienced globally-based moderation team to engage with the community and keep the server safe."], ["Engage", "Have our event team create an event calendar and host regular server activities to nurture a tight knit community."], ["Analyze", "Our team will provide you 24/7 up-to-date analytics of community growth, engagement, and retention to adapt to shortcomings and increase the quality of the community."]]}
-          /> className="servicesMobileButton"
+          /> 
         </div>
       </motion.div>
     </div>
