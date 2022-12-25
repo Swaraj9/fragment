@@ -69,13 +69,14 @@ const Subcard = ({title, text, index})=>{
   )
 }
 
-const Card = ({main, sub, active, deactive}) => {
+const Card = ({main, sub, active, deactive, id}) => {
   return (
     <motion.div 
       onViewportEnter={()=>{active()}}
       onViewportLeave={()=>{deactive()}}
       viewport={{margin:window.innerWidth >= 870 ? '-250px' : '250px'}}
       className='card'
+      id={id}
     >
       <div className='cardTitle'>{main}</div>
       <div className='subcardContainer' style={{display:'flex', width:"100%", justifyContent:'space-evenly', alignItems:'flex-start'}}>
@@ -89,6 +90,7 @@ const Card = ({main, sub, active, deactive}) => {
 const Services = ({scrollRef}) => {  
 
   const [activeCircles, setActiveCircles] = useState([false,false,false,false]);
+  const [inServices, setInServices] = useState(false);
 
   const myRef = useRef(null);
   const cardsRef = useRef(null);
@@ -132,53 +134,63 @@ const Services = ({scrollRef}) => {
         <div className='servicesTitle'>Our Services</div>
         <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community' needs.</div>
       </div>
-      <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
+      <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)} ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
         <div className='servicesSticky'>
           <div style={{position:'absolute', height:'85%', width:'2px', backgroundColor:'rgb(135,135,135,0.25)', boxShadow:'0 0 21px 9px rgb(135,135,135,0.1)', marginLeft:'8.7rem', zIndex:-10}}></div>
-          <div id="strategize" style={{display:'flex'}}>
+          <div style={{display:'flex'}}>
             <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Strategize</div>
             <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[0]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div id="build" style={{display:'flex'}}>
+          <div style={{display:'flex'}}>
             <div style={{color:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Build</div>
             <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[1]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div id="grow" style={{display:'flex'}}>
+          <div style={{display:'flex'}}>
             <div style={{color:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Grow</div>
             <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[2]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
           </div>
-          <div id="operate" style={{display:'flex'}}>
+          <div style={{display:'flex'}}>
             <div style={{color:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Operate</div>
             <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[3]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
           </div>
         </div>
+        {inServices && <div className='servicesMobile'>
+          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Strategize</a></div>
+          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
+          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
+          <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Operate</a></div>
+        </div>}
         <div>
-          <Card 
+          <Card
+            id="strategize" 
             active={() => {setCricle(0, true)}}
             deactive={() => {setCricle(0, false)}}
             main="Craft Your Road Map" 
             sub={[["Assess","We analyze your product info, community/product roadmap, graphic assets, marketing materials, and community/product roadmap to build a rough draft of how the community will be organized and released."], ["Collaborate", "Meet with our team to discuss server goals, key performance indicators, and aesthetic preferences to align our visions and begin crafting the final community plan."], ["Map", ""]]}
           />
-          <Card 
+          <Card
+            id="build" 
             active={() => {setCricle(1, true)}}
             deactive={() => {setCricle(1, false)}}
             main="Build Out Your Community" 
             sub={[["Structure","We create a skeleton of the community structure to build upon and aid in the creative process."], ["Develop", "Setup a role hierarchy and secure role/channel based permissions. Also introduce a bot structure for community security, general server needs, and increased engagement."], ["Design", "Using the community plan, we optimize and design the community structure to meet the desired aesthetic through graphic utilization, role/channel name customization, and introducing company specific channels"]]}
           />
-          <Card 
+          <Card
+            id="grow" 
             active={() => {setCricle(2, true)}}
             deactive={() => {setCricle(2, false)}}
             main="Champion Your Growth" 
             sub={[["Create","We make and post shareable content that will champion your growth and heighten your product awareness."], ["Amplify", "We use organic growth strategies to boost your social presence."], ["Partner", "We promote your project through our vast network of communities, projects, and influencers."]]}
           />
-          <Card 
+          <Card
+            id="operate" 
             active={() => {setCricle(3, true)}}
             deactive={() => {setCricle(3, false)}}
             main="Launch Your Community" 
             sub={[["Moderation","Bring on our experienced globally-based moderation team to engage with the community and keep the server safe."], ["Engage", "Have our event team create an event calendar and host regular server activities to nurture a tight knit community."], ["Analyze", "Our team will provide you 24/7 up-to-date analytics of community growth, engagement, and retention to adapt to shortcomings and increase the quality of the community."]]}
-          />
+          /> className="servicesMobileButton"
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

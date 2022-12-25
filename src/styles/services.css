@@ -57,11 +57,32 @@
     .subCard{
         margin-left: 0;
         margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .subCardText{
         font-size: 0.8rem;
     }
+}
+
+.servicesMobile{
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    justify-content: space-evenly;
+    background-color: rgb(35,35,35, 0.6);
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.servicesMobileButton{
+    border: 1px solid white;
+    padding: 0.6rem;
+    border-radius: 30px;
 }
 
 @media only screen and (max-width: 870px) {
@@ -80,6 +101,10 @@
 
     .servicesSticky{
         display: none;
+    }
+
+    .servicesMobile{
+        display: flex;
     }
 }
 

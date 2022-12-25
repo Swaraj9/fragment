@@ -24,3 +24,9 @@
     height: 100%;
     position: absolute;
 }
+
+@media only screen and (max-width:500px){
+    .cursor{
+        display: none;
+    }
+}
