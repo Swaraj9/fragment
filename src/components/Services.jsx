@@ -75,7 +75,7 @@ const Card = ({main, sub, active, deactive, id}) => {
     <motion.div 
       onViewportEnter={()=>{active()}}
       onViewportLeave={()=>{deactive()}}
-      viewport={{}}
+      viewport={{margin:'-250px'}}
       className='card'
       id={id}
     >
