@@ -43,8 +43,10 @@
 @media only screen and (max-width: 600px){
     .cardTitle{
         font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         margin-top: 5rem;
+        padding-bottom: 1rem;
+        border-bottom: solid rgb(235,235,235, 0.2) 1px;
     }
 
     .subCardTitle{
@@ -61,10 +63,12 @@
     .subCard{
         margin-left: 0;
         margin-right: 0;
-        padding-left: 0.5rem;
+        padding-left: 1rem;
         padding-right: 0;
+        padding-bottom: 0;
         line-height: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
+        border-left: solid rgb(235,235,235, 0.15) 2px;
     }
 
     .subCardText{
@@ -83,6 +87,7 @@
     width: 100%;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    font-size: 0.7rem;
 }
 
 .servicesMobileButton{

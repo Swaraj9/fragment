@@ -51,7 +51,7 @@ const Cursor = () => {
     }
 
     return (
-        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.1, x:{duration:0.01}, y:{duration:0.01}}} className='cursor'>
+        <motion.div variants={variants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.1, x:{duration:0.005}, y:{duration:0.005}}} className='cursor'>
             <img className="outerCursor" src={outerCursor} alt="outer"/>
             <motion.img variants={innerVariants} animate={cursorActive?"active":"default"} transition={{ease:'linear', duration:0.5}} className='innerCursor' src={innerCursor} alt="cursor"/>
         </motion.div>

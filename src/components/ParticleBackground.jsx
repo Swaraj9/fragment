@@ -114,8 +114,8 @@ const ParticlesBackground = () => {
                       }
                     },
                     bubble: {
-                      distance: 200,
-                      size: 15,
+                      distance: 100,
+                      size: 10,
                       duration: 2,
                       opacity: 0.8,
                       speed: 3
