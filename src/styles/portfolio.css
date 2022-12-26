@@ -63,6 +63,10 @@
     display: block;
 }
 
+.portfolioLine{
+    margin-left: 2rem;
+}
+
 @media only screen and (max-width: 600px){
     .portfolioImage{
         display: none;
@@ -72,8 +76,16 @@
 @media only screen and (max-width: 870px) {
     .portfolioClients{
         flex-direction: column;
-        justify-content: space-evenly;
-        height: 1000px;
+    }
+
+    .logos{
+        flex-wrap: wrap;
+        padding-left: 3rem;    
+    }
+
+    .logo{
+        margin-right: 3rem;
+        margin-top: 3rem;
     }
 
     .portfolioCard{
