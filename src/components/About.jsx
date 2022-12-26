@@ -2,7 +2,7 @@ import React from 'react'
 import avatarJosh from '../images/ezgif.com-gif-maker-300x300.webp'
 import avatarAstlin from '../images/astlin-300x300.gif'
 import {BsTwitter} from 'react-icons/bs'
-import {FaDiscord, FaEnvelope} from 'react-icons/fa'
+import {FaDiscord, FaEnvelope, FaLinkedin} from 'react-icons/fa'
 import '../styles/about.css'
 import A from './A'
 
@@ -17,13 +17,16 @@ const About = ({setContact}) => {
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Josh (JXSH)</div>
           <div style={{marginBottom:'1rem'}}>CEO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <A style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/jxshdiscord" target="blank">
-              <BsTwitter/>
-            </A>
             <A style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/399266210442772480" target="blank">
               <FaDiscord/>
             </A>
-            <A style={{color:'inherit', textDecoration:'none'}} href="josh@fragmentstudios.xyz" target="blank">
+            <A style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/jxshdiscord" target="blank">
+              <BsTwitter/>
+            </A>
+            <A style={{color:'inherit', textDecoration:'none'}} href="https://www.linkedin.com/in/joshuamaizes/" target="blank">
+              <FaLinkedin/>
+            </A>
+            <A style={{color:'inherit', textDecoration:'none'}} href="mailto:josh@fragmentstudios.xyz" target="blank">
               <FaEnvelope/> 
             </A>
           </div>
@@ -33,13 +36,13 @@ const About = ({setContact}) => {
           <div style={{fontSize:'1.5rem',marginTop:'0.5rem', marginBottom:'1rem'}}>Astlin</div>
           <div style={{marginBottom:'1rem'}}>COO and Co-Founder</div>
           <div style={{display:'flex', justifyContent:'space-evenly', fontSize:'1.75rem'}}>
-            <A style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xAstlin" target="blank">
-              <BsTwitter/>
-            </A>
             <A style={{color:'inherit', textDecoration:'none'}} href="https://discord.com/users/338586922081583104" target="blank">
               <FaDiscord/>
             </A>
-            <A style={{color:'inherit', textDecoration:'none'}} href="astlin@fragmentstudios.xyz" target="blank">
+            <A style={{color:'inherit', textDecoration:'none'}} href="https://twitter.com/0xAstlin" target="blank">
+              <BsTwitter/>
+            </A>
+            <A style={{color:'inherit', textDecoration:'none'}} href="mailto:astlin@fragmentstudios.xyz" target="blank">
               <FaEnvelope/> 
             </A>
           </div>

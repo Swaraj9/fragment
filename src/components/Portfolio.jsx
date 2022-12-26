@@ -5,6 +5,7 @@ import logo3 from '../images/goat-society-logo-2-puy3lol0l5zjr36qn6zgpm5rvoqdhth
 import logo4 from '../images/pudgy-logo-puy3lpiupt30hsqorrcj6azbf7e5rxfimn7cvxvzzc.png'
 import logo5 from '../images/warner-music-logo-puy3lpiwf7d83rvwvqeq6v70c3gk455v89xmnrf5d4.png'
 import logo6 from '../images/246x0w.webp'
+import logo7 from '../images/opera.png'
 import {motion} from 'framer-motion'
 import Button from './Button'
 import avatar1 from '../images/luca.avif'
@@ -13,6 +14,7 @@ import '../styles/portfolio.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
 import { useCursorContext } from '../cursorContext'
+import {TiArrowLeftThick, TiArrowRightThick} from 'react-icons/ti'
 
 const Logo = ({index, src}) => {
   return(
@@ -39,6 +41,7 @@ const Portfolio = ({setContact}) => {
         <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
         <Logo index={0} src={logo1}/>
         <Logo index={4} src={logo5}/>
+        <Logo index={6} src={logo7}/>
         <Logo index={5} src={logo6}/>
         <Logo index={3} src={logo4}/>
         <Logo index={1} src={logo2}/>
@@ -70,9 +73,8 @@ const Portfolio = ({setContact}) => {
                         paddingRight:'1rem',
                         paddingLeft:'1rem',
                         borderStyle:'solid',
-                        fontSize:'1.1rem',
                         borderWidth:'0.01rem',
-                        borderRadius:'20',
+                        borderRadius:'20px',
                         backgroundColor:'rgb(235,235,235,0.1)',
                         color:'white',
                         position:'absolute',
@@ -80,8 +82,9 @@ const Portfolio = ({setContact}) => {
                         top:'calc(50% - 1.1rem)',
                         left:'10px',
                         cursor:'none',
+                        fontSize: '1.5rem'
                     }}>
-                        {"<"}
+                        <TiArrowLeftThick/>
                     </button>
                 )
               }
@@ -104,7 +107,6 @@ const Portfolio = ({setContact}) => {
                         paddingRight:'1rem',
                         paddingLeft:'1rem',
                         borderStyle:'solid',
-                        fontSize:'1.1rem',
                         borderWidth:'0.01rem',
                         borderRadius:'20px',
                         backgroundColor:'rgb(235,235,235,0.1)',
@@ -114,8 +116,9 @@ const Portfolio = ({setContact}) => {
                         top:'calc(50% - 1.1rem)',
                         right:'10px',
                         cursor:'none',
+                        fontSize: '1.5rem'
                     }}>
-                        {">"}
+                        <TiArrowRightThick/>
                     </button>
                 )
               }
