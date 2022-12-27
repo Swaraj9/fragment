@@ -63,10 +63,10 @@ function App() {
                 <Navbar setContact={setContact} contact={contact}/>
                 { !contact ?
                   <div>
-                    <Home/>
-                    <Services scrollRef={scrollDiv}/>
-                    <Portfolio setContact={setContact}/>
-                    <About setContact={setContact}/>
+                      <Home/>
+                      <Services scrollRef={scrollDiv}/>
+                      <Portfolio setContact={setContact}/>
+                      <About setContact={setContact}/>
                   </div> : <Contact/>
                 }
                 <Footer setContact={setContact}/>

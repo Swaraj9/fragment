@@ -1,0 +1,50 @@
+
+  
+.animation-wrapper {
+    width: 100%;
+    padding-bottom: 50%;
+    position: fixed;
+    z-index: -10;
+}
+  
+.sphere-animation {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 580px;
+    height: 580px;
+    margin: -290px 0 0 -290px;
+}
+
+.sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(140, 0, 255, 0.8);
+    backface-visibility: hidden;
+    animation: 5s infinite changeColor;
+}
+
+@keyframes changeColor{
+    0% {
+        stroke: rgba(140,0,255,0);
+    }
+
+    20% {
+        stroke: rgba(140,0,255,0.8);
+    }
+    
+    80% {
+        stroke: rgba(140,0,255,0.8);
+    }
+
+    100% {
+        stroke: rgba( 140, 0, 255, 0);
+    }
+}
+
+
+@media (min-width: 500px) {
+    .sphere path {
+        stroke-width: .4px;
+    }
+}
