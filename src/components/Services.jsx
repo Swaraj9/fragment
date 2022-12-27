@@ -122,14 +122,14 @@ const Services = ({scrollRef}) => {
     
     const userInterval = setInterval(()=>{
       setUsers(users => {
-        if(users < 200000){
-          return users + 1000
+        if(users < 2000000){
+          return users + 10000
         }else{
           clearInterval(userInterval)
           return users
         }
       })
-    }, 50)
+    }, 10)
     
   }
 
