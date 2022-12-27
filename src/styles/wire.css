@@ -1,6 +1,6 @@
 .wireHome{
     width: 4px;
-    background: linear-gradient(black, blueviolet, blueviolet, black);
+    background: linear-gradient(transparent, blueviolet, blueviolet, transparent);
     height: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;

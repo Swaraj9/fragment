@@ -62,7 +62,7 @@ import AnimatedIcon from './AnimatedIcon';
 
 const Logo = ({index, src}) => {
   return(
-    <motion.img className='logo' style={{height:'80px'}} whileHover={{scale:1.2, rotate:45}} src={src} alt={`Logo ${index}`}/>
+    <motion.img className='logo' style={{height:'80px'}} whileHover={{scale:1.3}} src={src} alt={`Logo ${index}`}/>
   )
 }
 

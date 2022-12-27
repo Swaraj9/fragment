@@ -11,7 +11,7 @@ const ParticlesBackground = ({paraX, paraY}) => {
     // }, []);
 
     const draw = {
-      hidden: { pathLength: 0, x: 0, y: 0, scale: 1, color: 'red'},
+      hidden: { pathLength: 0, x: 0, y: 0, scale: 1},
       visible: (i) => {
         const delay = 1 + i * 0.5;
         return {
@@ -20,12 +20,11 @@ const ParticlesBackground = ({paraX, paraY}) => {
           //scale: [1, 1.05, 1],
           x: [i*0.3, i * -0.3, i*0.3],
           y: [i*0.3, i * -0.3, i*0.3],
-          color: 'purple',
           transition: {
             pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-            x: {delay, duration: 5, repeat: 'Infinity'},
-            y: {delay, duration: 5, repeat: 'Infinity'},
-            scale: {duration: 5, repeat: 'Infinity'}
+            x: {delay, duration: 8, repeat: 'Infinity'},
+            y: {delay, duration: 8, repeat: 'Infinity'},
+            scale: {duration: 8, repeat: 'Infinity'},
           }
         };
       }
