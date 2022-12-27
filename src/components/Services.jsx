@@ -17,8 +17,10 @@ import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
 import '../styles/wire.css'
-import { FaTwitch} from 'react-icons/fa';
-import AnimatedIcon from './AnimatedIcon';
+import inlinePink from '../images/inlinePink.png';
+import inlineRed from '../images/inlineRed.png';
+import inlineOrange from '../images/inlineOrange.png';
+import inlineViolet from '../images/inlineViolet.png';
 // import A from './A';
 
 // function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
@@ -103,7 +105,7 @@ const Card = ({main, sub, active, deactive, id}) => {
 }
 
 
-const Services = ({scrollRef}) => {  
+const Services = () => {  
 
   const [activeCircles, setActiveCircles] = useState([false,false,false,false]);
   const [inServices, setInServices] = useState(false);
@@ -159,24 +161,47 @@ const Services = ({scrollRef}) => {
   }
 
   return (
-    <div style={{display:'flex'}}>
+    <div style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
-        <AnimatedIcon>
-          <FaTwitch/>
-        </AnimatedIcon>
-        <motion.div transition={{duration:1, ease:'linear'}} viewport={{once:true, margin:'0px 0px 100px 0px'}} initial={{height:'0%'}} whileInView={{height:'25%'}} className='wireHome'></motion.div>
-        <AnimatedIcon>
-          <FaTwitch/>
-        </AnimatedIcon>
-        <motion.div transition={{duration:1, ease:'linear'}} viewport={{once:true, margin:'0px 0px -100px 0px'}} initial={{height:'0%'}} whileInView={{height:'25%'}} className='wireHome'></motion.div>
-        <AnimatedIcon>
-          <FaTwitch/>
-        </AnimatedIcon>
-        <motion.div transition={{duration:1, ease:'linear'}} viewport={{once:true, margin:'0px 0px -100px 0px'}} initial={{height:'0%'}} whileInView={{height:'25%'}} className='wireHome'></motion.div>
-        <AnimatedIcon>
-          <FaTwitch/>
-        </AnimatedIcon>
-        <motion.div transition={{duration:1, ease:'linear'}} viewport={{once:true, margin:'0px 0px -100px 0px'}} initial={{height:'0%'}} whileInView={{height:'25%'}} className='wireHome'></motion.div>
+        <motion.div 
+          style={{height:'770px', background:'linear-gradient(#ff4d00, red)'}} 
+          transition={{duration:2, ease:'linear', delay:0.5}}
+          viewport={{once:true, margin:'0px 0px -100px 0px'}}  
+          initial={{height:'0px'}} whileInView={{height:'770px'}}
+          className='wireHome'
+        ></motion.div>
+        <img alt="inline" src={inlineRed}/>
+        <motion.div 
+          style={{height:'250px', background:'linear-gradient(red, #ff00bb)'}} 
+          transition={{duration:2, ease:'linear', delay:0.5}} 
+          viewport={{once:true, margin:'0px 0px 100px 0px'}} 
+          initial={{height:'0px'}} whileInView={{height:'250px'}}
+          className='wireHome'
+        ></motion.div>
+        <img alt="inline" src={inlinePink}/>
+        <motion.div 
+          style={{height:'195px', background:'linear-gradient(#ff00bb, #ff4d00)'}} 
+          transition={{duration:2, ease:'linear', delay:0.5}} 
+          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
+          initial={{height:'0px'}} whileInView={{height:'195px'}}
+          className='wireHome'
+        ></motion.div>
+        <img alt="inline" src={inlineOrange}/>
+        <motion.div 
+          style={{height:'170px', background:'linear-gradient(#ff4d00, blueviolet)'}} 
+          transition={{duration:2, ease:'linear', delay:0.5}} 
+          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
+          initial={{height:'0px'}} whileInView={{height:'170px'}}
+          className='wireHome'
+        ></motion.div>
+        <img alt="inline" src={inlineViolet}/>
+        <motion.div 
+          style={{height:'170px', background:'linear-gradient(blueviolet, transparent)'}} 
+          transition={{duration:2, ease:'linear', delay:0.5}} 
+          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
+          initial={{height:'0px'}} whileInView={{height:'170px'}}
+          className='wireHome'
+        ></motion.div>
       </div>
       <div ref={myRef} id='services' style={{flex: 1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
         {/*<div className='parallaxTextContainer'>
