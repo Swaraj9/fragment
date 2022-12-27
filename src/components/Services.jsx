@@ -10,6 +10,12 @@ import {
 } from "framer-motion";
 // import { wrap } from "@motionone/utils";
 import '../styles/services.css'
+import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
+import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
+import logo3 from '../images/goat-society-logo-2-puy3lol0l5zjr36qn6zgpm5rvoqdhthkl3s4pqg95m.png'
+import logo5 from '../images/warner.png'
+import logo6 from '../images/irl.png'
+import logo7 from '../images/opera.png'
 // import A from './A';
 
 // function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
@@ -50,6 +56,12 @@ import '../styles/services.css'
 //       </div>
 //     );
 //   }
+
+const Logo = ({index, src}) => {
+  return(
+    <motion.img className='logo' style={{height:'80px'}} whileHover={{scale:1.2, rotate:45}} src={src} alt={`Logo ${index}`}/>
+  )
+}
 
 const Subcard = ({title, text, index})=>{
   const myRef = useRef(null)
@@ -92,6 +104,34 @@ const Services = ({scrollRef}) => {
 
   const [activeCircles, setActiveCircles] = useState([false,false,false,false]);
   const [inServices, setInServices] = useState(false);
+  const [clients, setClients] = useState(0);
+  const [users, setUsers] = useState(0);
+
+  const increaseClientsAndUsers = () => {
+
+    const clientInterval = setInterval(()=>{
+      setClients(clients => {
+        if(clients < 63){
+          return clients + 1 
+        }else{
+          clearInterval(clientInterval)
+          return clients
+        }
+      })
+    }, 50)
+    
+    const userInterval = setInterval(()=>{
+      setUsers(users => {
+        if(users < 200000){
+          return users + 1000
+        }else{
+          clearInterval(userInterval)
+          return users
+        }
+      })
+    }, 50)
+    
+  }
 
   const myRef = useRef(null);
   const cardsRef = useRef(null);
@@ -133,8 +173,31 @@ const Services = ({scrollRef}) => {
       </div>*/}
       <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
         <div className='servicesTitle'>Who We Are</div>
-        <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community' needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
+        <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community's needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
       </div>
+      <div className='portfolioTitle'>Our Portfolio</div>
+      <div className='portfolioSub' style={{width:'80%'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+      <motion.div 
+        initial={{opacity:0, translateX:-300}}
+        whileInView={{opacity:1, translateX:0}}
+        transition={{duration:0.5}}
+        className="portfolioClients"
+        style={{marginTop:'4rem', display:'flex', justifyContent:'space-evenly', width:'90%', alignItems:'center', marginBottom:'7rem'}}
+      >
+        <motion.div onViewportEnter={increaseClientsAndUsers}>
+          <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
+          <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{users}+ User Network</div>
+        </motion.div>
+        <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
+        <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
+          <Logo index={0} src={logo1}/>
+          <Logo index={4} src={logo5}/>
+          <Logo index={6} src={logo7}/>
+          <Logo index={5} src={logo6}/>
+          <Logo index={1} src={logo2}/>
+          <Logo index={2} src={logo3}/>
+        </div>
+      </motion.div>
       <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)} ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
         <div className='servicesSticky'>
           <div style={{position:'absolute', height:'85%', width:'2px', backgroundColor:'rgb(135,135,135,0.25)', boxShadow:'0 0 21px 9px rgb(135,135,135,0.1)', marginLeft:'8.7rem', zIndex:-10}}></div>

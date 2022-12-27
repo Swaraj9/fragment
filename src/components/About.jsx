@@ -1,15 +1,15 @@
 import React from 'react'
-import avatarJosh from '../images/ezgif.com-gif-maker-300x300.webp'
-import avatarAstlin from '../images/astlin-300x300.gif'
-import {BsTwitter} from 'react-icons/bs'
-import {FaDiscord, FaEnvelope, FaLinkedin} from 'react-icons/fa'
-import '../styles/about.css'
-import A from './A'
+// import avatarJosh from '../images/ezgif.com-gif-maker-300x300.webp'
+// import avatarAstlin from '../images/astlin-300x300.gif'
+// import {BsTwitter} from 'react-icons/bs'
+// import {FaDiscord, FaEnvelope, FaLinkedin} from 'react-icons/fa'
+// import '../styles/about.css'
+// import A from './A'
 
 const About = ({setContact}) => {
   return (
     <div id="about" className='about' style={{marginTop:'3rem', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-      <div className='aboutTitle' style={{fontSize:'3rem', marginBottom:'2rem', width:"80%", textAlign:'center'}}>Our Team</div>
+      {/*<div className='aboutTitle' style={{fontSize:'3rem', marginBottom:'2rem', width:"80%", textAlign:'center'}}>Our Team</div>
       <div className='aboutSubtitle' style={{textAlign:'center', fontSize:'1.5rem', width:'80%', maxWidth:'1000px', letterSpacing:'0.1', lineHeight:'2.5rem', marginBottom:'3rem'}}>Meet the team that makes the magic happen</div>
       <div className='aboutFounders'>
         <div className='aboutFounder'>
@@ -47,7 +47,7 @@ const About = ({setContact}) => {
             </A>
           </div>
         </div>
-      </div>
+  </div>*/}
     </div>
   )
 }
