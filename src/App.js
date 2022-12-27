@@ -6,7 +6,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import './styles/app.css'
 import Portfolio from './components/Portfolio';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
 import loader from './images/fragment.gif';
 import Contact from './components/Contact';
 import ParticleBackground from './components/ParticleBackground';
@@ -34,16 +34,20 @@ function App() {
 
   }, [])
 
-  /*const handleScroll = () => {
-    if(window.scrollY % 300 === 0){
-      let bgColor = Math.floor(Math.random()*backgroundColors.length);
-      setCurrBackgroundColor(bgColor);
-    }
-  }*/
+  const x = useMotionValue(200);
+  const y = useMotionValue(200);
+
+  const paraX = useTransform(x, [0, window.innerWidth], [100, -100]);
+  const paraY = useTransform(y, [0, window.innerHeight], [100, -100]);
+
+  const handleMouse = (event) => {
+    x.set(event.pageX);
+    y.set(event.pageY);
+  }
 
   return (
     <CursorContextProvider>
-      <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
+      <div onMouseMove={handleMouse} style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
         <Cursor/>
         {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img src={loader} alt="Loader GIF"/></div>}
         <motion.div 
@@ -59,7 +63,7 @@ function App() {
               style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
               <div style={{flex:'1'}}>
-                <ParticleBackground/>
+                <ParticleBackground paraX={paraX} paraY={paraY}/>
                 <Navbar setContact={setContact} contact={contact}/>
                 { !contact ?
                   <div>
