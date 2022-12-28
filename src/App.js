@@ -34,13 +34,10 @@ function App() {
       setVantaEffect(TOPOLOGY({
         el: vantaRef.current,
         p5: p5,
-        mouseControls: true,
-        touchControls: true,
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
-        scale: 0.50,
-        scaleMobile: 1.00,
+        scale: 1.0,
         color: 0x8a2be2,
         backgroundColor: 0x0
       }))
@@ -63,18 +60,18 @@ function App() {
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
         <Cursor/>
         {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img src={loader} alt="Loader GIF"/></div>}
-        <motion.div 
-          initial={{opacity:0}} 
-          animate={{opacity:1}} 
-          transition={{duration:1.8, repeat:1, ease:'linear'}} 
+        <div 
           className="App" 
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
           ref={vantaRef}
         >
-            <div 
+            <motion.div 
+              initial={{opacity:0}} 
+              animate={{opacity:1}} 
+              transition={{duration:1.8, ease:'linear'}} 
               ref={scrollDiv} 
               className='main' 
-              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+              style={{backgroundColor:'rgb(0,0,0,0.4)', display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
               <div style={{flex:'1'}}>
                   <Navbar setContact={setContact} contact={contact}/>
@@ -89,8 +86,8 @@ function App() {
                   <Footer setContact={setContact}/>
               </div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
       </div>
     </CursorContextProvider>
   );

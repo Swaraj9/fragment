@@ -127,15 +127,14 @@ const Services = () => {
     
     const userInterval = setInterval(()=>{
       setUsers(users => {
-        if(users < 2000000){
-          return users + 10000
+        if(users < 2000){
+          return users + 50
         }else{
           clearInterval(userInterval)
           return users
         }
       })
     }, 10)
-    
   }
 
   const myRef = useRef(null);
@@ -233,7 +232,7 @@ const Services = () => {
         >
           <motion.div onViewportEnter={increaseClientsAndUsers}>
             <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
-            <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{users}+ User Network</div>
+            <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{`${parseInt(users/1000) === 0 ? '' : parseInt(users/1000) + ','}${users%1000 === 0 ? '000' : users%1000},000`}+ User Network</div>
           </motion.div>
           <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
           <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>

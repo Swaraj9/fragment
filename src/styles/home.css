@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+.homeMain{
+    margin-left: -120px;
+}
+
+
 @media only screen and (max-width: 870px) {
     .homeTitle{
         font-size: 3rem;
@@ -18,6 +23,10 @@
 
     .homeSub{
         font-size: 1.5rem;
+    }
+
+    .homeMain{
+        margin-left: 0;
     }
 }
 
