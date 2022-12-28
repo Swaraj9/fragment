@@ -3,14 +3,16 @@ import Button from './Button'
 import '../styles/home.css'
 import '../styles/wire.css'
 import { motion } from 'framer-motion'
-import inlineViolet from '../images/inlineViolet.png'
+import { useRef } from 'react'
 
 const Home = () => {
+
+  const homeRef = useRef(null);
+
   return (
-    <div className='home' id='home' style={{width:'100%', display:'flex', alignItems:'center', height:'calc(100vh - 4.7rem)'}}>
+    <div ref={homeRef} className='home' id='home'>
         <div className='wireHomeContainer'>
-          <motion.div style={{height:'100%', background:'linear-gradient(transparent, blueviolet)'}} className='wireHome'></motion.div>
-          <img alt="inline" src={inlineViolet}/>
+          <motion.div style={{height:'90vh', background:'linear-gradient(transparent, blueviolet)'}} className='wireHome'></motion.div>
         </div>
         <div className='homeMain' style={{flex: 1, display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div className='homeTitle'>Fragment Studios</div>

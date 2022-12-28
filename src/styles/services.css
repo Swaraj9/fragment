@@ -1,22 +1,31 @@
 .servicesTitle{
     font-size: 3rem;
     padding-bottom: 2rem;
+    text-align: center;
 }
 
-.services{
-    flex: 1;
+.servicesMain{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    margin-left:-120px;
+    margin-left: -120px;
 }
 
 .servicesSub{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-bottom: 2rem;
     text-align: center;
-    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+    height: 300px;
+}
+
+.servicesUpper{
+    width: 80%;
 }
 
 .servicesSticky{
@@ -38,8 +47,7 @@
 
 .card{
     padding: 2rem;
-    margin-bottom: 1rem;
-    height: 800px;
+    height: 600px;
 }
 
 .subCard{
@@ -85,8 +93,15 @@
         font-size: 0.8rem;
     }
 
+    .servicesTitle{
+        text-align: start;
+    }
+
     .servicesSub{
-        width: 80%;
+        width: 95%;
+        line-height: 1.75rem;
+        letter-spacing: normal;
+        text-align: start;
     }
 }
 
@@ -111,7 +126,24 @@
     border-radius: 30px;
 }
 
+.portfolioLine{
+    margin-left: 2rem;
+}
+
 @media only screen and (max-width: 870px) {
+    .portfolioClients{
+        flex-direction: column;
+    }
+
+    .portfolioLine{
+        display: none;
+    }
+
+    .logos{
+        flex-wrap: wrap;
+        padding-left: 3rem;
+    }
+
     .servicesTitle{
         font-size: 2rem;
         padding-bottom: 1.5rem;
@@ -134,6 +166,23 @@
     }
     
     .services{
+        margin-left: 0;
+    }
+
+    .servicesSub{
+        height: fit-content;
+    }
+
+    .logo{
+        margin-right: 3rem;
+        margin-top: 3rem;
+    }
+
+    .card{
+        height: fit-content;
+    }
+
+    .servicesMain{
         margin-left: 0;
     }
 }

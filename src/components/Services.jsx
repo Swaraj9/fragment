@@ -1,14 +1,5 @@
 import React, {useRef, useState} from 'react'
-import {
-  motion,
-  // useScroll,
-  // useSpring,
-  // useTransform,
-  // useMotionValue,
-  // useVelocity,
-  // useAnimationFrame
-} from "framer-motion";
-// import { wrap } from "@motionone/utils";
+import {motion} from "framer-motion";
 import '../styles/services.css'
 import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
 import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
@@ -21,47 +12,7 @@ import inlinePink from '../images/inlinePink.png';
 import inlineRed from '../images/inlineRed.png';
 import inlineOrange from '../images/inlineOrange.png';
 import inlineViolet from '../images/inlineViolet.png';
-import '../styles/portfolio.css'
-// import A from './A';
 
-// function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
-//   const baseX = useMotionValue(0);
-//   const { scrollY } = useScroll({container:scrollRef});
-//   const scrollVelocity = useVelocity(scrollY);
-//   const smoothVelocity = useSpring(scrollVelocity, {
-//     damping: 50,
-//     stiffness: 400
-//   });
-//   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-//     clamp: false
-//   });
-
-//   const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
-
-//   const directionFactor = useRef(1);
-//   useAnimationFrame((t, delta) => {
-//     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-//     if (velocityFactor.get() < 0) {
-//       directionFactor.current = -1;
-//     } else if (velocityFactor.get() > 0) {
-//       directionFactor.current = 1;
-//     }
-
-//     moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-//     baseX.set(baseX.get() + moveBy);
-//   });
-
-//     return (
-//       <div style={{marginBottom:'3rem', width:'calc(100vw - 50px)'}} className="parallax">
-//         <motion.div className="scroller" style={{ x, display:'flex', width:'100%'}}>
-//           <span style={{display:'flex', justifyContent:'space-between', width:'100%', marginRight:'2rem'}}>{children} </span>
-//           <span style={{display:'flex', justifyContent:'space-between', width:'100%'}}>{children} </span>
-//         </motion.div>
-//       </div>
-//     );
-//   }
 
 const Logo = ({index, src}) => {
   return(
@@ -161,110 +112,62 @@ const Services = () => {
   }
 
   return (
-    <div style={{display:'flex', alignItems:'stretch'}}>
-      <div className='wireServicesContainer'>
-        <motion.div 
-          style={{height:'16.6%', background:'linear-gradient(blueviolet, red)'}} 
-          transition={{duration:2, ease:'linear', delay:0.5}}
-          viewport={{once:true, margin:'0px 0px -100px 0px'}}  
-          initial={{height:'0px'}} whileInView={{height:'16.6%'}}
+    <div className='services' style={{display:'flex', alignItems:'stretch'}}>
+      <motion.div transition={{duration:3, ease:'linear'}} initial={{height:0}} whileInView={{height:'auto'}} className='wireServicesContainer'>
+        <div 
+          style={{height:'910px', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
-        ></motion.div>
-        <img alt="inline" src={inlineRed}/>
-        <motion.div 
-          style={{height:'460px', background:'linear-gradient(red, #ff00bb)'}} 
-          transition={{duration:2, ease:'linear', delay:0.5}} 
-          viewport={{once:true, margin:'0px 0px 100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'460px'}}
+        ></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineRed}/>
+        <div 
+          style={{height:'260px', background:'linear-gradient(red, #ff00bb)'}} 
           className='wireHome'
-        ></motion.div>
-        <img alt="inline" src={inlinePink}/>
-        <motion.div 
-          style={{height:'480px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
-          transition={{duration:2, ease:'linear', delay:0.5}} 
-          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'480px'}}
+        ></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlinePink}/>
+        <div 
+          style={{height:'260px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           className='wireHome'
-        ></motion.div>
-        <img alt="inline" src={inlineOrange}/>
-        <motion.div 
-          style={{height:'485px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
-          transition={{duration:2, ease:'linear', delay:0.5}} 
-          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'485px'}}
+        ></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
+        <div 
+          style={{height:'250px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           className='wireHome'
-        ></motion.div>
-        <img alt="inline" src={inlineViolet}/>
-        <motion.div 
+        ></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
+        <div 
           style={{height:'300px', background:'linear-gradient(blueviolet, transparent)'}} 
-          transition={{duration:2, ease:'linear', delay:0.5}} 
-          viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'300px'}}
           className='wireHome'
-        ></motion.div>
-      </div>
-      <div ref={myRef} id='services' className='services'>
-        {/*<div className='parallaxTextContainer'>
-          <ParallaxText scrollRef={scrollRef} baseVelocity={-5}>
-            <A className='parallaxText1' href="#strategize">Strategize</A>  
-            <A className='parallaxText2' href="#build">Build</A>
-            <A className='parallaxText1' href="#grow">Grow</A> 
-            <A className='parallaxText2' href="#operate">Operate</A>
-          </ParallaxText>
-          <ParallaxText scrollRef={scrollRef} baseVelocity={5}>
-            <A className='parallaxText1' href="#strategize">Strategize</A>  
-            <A className='parallaxText2' href="#build">Build</A>
-            <A className='parallaxText1' href="#grow">Grow</A> 
-            <A className='parallaxText2' href="#operate">Operate</A>
-          </ParallaxText>
-        </div>*/}
-        <div style={{paddingBottom:'3rem', maxWidth:'750px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+        ></div>
+      </motion.div>
+      <div ref={myRef} id='services' className='servicesMain'>
+        <div className='servicesUpper'>
           <div className='servicesTitle'>Who We Are</div>
           <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community's needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
-        </div>
-        <div className='portfolioTitle'>Our Portfolio</div>
-        <div className='portfolioSub' style={{width:'80%'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
-        <motion.div 
-          initial={{opacity:0, translateX:-300}}
-          whileInView={{opacity:1, translateX:0}}
-          transition={{duration:0.5}}
-          className="portfolioClients"
-          style={{marginTop:'4rem', display:'flex', justifyContent:'space-evenly', width:'90%', alignItems:'center', marginBottom:'7rem'}}
-        >
-          <motion.div onViewportEnter={increaseClientsAndUsers}>
-            <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
-            <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{`${parseInt(users/1000) === 0 ? '' : parseInt(users/1000) + ','}${users%1000 === 0 ? '000' : users%1000},000`}+ User Network</div>
+          <div className='servicesTitle'>Our Portfolio</div>
+          <div className='servicesSub'>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+          <motion.div 
+            initial={{opacity:0, translateX:-300}}
+            whileInView={{opacity:1, translateX:0}}
+            transition={{duration:0.5}}
+            className="portfolioClients"
+            style={{width:'100%', marginTop:'4rem', display:'flex', justifyContent:'space-evenly', alignItems:'center'}}
+          >
+            <motion.div onViewportEnter={increaseClientsAndUsers}>
+              <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
+              <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{`${parseInt(users/1000) === 0 ? '' : parseInt(users/1000) + ','}${users%1000 === 0 ? '000' : users%1000},000`}+ User Network</div>
+            </motion.div>
+            <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
+            <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
+              <Logo index={0} src={logo1}/>
+              <Logo index={4} src={logo5}/>
+              <Logo index={6} src={logo7}/>
+              <Logo index={5} src={logo6}/>
+              <Logo index={1} src={logo2}/>
+              <Logo index={2} src={logo3}/>
+            </div>
           </motion.div>
-          <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
-          <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
-            <Logo index={0} src={logo1}/>
-            <Logo index={4} src={logo5}/>
-            <Logo index={6} src={logo7}/>
-            <Logo index={5} src={logo6}/>
-            <Logo index={1} src={logo2}/>
-            <Logo index={2} src={logo3}/>
-          </div>
-        </motion.div>
+        </div>
         <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)} ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
-          {/*<div className='servicesSticky'>
-            <div style={{position:'absolute', height:'85%', width:'2px', backgroundColor:'rgb(135,135,135,0.25)', boxShadow:'0 0 21px 9px rgb(135,135,135,0.1)', marginLeft:'8.7rem', zIndex:-10}}></div>
-            <div style={{display:'flex'}}>
-              <div style={{color:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Plan</div>
-              <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[0]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[0]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[0]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
-            </div>
-            <div style={{display:'flex'}}>
-              <div style={{color:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Build</div>
-              <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[1]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[1]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[1]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
-            </div>
-            <div style={{display:'flex'}}>
-              <div style={{color:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Operate</div>
-              <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[2]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[2]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[2]?'50vh':'2rem', marginTop:'0.5rem'}}></div>
-            </div>
-            <div style={{display:'flex'}}>
-              <div style={{color:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', marginRight:'1rem', width:'7rem', fontSize:'18px'}}>Grow</div>
-              <div style={{transition:'all 0.3s ease-out', boxShadow:activeCircles[3]?'0 0 14px 9px rgb(135,135,135,0.5)':'none', backgroundColor:activeCircles[3]?'white':'rgb(135,135,135, 0.25)', width:'1.5rem', height:'1.5rem', borderRadius:'50%', marginBottom:activeCircles[3]?'100%':'2rem', marginTop:'0.5rem'}}></div>
-            </div>
-          </div>*/}
           {inServices && <div className='servicesMobile'>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[0]?'white':'transparent', color:activeCircles[0]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Plan</a></div>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[1]?'white':'transparent', color:activeCircles[1]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>

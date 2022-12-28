@@ -78,11 +78,9 @@ function App() {
               >
                   <Navbar setContact={setContact} contact={contact}/>
                   { !contact ?
-                    <div style={{backgroundColor:'rgb(0,0,0,0.4)'}}>
+                    <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
                         <Home/>
                         <Services scrollRef={scrollDiv}/>
-                        {/*<Portfolio setContact={setContact}/>
-                        <About setContact={setContact}/>*/}
                     </div> : <Contact/>
                   }
                   <Footer setContact={setContact}/>

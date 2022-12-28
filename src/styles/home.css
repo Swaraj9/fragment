@@ -3,17 +3,19 @@
     font-size: 5rem;
 }
 
+.home{
+    width:100%;
+    display:flex;
+    align-items:center;
+    height:100vh;
+}
+
 .homeSub{
     margin-bottom: 2rem;
     font-size: 2rem;
     width: 80%;
     text-align: center;
 }
-
-.homeMain{
-    margin-left: -120px;
-}
-
 
 @media only screen and (max-width: 870px) {
     .homeTitle{
