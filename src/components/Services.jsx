@@ -188,7 +188,7 @@ const Services = () => {
         ></motion.div>
         <img alt="inline" src={inlineOrange}/>
         <motion.div 
-          style={{height:'140px', background:'linear-gradient(#ff4d00, blueviolet)'}} 
+          style={{height:'140px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px -100px 0px'}} 
           initial={{height:'0px'}} whileInView={{height:'140px'}}
