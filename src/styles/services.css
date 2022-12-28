@@ -16,7 +16,7 @@
     font-size: 1.5rem;
     padding-bottom: 2rem;
     text-align: center;
-    width: 120%;
+    width: 90%;
 }
 
 .servicesSticky{
@@ -39,6 +39,7 @@
 .card{
     padding: 2rem;
     margin-bottom: 1rem;
+    height: calc(100vh + 50px);
 }
 
 .subCard{

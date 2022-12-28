@@ -68,7 +68,7 @@ function App() {
             <div 
               ref={scrollDiv} 
               className='main' 
-              style={{backgroundColor:'rgb(0,0,0,0.4)', display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
               <motion.div 
                 style={{flex:'1'}}              
@@ -78,7 +78,7 @@ function App() {
               >
                   <Navbar setContact={setContact} contact={contact}/>
                   { !contact ?
-                    <div>
+                    <div style={{backgroundColor:'rgb(0,0,0,0.4)'}}>
                         <Home/>
                         <Services scrollRef={scrollDiv}/>
                         {/*<Portfolio setContact={setContact}/>
