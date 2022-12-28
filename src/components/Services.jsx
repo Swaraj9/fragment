@@ -164,7 +164,7 @@ const Services = () => {
     <div style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
         <motion.div 
-          style={{height:'770px', background:'linear-gradient(#ff4d00, red)'}} 
+          style={{height:'770px', background:'linear-gradient(blueviolet, red)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}}
           viewport={{once:true, margin:'0px 0px -100px 0px'}}  
           initial={{height:'0px'}} whileInView={{height:'770px'}}
@@ -180,18 +180,18 @@ const Services = () => {
         ></motion.div>
         <img alt="inline" src={inlinePink}/>
         <motion.div 
-          style={{height:'195px', background:'linear-gradient(#ff00bb, #ff4d00)'}} 
+          style={{height:'170px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'195px'}}
+          initial={{height:'0px'}} whileInView={{height:'170px'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlineOrange}/>
         <motion.div 
-          style={{height:'170px', background:'linear-gradient(#ff4d00, blueviolet)'}} 
+          style={{height:'140px', background:'linear-gradient(#ff4d00, blueviolet)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'170px'}}
+          initial={{height:'0px'}} whileInView={{height:'140px'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlineViolet}/>
@@ -203,7 +203,7 @@ const Services = () => {
           className='wireHome'
         ></motion.div>
       </div>
-      <div ref={myRef} id='services' style={{flex: 1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+      <div ref={myRef} id='services' className='services'>
         {/*<div className='parallaxTextContainer'>
           <ParallaxText scrollRef={scrollRef} baseVelocity={-5}>
             <A className='parallaxText1' href="#strategize">Strategize</A>  

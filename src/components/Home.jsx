@@ -11,7 +11,6 @@ const Home = () => {
         <div className='wireHomeContainer'>
           <motion.div style={{height:'100%', background:'linear-gradient(transparent, blueviolet)'}} className='wireHome'></motion.div>
           <img alt="inline" src={inlineViolet}/>
-          <motion.div style={{height:'100%', background:'linear-gradient(blueviolet, #ff4d00)'}} className='wireHome'></motion.div>
         </div>
         <div style={{flex: 1, display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div className='homeTitle'>Fragment Studios</div>
