@@ -39,7 +39,7 @@ function App() {
         minWidth: 200.00,
         scale: 1.0,
         color: 0x8a2be2,
-        backgroundColor: 0x0
+        backgroundColor: 0x0,
       }))
     }
     return () => {
@@ -65,15 +65,17 @@ function App() {
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
           ref={vantaRef}
         >
-            <motion.div 
-              initial={{opacity:0}} 
-              animate={{opacity:1}} 
-              transition={{duration:1.8, ease:'linear'}} 
+            <div 
               ref={scrollDiv} 
               className='main' 
               style={{backgroundColor:'rgb(0,0,0,0.4)', display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
-              <div style={{flex:'1'}}>
+              <motion.div 
+                style={{flex:'1'}}              
+                initial={{opacity:0}} 
+                animate={{opacity:1}} 
+                transition={{duration:1.8, ease:'linear'}} 
+              >
                   <Navbar setContact={setContact} contact={contact}/>
                   { !contact ?
                     <div>
@@ -84,9 +86,9 @@ function App() {
                     </div> : <Contact/>
                   }
                   <Footer setContact={setContact}/>
-              </div>
+              </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
-            </motion.div>
+            </div>
           </div>
       </div>
     </CursorContextProvider>

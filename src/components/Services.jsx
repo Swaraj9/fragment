@@ -21,6 +21,7 @@ import inlinePink from '../images/inlinePink.png';
 import inlineRed from '../images/inlineRed.png';
 import inlineOrange from '../images/inlineOrange.png';
 import inlineViolet from '../images/inlineViolet.png';
+import '../styles/portfolio.css'
 // import A from './A';
 
 // function ParallaxText({ children, baseVelocity = 100 , scrollRef}) {
