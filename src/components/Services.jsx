@@ -164,34 +164,34 @@ const Services = () => {
     <div style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
         <motion.div 
-          style={{height:'18.5%', background:'linear-gradient(blueviolet, red)'}} 
+          style={{height:'16.6%', background:'linear-gradient(blueviolet, red)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}}
           viewport={{once:true, margin:'0px 0px -100px 0px'}}  
-          initial={{height:'0px'}} whileInView={{height:'18.5%'}}
+          initial={{height:'0px'}} whileInView={{height:'16.6%'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlineRed}/>
         <motion.div 
-          style={{height:'9%', background:'linear-gradient(red, #ff00bb)'}} 
+          style={{height:'460px', background:'linear-gradient(red, #ff00bb)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px 100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'9%'}}
+          initial={{height:'0px'}} whileInView={{height:'460px'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlinePink}/>
         <motion.div 
-          style={{height:'9%', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
+          style={{height:'480px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'9%'}}
+          initial={{height:'0px'}} whileInView={{height:'480px'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlineOrange}/>
         <motion.div 
-          style={{height:'9%', background:'linear-gradient(#ff7a00, blueviolet)'}} 
+          style={{height:'485px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           transition={{duration:2, ease:'linear', delay:0.5}} 
           viewport={{once:true, margin:'0px 0px -100px 0px'}} 
-          initial={{height:'0px'}} whileInView={{height:'9%'}}
+          initial={{height:'0px'}} whileInView={{height:'485px'}}
           className='wireHome'
         ></motion.div>
         <img alt="inline" src={inlineViolet}/>
