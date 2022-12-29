@@ -59,7 +59,7 @@ function App() {
     <CursorContextProvider>
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
         <Cursor/>
-        {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img src={loader} alt="Loader GIF"/></div>}
+        {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img height='100%' src={loader} alt="Loader GIF"/></div>}
         <div 
           className="App" 
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
@@ -74,7 +74,7 @@ function App() {
                 style={{flex:'1'}}              
                 initial={{opacity:0}} 
                 animate={{opacity:1}} 
-                transition={{duration:1.8, ease:'linear'}} 
+                transition={{duration:2.5, ease:'linear'}} 
               >
                   <Navbar setContact={setContact} contact={contact}/>
                   { !contact ?

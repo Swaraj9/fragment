@@ -6,9 +6,9 @@ import Button from './Button'
 
 const Footer = ({setContact}) => {
   return (
-    <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', backgroundColor:'rgb(0,0,0,0.4)'}}>
-      <div style={{marginBottom:'15rem', flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-        <div style={{marginBottom:'5rem', fontSize:'4rem', textAlign:'center', width:'80%'}}>Ready to get started?</div>
+    <div style={{height:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', backgroundColor:'rgb(0,0,0,0.4)'}}>
+      <div style={{flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <div className='footerText'>Ready to get started?</div>
         <Button onClick={() => {
           setContact(true);
         }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>

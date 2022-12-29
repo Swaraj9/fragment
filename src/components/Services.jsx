@@ -116,7 +116,7 @@ const Services = () => {
       <div className='wireServicesContainer'>
         <motion.div
           initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'910px', background:'linear-gradient(blueviolet, red)'}} 
+          style={{height:'760px', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
         ></motion.div>
         <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineRed}/>
@@ -146,10 +146,24 @@ const Services = () => {
       </div>
       <div ref={myRef} id='services' className='servicesMain'>
         <div className='servicesUpper'>
-          <div className='servicesTitle'>Who We Are</div>
-          <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community's needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
-          <div className='servicesTitle'>Our Portfolio</div>
-          <div className='servicesSub'>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+          <motion.div
+            initial={{opacity:0, translateY: 200}}
+            whileInView={{opacity:1, translateY: 0}}
+            transition={{duration:0.7}}
+            viewport={{margin:'400px', once:true}}
+          >
+            <div className='servicesTitle'>Who We Are</div>
+            <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community's needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
+          </motion.div>
+          <motion.div
+            initial={{opacity:0, translateY: 200}}
+            whileInView={{opacity:1, translateY: 0}}
+            transition={{duration:0.7}}
+            viewport={{margin:'400px', once:true}}
+          >
+            <div className='servicesTitle'>Our Portfolio</div>
+            <div className='servicesSub' style={{height:'150px'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+          </motion.div>
           <motion.div 
             initial={{opacity:0, translateX:-300}}
             whileInView={{opacity:1, translateX:0}}
