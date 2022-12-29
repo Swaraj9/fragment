@@ -113,32 +113,37 @@ const Services = () => {
 
   return (
     <div className='services' style={{display:'flex', alignItems:'stretch'}}>
-      <motion.div transition={{duration:3, ease:'linear'}} initial={{height:0}} whileInView={{height:'auto'}} className='wireServicesContainer'>
-        <div 
+      <div className='wireServicesContainer'>
+        <motion.div
+          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
           style={{height:'910px', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
-        ></div>
-        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineRed}/>
-        <div 
+        ></motion.div>
+        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineRed}/>
+        <motion.div
+          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
           style={{height:'260px', background:'linear-gradient(red, #ff00bb)'}} 
           className='wireHome'
-        ></div>
-        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlinePink}/>
-        <div 
+        ></motion.div>
+        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlinePink}/>
+        <motion.div
+          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
           style={{height:'260px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           className='wireHome'
-        ></div>
-        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
-        <div 
+        ></motion.div>
+        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
+        <motion.div
+          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
           style={{height:'250px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           className='wireHome'
-        ></div>
-        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
-        <div 
+        ></motion.div>
+        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
+        <motion.div
+          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
           style={{height:'300px', background:'linear-gradient(blueviolet, transparent)'}} 
           className='wireHome'
-        ></div>
-      </motion.div>
+        ></motion.div>
+      </div>
       <div ref={myRef} id='services' className='servicesMain'>
         <div className='servicesUpper'>
           <div className='servicesTitle'>Who We Are</div>
