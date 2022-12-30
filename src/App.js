@@ -81,9 +81,9 @@ function App() {
                     <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
                         <Home/>
                         <Services scrollRef={scrollDiv}/>
+                        <Footer setContact={setContact}/>
                     </div> : <Contact/>
                   }
-                  <Footer setContact={setContact}/>
               </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
             </div>
