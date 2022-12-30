@@ -6,8 +6,8 @@ import Button from './Button'
 
 const Footer = ({setContact}) => {
   return (
-    <div style={{height:'65vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', backgroundColor:'rgb(0,0,0,0.4)'}}>
-      <div style={{marginBottom:'10rem', flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+    <div style={{height:'500px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', backgroundColor:'rgb(0,0,0,0.4)'}}>
+      <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
         <Button style={{fontSize:'1.5rem', padding:'1rem', paddingRight:'1.5rem', paddingLeft:'1.5rem'}} onClick={() => {
           setContact(true);
