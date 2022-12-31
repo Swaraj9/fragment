@@ -4,6 +4,11 @@
 
 .discordIcon{
     transition: all 0.5s;
+    margin-right:5rem;
+    margin-bottom:1rem;
+    color:inherit;
+    text-decoration:none;
+    font-size:2rem;
 }
 
 .footerText{
@@ -16,5 +21,10 @@
 @media only screen and (max-width:870px) {
     .footerText{
         font-size: 2rem;
+    }
+
+    .discordIcon{
+        margin-right: 1.75rem;
+        margin-bottom: 5rem;
     }
 }

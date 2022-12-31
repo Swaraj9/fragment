@@ -16,7 +16,7 @@ import inlineViolet from '../images/inlineViolet.png';
 
 const Logo = ({index, src}) => {
   return(
-    <motion.img className='logo' style={{height:'80px'}} whileHover={{scale:1.3}} src={src} alt={`Logo ${index}`}/>
+    <motion.img className='logo' whileHover={{scale:1.3}} src={src} alt={`Logo ${index}`}/>
   )
 }
 
@@ -186,14 +186,14 @@ const Services = () => {
             </div>
           </motion.div>
         </div>
-        <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)} ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
+        <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
           {inServices && <div className='servicesMobile'>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[0]?'white':'transparent', color:activeCircles[0]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Plan</a></div>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[1]?'white':'transparent', color:activeCircles[1]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[2]?'white':'transparent', color:activeCircles[2]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Operate</a></div>
             <div className="servicesMobileButton" style={{backgroundColor:activeCircles[3]?'white':'transparent', color:activeCircles[3]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
           </div>}
-          <div>
+          <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)}>
             <Card
               id="strategize" 
               active={() => {setCricle(0, true)}}
@@ -222,8 +222,8 @@ const Services = () => {
               main="Grow Your Presence" 
               sub={[["Market","Have our team run marketing campaigns within your designated niche to increase brand awareness and grow your project community."], ["Amplify", "Our marketing team will build a game plan to optimize and utilize all organic growth funnels to maximize growth funnels."], ["Collaborate", "Organize project partnerships with other communities within your niche to bring new faces into the existing community."]]}
             />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   )

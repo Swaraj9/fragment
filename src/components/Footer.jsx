@@ -14,16 +14,16 @@ const Footer = ({setContact}) => {
         }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>
       </div>
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
-        <A className='discordIcon' style={{marginRight:'5rem', marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+        <A className='discordIcon' style={{}} href="https://discord.gg/r2f8FvQA5F" target="blank">
           <FaDiscord/>
         </A>
-        <A className='discordIcon' style={{marginRight:'5rem', marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://www.linkedin.com/company/fragment-studios/" target="blank">
+        <A className='discordIcon' style={{}} href="https://www.linkedin.com/company/fragment-studios/" target="blank">
           <FaLinkedin/>
         </A>
-        <A className='discordIcon' style={{marginRight:'5rem', marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="https://twitter.com/Fragm3ntStudios" target="blank">
+        <A className='discordIcon' style={{}} href="https://twitter.com/Fragm3ntStudios" target="blank">
           <FaTwitter/>
         </A>
-        <A className='discordIcon' style={{marginBottom:'1rem', color:'inherit', textDecoration:'none', fontSize:'2rem'}} href="mailto:contact@fragmentstudios.xyz" target="blank">
+        <A className='discordIcon' style={{marginRight:0}} href="mailto:contact@fragmentstudios.xyz" target="blank">
           <FaEnvelope/>
         </A>
         <div style={{position:'absolute', right:'20px', marginBottom:'1.5rem'}}><A style={{color:'grey'}} href='https://swaraj9.github.io/portfolio/'>Made By Swaraj9</A></div>
