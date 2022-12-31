@@ -26,7 +26,6 @@ const Footer = ({setContact}) => {
         <A className='discordIcon' style={{marginRight:0}} href="mailto:contact@fragmentstudios.xyz" target="blank">
           <FaEnvelope/>
         </A>
-        <div style={{position:'absolute', right:'20px', marginBottom:'1.5rem'}}><A style={{color:'grey'}} href='https://swaraj9.github.io/portfolio/'>Made By Swaraj9</A></div>
       </div>
     </div>
   )
