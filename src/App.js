@@ -8,10 +8,10 @@ import { motion, useScroll} from 'framer-motion';
 import loader from './images/fragment.gif';
 import Contact from './components/Contact';
 //import ParticleBackground from './components/ParticleBackground';
-import Cursor from './components/Cursor';
 import { CursorContextProvider } from './cursorContext';
 import TOPOLOGY from 'vanta/dist/vanta.topology.min'
 import p5 from 'p5'
+import ScrollButton from './components/ScrollButton';
 
 //const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
 
@@ -20,6 +20,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(false);
 
+  const [inHome, setInHome] = useState(false);
 
   const scrollDiv = useRef(null);
   const {scrollYProgress} = useScroll({container: scrollDiv})
@@ -58,7 +59,7 @@ function App() {
   return (
     <CursorContextProvider>
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
-        <Cursor/> 
+        {/*<Cursor/>*/} 
         {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='100%' src={loader} alt="Loader GIF"/></div>}
         <div 
           className="App" 
@@ -79,13 +80,14 @@ function App() {
                   <Navbar setContact={setContact} contact={contact}/>
                   { !contact ?
                     <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
-                        <Home/>
-                        <Services scrollRef={scrollDiv}/>
+                        <Home inHome={inHome} setInHome={setInHome}/>
+                        <Services/>
                         <Footer setContact={setContact}/>
                     </div> : <Contact/>
                   }
               </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
+              <ScrollButton inHome={inHome}/>    
             </div>
           </div>
       </div>

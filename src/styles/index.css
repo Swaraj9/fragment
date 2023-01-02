@@ -12,12 +12,8 @@ body {
   --primary: 'red';
   background-color: black;
   overflow: hidden;
-  cursor: none;
 }
 
-a{
-  cursor: none;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

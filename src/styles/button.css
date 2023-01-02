@@ -10,7 +10,6 @@
     transition: all 0.5s;
     border-width: 0.01rem;
     border-radius: 10px;
-    cursor:none;
 }
 
 @media only screen and (max-width:600px){

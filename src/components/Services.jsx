@@ -12,6 +12,7 @@ import inlinePink from '../images/inlinePink.png';
 import inlineRed from '../images/inlineRed.png';
 import inlineOrange from '../images/inlineOrange.png';
 import inlineViolet from '../images/inlineViolet.png';
+import { BsCircleFill } from 'react-icons/bs'
 
 
 const Logo = ({index, src}) => {
@@ -33,7 +34,7 @@ const Subcard = ({title, text, index})=>{
       className='subCard'
       style={{paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle'>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px'}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
@@ -114,35 +115,35 @@ const Services = () => {
   return (
     <div className='services' style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
-        <motion.div
-          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'760px', background:'linear-gradient(blueviolet, red)'}} 
+        <div style={{height:'760px'}}><motion.div
+          initial={{height:'0%'}} whileInView={{height:'100%'}} viewport={{once:true}} transition={{duration: 1}} 
+          style={{height:'100%', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
-        ></motion.div>
-        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineRed}/>
-        <motion.div
-          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'260px', background:'linear-gradient(red, #ff00bb)'}} 
+        ></motion.div></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:0.75}} viewport={{once:true}} alt="inline" src={inlineRed}/>
+        <div style={{height:'260px'}}><motion.div
+          initial={{height:'0%'}} whileInView={{height:'100%'}} viewport={{once:true}} transition={{duration: 1}} 
+          style={{height:'100%', background:'linear-gradient(red, #ff00bb)'}} 
           className='wireHome'
-        ></motion.div>
-        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlinePink}/>
-        <motion.div
-          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'260px', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
+        ></motion.div></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:0.75}} viewport={{once:true}} alt="inline" src={inlinePink}/>
+        <div style={{height:'260px'}}><motion.div
+          initial={{height:'0%'}} whileInView={{height:'100%'}} viewport={{once:true}} transition={{duration: 1}} 
+          style={{height:'100%', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           className='wireHome'
-        ></motion.div>
-        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
-        <motion.div
-          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'250px', background:'linear-gradient(#ff7a00, blueviolet)'}} 
+        ></motion.div></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:0.75}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
+        <div style={{height:'250px'}}><motion.div
+          initial={{height:'0%'}} whileInView={{height:'100%'}} viewport={{once:true}} transition={{duration: 1}} 
+          style={{height:'100%', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           className='wireHome'
-        ></motion.div>
-        <motion.img initial={{opacity:0, y:-100}} whileInView={{opacity:1, y:0}} transition={{duration:1.5}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
-        <motion.div
-          initial={{y:-100, opacity:0}} whileInView={{y:0, opacity: 1}} viewport={{once:true}} transition={{duration: 1.5}} 
-          style={{height:'300px', background:'linear-gradient(blueviolet, transparent)'}} 
+        ></motion.div></div>
+        <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{duration:0.75}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
+        <div style={{height:'300px'}}><motion.div
+          initial={{height:'0%'}} whileInView={{height:'100%'}} viewport={{once:true}} transition={{duration: 1}} 
+          style={{height:'100%', background:'linear-gradient(blueviolet, transparent)'}} 
           className='wireHome'
-        ></motion.div>
+        ></motion.div></div>
       </div>
       <div ref={myRef} id='services' className='servicesMain'>
         <div className='servicesUpper'>

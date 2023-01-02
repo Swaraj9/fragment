@@ -6,7 +6,7 @@ import Button from './Button'
 
 const Footer = ({setContact}) => {
   return (
-    <div style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+    <div id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
         <Button style={{fontSize:'1.5rem', padding:'1rem', paddingRight:'1.5rem', paddingLeft:'1.5rem'}} onClick={() => {

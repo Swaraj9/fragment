@@ -1,21 +1,18 @@
 import React, { useState } from 'react'
-import { useCursorContext } from '../cursorContext';
 import '../styles/button.css';
 
 const Button = ({children, style, ...props}) => {
   const [hover, setHover] = useState(false);
 
-  const {activateCursor, deActivateCursor} = useCursorContext();
-
   return (
     <button
       onMouseEnter={()=>{
         setHover(true);
-        activateCursor();
+        //activateCursor();
       }}
       onMouseLeave={()=>{
         setHover(false);
-        deActivateCursor();
+        //deActivateCursor();
       }}
 
       className="Button"
