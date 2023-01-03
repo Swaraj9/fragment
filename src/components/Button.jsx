@@ -8,18 +8,16 @@ const Button = ({children, style, ...props}) => {
     <button
       onMouseEnter={()=>{
         setHover(true);
-        //activateCursor();
       }}
       onMouseLeave={()=>{
         setHover(false);
-        //deActivateCursor();
       }}
 
       className="Button"
 
       style={{
-        backgroundColor: hover ? 'white': 'rgb(255,255,255,0.1)',
-        color: hover ? 'rgb(20,20,20)': 'white',
+        backgroundColor: hover ? 'white': 'rgb(138,43,226,0.5)',
+        color: hover ? 'blueviolet': 'white',
         ...style
       }} 
       {...props}

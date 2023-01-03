@@ -34,7 +34,7 @@
     margin-bottom: 2rem;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(200,200,200);
     outline: none;
     font-size: 1.25rem;
     padding-bottom: 10px;
@@ -42,13 +42,38 @@
     transition: all 0.5s;
 }
 
+.footerInput::placeholder{
+    color:rgb(200,200,200);
+}
+
 .footerInput:focus{
     border-bottom: 2px solid white;
 }
 
 .footerInput:focus::placeholder{
-    color: white;
+    color: transparent;
     transition: all 0.5s;
+}
+
+.footerButton{
+    padding:0.75rem;
+    padding-right:1.5rem;
+    padding-left:1.5rem;
+    border-color: white;
+    box-shadow: none;
+    border-style: solid;
+    font-size: 1.1rem;
+    font-family: Space Grotesk;
+    transition: all 0.5s;
+    border-width: 0.01rem;
+    border-radius: 10px;
+    background-color: rgb(138,43,226,0.5);
+    color:white;
+}
+
+.footerButton:hover{
+    background-color: white;
+    color: blueviolet;
 }
 
 @media only screen and (max-width:870px) {

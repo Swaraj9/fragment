@@ -2,11 +2,11 @@ import React from 'react'
 import Button from './Button'
 import '../styles/navbar.css'
 
-const Navbar = ({contact, setContact}) => {
+const Navbar = () => {
   return (
     <div id="navbar" className='navbar'>
       <div className='navbarTitle'>Fragment</div>
-      <Button onClick={() => setContact(!contact)}>{contact ? "Home" : "Get in Touch"}</Button>
+      <Button style={{position:'fixed', top:'40px', right:'40px'}}><a style={{color:'inherit', textDecoration:'none'}} href="#footer">Get in Touch</a></Button>
     </div>
   )
 }

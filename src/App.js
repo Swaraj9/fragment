@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import './styles/app.css'
 import { motion, useScroll} from 'framer-motion';
 import loader from './images/fragment.gif';
-import Contact from './components/Contact';
 //import ParticleBackground from './components/ParticleBackground';
 import { CursorContextProvider } from './cursorContext';
 import TOPOLOGY from 'vanta/dist/vanta.topology.min'
@@ -18,7 +17,6 @@ import ScrollButton from './components/ScrollButton';
 function App() {
 
   const [loading, setLoading] = useState(false);
-  const [contact, setContact] = useState(false);
 
   const [inHome, setInHome] = useState(false);
 
@@ -77,14 +75,12 @@ function App() {
                 animate={{opacity:1}} 
                 transition={{duration:2.5, ease:'linear'}} 
               >
-                  <Navbar setContact={setContact} contact={contact}/>
-                  { !contact ?
-                    <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
-                        <Home inHome={inHome} setInHome={setInHome}/>
-                        <Services/>
-                        <Footer setContact={setContact}/>
-                    </div> : <Contact/>
-                  }
+                  <Navbar/>
+                  <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
+                      <Home inHome={inHome} setInHome={setInHome}/>
+                      <Services/>
+                      <Footer/>
+                  </div>
               </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
               <ScrollButton inHome={inHome}/>    

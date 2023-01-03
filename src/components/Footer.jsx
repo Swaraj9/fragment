@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {FaDiscord, FaEnvelope, FaLinkedin, FaTwitter} from 'react-icons/fa'
 import '../styles/footer.css'
 import A from './A'
-import Button from './Button'
+import emailjs from '@emailjs/browser'
 
 const Footer = () => {
+
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_boiqrjn', 'template_8tedsni', form.current, 'npCONrMQSRL9PaGU0')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
   return (
     <div id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
-        <div className='footerDiv'>
-          <input className='footerInput' placeholder='Your Name'/>
-          <input className='footerInput' placeholder='Email'/>
-          <input className='footerInput' placeholder='Project Link/Description (Optional)'/>
-          <input className='footerInput' placeholder='Twitter (Optional)'/>
-          <Button>Submit</Button>
-        </div>  
+        <form ref={form} onSubmit={sendEmail} className='footerDiv'>
+          <input className='footerInput' name="user_name" placeholder='Your Name'/>
+          <input type="email" name="user_email" className='footerInput' placeholder='Email'/>
+          <input className='footerInput' name="user_desc" placeholder='Project Link/Description (Optional)'/>
+          <input className='footerInput' name="user_twitter" placeholder='Twitter (Optional)'/>
+          <input type="submit" value="Submit" className='footerButton' />
+        </form>  
       </div>
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
         <A className='discordIcon' style={{}} href="https://discord.gg/r2f8FvQA5F" target="blank">
