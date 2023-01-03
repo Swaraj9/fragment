@@ -18,15 +18,19 @@ const ScrollButton = ({inHome}) => {
                 alignItems:'center',
                 justifyContent:'center',
                 flexDirection:'column',
-                fontSize:'20px',
                 scale:hover?1.2:1,
                 transition:'all 0.5s',
-                rotate:inHome?'0deg':'180deg'
+                rotate:inHome?'0deg':'180deg',
+                backgroundColor:'rgb(255,255,255,0.1)',
+                borderRadius:'50%',
+                width: '50px',
+                height: '50px',
+                border: '2px solid white',
+                color: 'white',
             }}    
         >
             <a href={!inHome?'#navbar':'#footer'} style={{textDecoration:'none', color:'inherit'}}>
-                <div style={{marginLeft:'-35px', paddingBottom:'40px', rotate:'90deg'}}>Scroll</div>
-                <BsArrowDown size='20px'/>
+                <BsArrowDown size='20px' style={{marginTop:'5px'}}/>
             </a>
         </motion.div>
     )

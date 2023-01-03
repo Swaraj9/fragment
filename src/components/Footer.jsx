@@ -4,14 +4,18 @@ import '../styles/footer.css'
 import A from './A'
 import Button from './Button'
 
-const Footer = ({setContact}) => {
+const Footer = () => {
   return (
     <div id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-      <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+      <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
-        <Button style={{fontSize:'1.5rem', padding:'1rem', paddingRight:'1.5rem', paddingLeft:'1.5rem'}} onClick={() => {
-          setContact(true);
-        }}><a style={{color:'inherit', textDecoration:'none'}} href="#navbar">Schedule a Call</a></Button>
+        <div className='footerDiv'>
+          <input className='footerInput' placeholder='Your Name'/>
+          <input className='footerInput' placeholder='Email'/>
+          <input className='footerInput' placeholder='Project Link/Description (Optional)'/>
+          <input className='footerInput' placeholder='Twitter (Optional)'/>
+          <Button>Submit</Button>
+        </div>  
       </div>
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
         <A className='discordIcon' style={{}} href="https://discord.gg/r2f8FvQA5F" target="blank">

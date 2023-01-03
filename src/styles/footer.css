@@ -13,9 +13,42 @@
 
 .footerText{
     margin-bottom:3rem;
-    font-size:4rem;
-    text-align:center;
+    font-size:3rem;
+    text-align:end;
     width:'80%';
+    flex: 0.5;
+    margin-right: 2rem;
+}
+
+.footerDiv{
+    flex: 0.5;
+    border-left: 2px solid white;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerInput{
+    width: 80%;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.footerInput:focus{
+    border-bottom: 2px solid white;
+}
+
+.footerInput:focus::placeholder{
+    color: white;
+    transition: all 0.5s;
 }
 
 @media only screen and (max-width:870px) {
