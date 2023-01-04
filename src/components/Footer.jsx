@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <div id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-      <div style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
+      <div className='footerMain' style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
         <form ref={form} onSubmit={sendEmail} className='footerDiv'>
           <input className='footerInput' name="user_name" placeholder='Your Name'/>
