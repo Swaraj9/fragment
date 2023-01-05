@@ -17,6 +17,14 @@ const Footer = () => {
       }, (error) => {
           console.log(error.text);
       });
+
+
+    emailjs.sendForm('service_boiqrjn', 'template_nxzksae', form.current, 'npCONrMQSRL9PaGU0')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   }
 
   return (
