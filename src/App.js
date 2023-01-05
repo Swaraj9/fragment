@@ -67,13 +67,13 @@ function App() {
             <div 
               ref={scrollDiv} 
               className='main' 
-              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'2s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
               <motion.div 
                 style={{flex:'1'}}              
-                initial={{opacity:0}} 
-                animate={{opacity:1}} 
-                transition={{duration:2.5, ease:'linear'}} 
+                initial={{opacity:0, backgroundColor:'black'}} 
+                animate={{opacity:1, backgroundColor:'transparent'}} 
+                transition={{duration:4}} 
               >
                   <Navbar/>
                   <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.4)'}}>
