@@ -67,7 +67,7 @@ function App() {
             <div 
               ref={scrollDiv} 
               className='main' 
-              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'2s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
             >
               <motion.div 
                 style={{flex:'1'}}              
