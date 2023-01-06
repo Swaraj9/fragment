@@ -12,8 +12,8 @@ const ScrollButton = ({inHome}) => {
             onMouseLeave={() => setHover(false)}
             style={{
                 position:'fixed', 
-                bottom:'40px', 
-                right:'40px', 
+                bottom:window.innerWidth >= 600 ? '40px' : '80px', 
+                right:window.innerWidth >= 600 ? '40px' : '15px', 
                 display:'flex',
                 alignItems:'center',
                 justifyContent:'center',

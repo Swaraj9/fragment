@@ -34,7 +34,7 @@ const Subcard = ({title, text, index})=>{
       className='subCard'
       style={{paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px'}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', opacity:0.7}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
@@ -163,7 +163,7 @@ const Services = () => {
             viewport={{margin:'400px', once:true}}
           >
             <div className='servicesTitle'>Our Portfolio</div>
-            <div className='servicesSub' style={{height:'150px'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
+            <div className='servicesSub' style={{height:'100px'}}>Check out our list of notable past client projects, covering a wide range of niches such as Crypto, NFTs, Metaverse, Music, Social, Gaming, and more!</div>
           </motion.div>
           <motion.div 
             initial={{opacity:0, translateX:-300}}

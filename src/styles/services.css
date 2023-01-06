@@ -96,6 +96,7 @@
 
     .subCardText{
         font-size: 0.8rem;
+        text-align: justify;
     }
 
     .servicesTitle{
@@ -107,10 +108,11 @@
         line-height: 1.75rem;
         letter-spacing: normal;
         text-align: start;
+        font-size: 0.9rem;
     }
 
     .logo{
-        height: 35px;
+        height: 40px;
     }
 }
 
@@ -156,10 +158,6 @@
     .servicesTitle{
         font-size: 2rem;
         padding-bottom: 1.5rem;
-    }
-
-    .servicesSub{
-        font-size: 1.25rem;
     }
 
     .parallaxTextContainer{
