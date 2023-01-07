@@ -24,10 +24,10 @@ const Logo = ({index, src, title, text}) => {
       <motion.img whileHover={{scale:1.2}} onHoverStart={() => setActive(true)} onHoverEnd={() => setActive(false)} style={{height:'100%'}} src={src} alt={`Logo ${index}`}/>
       <AnimatePresence>
       {active && 
-      <div className='modal'>
+      <motion.div initial={{scale:0.5, opacity: 0}} animate={{scale:1, opacity:1}} className='modal'>
         <div className='modalTitle'>{title}</div>
         <div className='modalText'>{text}</div>  
-      </div>}
+      </motion.div>}
       </AnimatePresence>
     </div>
   )
