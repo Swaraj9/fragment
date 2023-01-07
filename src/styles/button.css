@@ -6,7 +6,7 @@
     box-shadow: none;
     border-style: solid;
     font-size: 1.1rem;
-    font-family: 'Space Grotesk', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: siteFont, 'Space Grotesk', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     transition: all 0.5s;
