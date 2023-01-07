@@ -21,11 +21,12 @@ const ScrollButton = ({inHome}) => {
                 scale:hover?1.2:1,
                 transition:'all 0.5s',
                 rotate:inHome?'0deg':'180deg',
-                backgroundColor:'rgb(255,255,255,0.1)',
+                backgroundColor:'rgba(174, 114, 229,0.2)',
                 borderRadius:'50%',
                 width: '50px',
                 height: '50px',
-                border: '2px solid white',
+                border: '2px solid rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(15px)',
                 color: 'white',
             }}    
         >
