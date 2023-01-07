@@ -3,6 +3,7 @@ import {FaDiscord, FaEnvelope, FaLinkedin, FaTwitter} from 'react-icons/fa'
 import '../styles/footer.css'
 import A from './A'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
 
@@ -28,12 +29,12 @@ const Footer = () => {
   }
 
   return (
-    <div id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+    <motion.div initial={{opacity:0, translateY: 200}} whileInView={{opacity:1, translateY: 0}} transition={{duration:0.7}} viewport={{margin:'400px', once:true}} ini id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div className='footerMain' style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
         <form ref={form} onSubmit={sendEmail} className='footerDiv'>
-          <input className='footerInput' name="user_name" placeholder='Your Name'/>
-          <input type="email" name="user_email" className='footerInput' placeholder='Email'/>
+          <input required type="text" className='footerInput' name="user_name" placeholder='Your Name'/>
+          <input required type="email" name="user_email" className='footerInput' placeholder='Email'/>
           <input className='footerInput' name="user_desc" placeholder='Project Link/Description (Optional)'/>
           <input className='footerInput' name="user_twitter" placeholder='Twitter (Optional)'/>
           <input type="submit" value="Submit" className='footerButton' />
@@ -53,7 +54,7 @@ const Footer = () => {
           <FaEnvelope/>
         </A>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

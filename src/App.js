@@ -66,7 +66,7 @@ function App() {
             <div 
               ref={scrollDiv} 
               className='main' 
-              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none'}}
+              style={{display:loading?'none':'flex',width:'100%', transitionProperty: 'all', transitionDuration:'1s', scrollBehavior:'smooth', height:'100%', overflowY:'scroll', scrollbarWidth:'none', backgroundColor:'rgb(0,0,0,0.5)'}}
             >
               <motion.div 
                 style={{flex:'1'}}              
@@ -75,7 +75,7 @@ function App() {
                 transition={{duration:4}} 
               >
                   <Navbar/>
-                  <div style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(0,0,0,0.8)'}}>
+                  <div style={{display:'flex', flexDirection:'column'}}>
                       <Home inHome={inHome} setInHome={setInHome}/>
                       <Services/>
                       <Footer/>

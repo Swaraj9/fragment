@@ -29,7 +29,7 @@ const ScrollButton = ({inHome}) => {
                 color: 'white',
             }}    
         >
-            <a href={!inHome?'#navbar':'#footer'} style={{textDecoration:'none', color:'inherit'}}>
+            <a href={!inHome?'#home':'#footer'} style={{textDecoration:'none', color:'inherit'}}>
                 <BsArrowDown size='20px' style={{marginTop:'5px'}}/>
             </a>
         </motion.div>

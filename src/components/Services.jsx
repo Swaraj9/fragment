@@ -115,30 +115,30 @@ const Services = () => {
   return (
     <div className='services' style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
-        <div style={{height:'760px'}}><motion.div
+        <div style={{height:'715px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
           style={{height:'100%', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
         ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.1, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineRed}/>
+        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineRed}/>
         <div style={{height:'260px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
           style={{height:'100%', background:'linear-gradient(red, #ff00bb)'}} 
           className='wireHome'
         ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.1, duration:0.25}} viewport={{once:true}} alt="inline" src={inlinePink}/>
+        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlinePink}/>
         <div style={{height:'260px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
           style={{height:'100%', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           className='wireHome'
         ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.1, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
+        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
         <div style={{height:'250px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
           style={{height:'100%', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           className='wireHome'
         ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.1, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
+        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
         <div style={{height:'300px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
           style={{height:'100%', background:'linear-gradient(blueviolet, transparent)'}} 
@@ -154,7 +154,7 @@ const Services = () => {
             viewport={{margin:'400px', once:true}}
           >
             <div className='servicesTitle'>Who We Are</div>
-            <div className='servicesSub'>Fragment Studios' multifaceted Discord Creative Team works with your team to meet and exceed your community's needs. Our team has been professionally managing and marketing Discord Communities for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients.</div>
+            <div className='servicesSub'>Fragment Studios' multifaceted Discord creative team design and develop strategies to meet and exceed your community's needs. We have been professionally managing and marketing Communities on Discord for 4+ years and have built a network of over 2 million Discord users while working with over 60 clients ranging from DeFi projects, musical artists, and the largest social servers on the platform.</div>
           </motion.div>
           <motion.div
             initial={{opacity:0, translateY: 200}}
@@ -221,7 +221,7 @@ const Services = () => {
               active={() => {setCricle(3, true)}}
               deactive={() => {setCricle(3, false)}}
               main="Grow Your Presence" 
-              sub={[["Market","Have our team run marketing campaigns within your designated niche to increase brand awareness and grow your project community."], ["Amplify", "Our marketing team will build a game plan to optimize and utilize all organic growth funnels to maximize growth funnels."], ["Collaborate", "Organize project partnerships with other communities within your niche to bring new faces into the existing community."]]}
+              sub={[["Market","Have our team run marketing campaigns within your designated niche to increase brand awareness and grow your project community."], ["Amplify", "Our marketing team will build a game plan to optimize and utilize all organic growth funnels to maximize community reach."], ["Collaborate", "Organize project partnerships with other communities within your niche to bring new faces into the existing community."]]}
             />
           </motion.div>
         </div>

@@ -57,6 +57,7 @@
     line-height: 1.75rem;
     letter-spacing: 0.075rem;
     font-size: 1.2rem;
+    width: 300px;
 }
 
 .logo{
@@ -92,6 +93,7 @@
         line-height: 1.5rem;
         margin-bottom: 3rem;
         border-left: solid rgb(235,235,235, 0.15) 2px;
+        width: auto;
     }
 
     .subCardText{

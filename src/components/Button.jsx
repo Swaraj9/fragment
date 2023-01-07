@@ -16,7 +16,7 @@ const Button = ({children, style, ...props}) => {
       className="Button"
 
       style={{
-        backgroundColor: hover ? 'rgb(235,235,235)': 'rgb(138,43,226,0.5)',
+        backgroundColor: hover ? 'rgb(235,235,235)': 'rgb(138,43,226,0.2)',
         color: hover ? 'blueviolet': 'rgb(235,235,235)',
         ...style
       }} 
