@@ -57,7 +57,7 @@ function App() {
   return (
     <CursorContextProvider>
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
-        {loading && <motion.div transition={{delay:0.5}} initial={{opacity:1}} animate={{opacity:0}} style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='100%' src={loader} alt="Loader GIF"/></motion.div>}
+        {loading && <motion.div transition={{delay:0.5}} initial={{opacity:1}} animate={{opacity:0}} style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='80%' style={{maxWidth:'800px'}} src={loader} alt="Loader GIF"/></motion.div>}
         <div 
           className="App" 
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
