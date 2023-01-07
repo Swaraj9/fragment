@@ -50,22 +50,44 @@
 
 .card{
     padding: 2rem;
-    height: 600px;
+    height: 450px;
+    width: 100%;
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid rgba(150, 150, 150, 1);
+    position: absolute;
+    max-width: 400px;
+    margin-top: 2rem;
+}
+
+.modalTitle{
+    font-family: siteFontBold;
+    margin-bottom: 1rem;
+    color: blueviolet;
 }
 
 .subCard{
     padding: 2rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
+    padding-right: 0px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     line-height: 1.75rem;
     letter-spacing: 0.075rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
     width: 30%;
 }
 
 .logo{
     height: 80px;
 }
+
 
 @media only screen and (max-width: 600px){
     .cardTitle{

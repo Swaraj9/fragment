@@ -63,11 +63,11 @@
     box-shadow: none;
     border-style: solid;
     font-size: 1.1rem;
-    font-family: Space Grotesk;
+    font-family: siteFont, Space Grotesk;
     transition: all 0.5s;
-    border-width: 0.01rem;
+    border-width: 2px;
     border-radius: 10px;
-    background-color: rgb(138,43,226,0.5);
+    background-color: rgb(174, 114, 229,0.2);
     color:white;
 }
 

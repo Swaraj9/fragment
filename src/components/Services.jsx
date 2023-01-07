@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react'
-import {motion} from "framer-motion";
+import {motion, AnimatePresence} from "framer-motion";
 import '../styles/services.css'
 import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
 import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
@@ -15,9 +15,21 @@ import inlineViolet from '../images/inlineViolet.png';
 import { BsCircleFill } from 'react-icons/bs'
 
 
-const Logo = ({index, src}) => {
+const Logo = ({index, src, title, text}) => {
+
+  const [active, setActive] = useState(false);
+
   return(
-    <motion.img className='logo' whileHover={{scale:1.3}} src={src} alt={`Logo ${index}`}/>
+    <div className='logo'>
+      <motion.img whileHover={{scale:1.2}} onHoverStart={() => setActive(true)} onHoverEnd={() => setActive(false)} style={{height:'100%'}} src={src} alt={`Logo ${index}`}/>
+      <AnimatePresence>
+      {active && 
+      <div className='modal'>
+        <div className='modalTitle'>{title}</div>
+        <div className='modalText'>{text}</div>  
+      </div>}
+      </AnimatePresence>
+    </div>
   )
 }
 
@@ -115,25 +127,25 @@ const Services = () => {
   return (
     <div className='services' style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
-        <div style={{height:'715px'}}><motion.div
+        <div style={{height:'735px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
           style={{height:'100%', background:'linear-gradient(blueviolet, red)'}} 
           className='wireHome'
         ></motion.div></div>
         <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineRed}/>
-        <div style={{height:'260px'}}><motion.div
+        <div style={{height:'100px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
           style={{height:'100%', background:'linear-gradient(red, #ff00bb)'}} 
           className='wireHome'
         ></motion.div></div>
         <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlinePink}/>
-        <div style={{height:'260px'}}><motion.div
+        <div style={{height:'100px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
           style={{height:'100%', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
           className='wireHome'
         ></motion.div></div>
         <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
-        <div style={{height:'250px'}}><motion.div
+        <div style={{height:'110px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
           style={{height:'100%', background:'linear-gradient(#ff7a00, blueviolet)'}} 
           className='wireHome'
@@ -178,12 +190,12 @@ const Services = () => {
             </motion.div>
             <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
             <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
-              <Logo index={0} src={logo1}/>
-              <Logo index={4} src={logo5}/>
-              <Logo index={6} src={logo7}/>
-              <Logo index={5} src={logo6}/>
-              <Logo index={1} src={logo2}/>
-              <Logo index={2} src={logo3}/>
+              <Logo title='Atlantic Records' text='Atlantic Records is home to some of the largest artists worldwide including notable figures such as Skrillex, Cardi B, Jack Harlow and many more. Our team built out a server for dozens of artists catered to their niche of music and personality, successfully creating a community nurtured to their fanbase.' index={0} src={logo1}/>
+              <Logo title='Warner Music Group (WMG)' text='Warner Music Group, one of the biggest record label conglomerates in the industry, recently teamed up with Sandbox, a metaverse platform, to create a virtual world for their artists. We promoted their Discord community using niche targeted marketing to expand their audience.' index={4} src={logo5}/>
+              <Logo title='Opera GX' text='Opera GX is a unique web browser that is specifically designed for gaming. We worked with one of their subprojects, Club Koala, to grow their social presence within the gaming niche.' index={6} src={logo7}/>
+              <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
+              <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
+              <Logo title='The GOAT Society' text='The GOAT Society is a pfp NFT collection with hand-drawn goat art. We marketed and managed their Discord community post-mint leading up to the release of their second collection.' index={2} src={logo3}/>
             </div>
           </motion.div>
         </div>
