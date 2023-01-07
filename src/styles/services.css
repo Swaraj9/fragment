@@ -2,7 +2,6 @@
     font-size: 3rem;
     padding-bottom: 2rem;
     text-align: center;
-    font-family: siteFontBold;
 }
 
 .servicesMain{
@@ -39,13 +38,11 @@
 .cardTitle{
     font-size: 2.5rem;
     padding-bottom: 2rem;
-    font-family: siteFontBold;
 }
 
 .subCardTitle{
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-family: siteFontBold;
 }
 
 .card{
@@ -95,7 +92,7 @@
 
 @media only screen and (max-width: 600px){
     .cardTitle{
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 5rem;
         margin-top: 5rem;
         padding-bottom: 1rem;
@@ -132,6 +129,7 @@
 
     .servicesTitle{
         text-align: start;
+        font-size: 1.5rem;
     }
 
     .servicesSub{
@@ -139,7 +137,7 @@
         line-height: 1.75rem;
         letter-spacing: normal;
         text-align: start;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .logo{
@@ -148,6 +146,11 @@
 }
 
 .servicesMobile{
+    background: rgba(235, 235, 235, 0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(5px);
     display: none;
     flex-direction: row;
     position: fixed;
@@ -158,14 +161,16 @@
     width: 100%;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    z-index: 10;
 }
 
 .servicesMobileButton{
     transition: all 0.3s;
-    border: 1px solid white;
-    padding: 0.6rem;
+    padding: 0.7rem;
     border-radius: 30px;
+    background-color: rgba(174, 114, 229,0.2);
+    backdrop-filter: blur(15px);
 }
 
 .portfolioLine{
@@ -191,7 +196,6 @@
     }
 
     .servicesTitle{
-        font-size: 2rem;
         padding-bottom: 1.5rem;
     }
 

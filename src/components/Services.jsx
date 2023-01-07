@@ -41,9 +41,9 @@ const Subcard = ({title, text, index})=>{
       viewport={{margin:'400px'}}
       ref = {myRef}
       className='subCard'
-      style={{paddingTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
+      style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', opacity:0.7}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(235,235,235,0.4)', backdropFilter:'blur(15px)'}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
@@ -178,10 +178,11 @@ const Services = () => {
         </div>
         <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
           {inServices && <div className='servicesMobile'>
-            <div className="servicesMobileButton" style={{backgroundColor:activeCircles[0]?'white':'transparent', color:activeCircles[0]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Plan</a></div>
-            <div className="servicesMobileButton" style={{backgroundColor:activeCircles[1]?'white':'transparent', color:activeCircles[1]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
-            <div className="servicesMobileButton" style={{backgroundColor:activeCircles[2]?'white':'transparent', color:activeCircles[2]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Operate</a></div>
-            <div className="servicesMobileButton" style={{backgroundColor:activeCircles[3]?'white':'transparent', color:activeCircles[3]?'black':'white'}}><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
+            <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Craft</a></div>
+            <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#build">Build</a></div>
+            <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#operate">Launch</a></div>
+            <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#grow">Grow</a></div>
+            <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#footer">Contact</a></div>
           </div>}
           <motion.div onViewportEnter={() => setInServices(true)} onViewportLeave={() => setInServices(false)}>
             <Card
