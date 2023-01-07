@@ -5,7 +5,7 @@ import '../styles/wire.css'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 
-const Home = ({inHome, setInHome}) => {
+const Home = ({setInHome}) => {
 
   const homeRef = useRef(null);
 

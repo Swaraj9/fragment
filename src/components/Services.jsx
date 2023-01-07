@@ -8,11 +8,8 @@ import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
 import '../styles/wire.css'
-import inlinePink from '../images/inlinePink.png';
-import inlineRed from '../images/inlineRed.png';
-import inlineOrange from '../images/inlineOrange.png';
-import inlineViolet from '../images/inlineViolet.png';
 import { BsCircleFill } from 'react-icons/bs'
+import Curly from './Curly';
 
 
 const Logo = ({index, src, title, text}) => {
@@ -127,33 +124,13 @@ const Services = () => {
   return (
     <div className='services' style={{display:'flex', alignItems:'stretch'}}>
       <div className='wireServicesContainer'>
-        <div style={{height:'735px'}}><motion.div
-          initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
-          style={{height:'100%', background:'linear-gradient(blueviolet, red)'}} 
-          className='wireHome'
-        ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineRed}/>
-        <div style={{height:'100px'}}><motion.div
-          initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
-          style={{height:'100%', background:'linear-gradient(red, #ff00bb)'}} 
-          className='wireHome'
-        ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlinePink}/>
-        <div style={{height:'100px'}}><motion.div
-          initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}}
-          style={{height:'100%', background:'linear-gradient(#ff00bb, #ff7a00)'}} 
-          className='wireHome'
-        ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineOrange}/>
-        <div style={{height:'110px'}}><motion.div
-          initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
-          style={{height:'100%', background:'linear-gradient(#ff7a00, blueviolet)'}} 
-          className='wireHome'
-        ></motion.div></div>
-        <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.25, duration:0.25}} viewport={{once:true}} alt="inline" src={inlineViolet}/>
+        <Curly color = 'red' prevColor='blueviolet' index={1}/>
+        <Curly color = '#ff00bb' prevColor='red' index={2}/>
+        <Curly color = '#ff7a00' prevColor='#ff00bb' index={3}/>
+        <Curly color = '#8a2be2' prevColor='#ff7a00' index={4}/>
         <div style={{height:'300px'}}><motion.div
           initial={{height:'0%'}} whileInView={{height:'100%'}} transition={{duration: 1}} viewport={{once:true}} 
-          style={{height:'100%', background:'linear-gradient(blueviolet, transparent)'}} 
+          style={{marginTop:'-10px', height:'100%', background:'linear-gradient(blueviolet, transparent)'}} 
           className='wireHome'
         ></motion.div></div>
       </div>
