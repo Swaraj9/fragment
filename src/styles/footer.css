@@ -80,7 +80,9 @@
 @media only screen and (max-width:870px) {
     .footerText{
         font-size: 2rem;
-        margin-top: 8rem;
+        margin:0px;
+        margin-top: 250px;
+        margin-bottom: 4rem;
         text-align: center;
     }
 
