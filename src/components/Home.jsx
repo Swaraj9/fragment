@@ -17,7 +17,7 @@ const Home = ({setInHome}) => {
         <div className='homeMain' style={{flex: 1, display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div className='homeTitle'>FRAGMENT STUDIOS</div>
             <div className='homeSub'>Bring your community vision to life</div>
-            <Button><a style={{textDecoration:'none', color:'inherit'}} href="#services">More Details</a></Button>
+            <a href="#services"><Button>More Details</Button></a>
         </div>
     </motion.div>
   )

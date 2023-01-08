@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div id="navbar" className='navbar'>
       <div className='navbarTitle'>Fragment</div>
-      <Button className='Button navbarButton'><a style={{color:'inherit', textDecoration:'none'}} href="#footer">Get in Touch</a></Button>
+      <a href='#footer'><Button className='Button navbarButton'>Get in Touch</Button></a>
     </div>
   )
 }

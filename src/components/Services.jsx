@@ -38,12 +38,12 @@ const Subcard = ({title, text, index})=>{
       initial={{opacity:0, translateY: 200}}
       whileInView={{opacity:1, translateY: 0}}
       transition={{duration:0.7, delay: window.innerWidth >= 600 ? index*0.2 : 0}}
-      viewport={{margin:'400px'}}
+      viewport={{margin:'400px', once:true}}
       ref = {myRef}
       className='subCard'
       style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(235,235,235,0.4)', backdropFilter:'blur(15px)'}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(174, 114, 229,0.5)', backdropFilter:'blur(15px)'}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
