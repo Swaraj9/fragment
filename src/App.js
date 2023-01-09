@@ -6,19 +6,20 @@ import Footer from './components/Footer';
 import './styles/app.css'
 import { motion, useScroll} from 'framer-motion';
 import loader from './images/fragment.gif';
-//import ParticleBackground from './components/ParticleBackground';
 import { CursorContextProvider } from './cursorContext';
 import TOPOLOGY from 'vanta/dist/vanta.topology.min'
 import p5 from 'p5'
 import ScrollButton from './components/ScrollButton';
+import CaseStudy from './components/CaseStudy';
 
-//const backgroundColors = ['rgb(0,0,0,0.3)', 'rgb(102, 35, 106, 0.3)', 'rgb(40, 153, 203, 0.3)', 'rgb(80, 13, 239, 0.3)', 'rgb(216, 19, 115, 0.3)'];
 
 function App() {
 
   const [loading, setLoading] = useState(false);
 
   const [inHome, setInHome] = useState(false);
+
+  const [caseStudy, setCaseStudy] = useState(false);
 
   const scrollDiv = useRef(null);
   const {scrollYProgress} = useScroll({container: scrollDiv})
@@ -74,12 +75,13 @@ function App() {
                 animate={{opacity:1, backgroundColor:'transparent'}} 
                 transition={{duration:4}} 
               >
-                  <Navbar/>
-                  <div style={{display:'flex', flexDirection:'column'}}>
+                  <Navbar caseStudy={caseStudy} setCaseStudy={setCaseStudy}/>
+                  {!caseStudy ?
+                    <div style={{display:'flex', flexDirection:'column'}}>
                       <Home inHome={inHome} setInHome={setInHome}/>
-                      <Services/>
+                      <Services setCaseStudy={setCaseStudy}/>
                       <Footer/>
-                  </div>
+                  </div> : <CaseStudy/>}
               </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
               <ScrollButton inHome={inHome}/>    

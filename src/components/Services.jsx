@@ -10,6 +10,7 @@ import logo7 from '../images/opera.png'
 import '../styles/wire.css'
 import { BsCircleFill } from 'react-icons/bs'
 import Curly from './Curly';
+import Button from './Button';
 
 
 const Logo = ({index, src, title, text}) => {
@@ -67,7 +68,7 @@ const Card = ({main, sub, active, deactive, id}) => {
 }
 
 
-const Services = () => {  
+const Services = ({setCaseStudy}) => {  
 
   const [activeCircles, setActiveCircles] = useState([false,false,false,false]);
   const [inServices, setInServices] = useState(false);
@@ -177,6 +178,7 @@ const Services = () => {
             </div>
           </motion.div>
         </div>
+        <Button onClick={() => setCaseStudy(true)}>See Case Study</Button>
         <div ref={cardsRef} className='cards' style={{height:'100%', padding:'2rem', width:'85%', display:'flex', flexDirection:'row', alignItems:'flex-start'}}>
           {inServices && <div className='servicesMobile'>
             <div className="servicesMobileButton"><a style={{textDecoration:'none', color:'inherit'}} href="#strategize">Craft</a></div>
