@@ -43,7 +43,7 @@ const Subcard = ({title, text, index})=>{
       className='subCard'
       style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(174, 114, 229,0.5)', backdropFilter:'blur(15px)'}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(235, 235, 235,0.3)', backdropFilter:'blur(15px)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
@@ -158,6 +158,7 @@ const Services = () => {
             initial={{opacity:0, translateX:-300}}
             whileInView={{opacity:1, translateX:0}}
             transition={{duration:0.5}}
+            viewport={{once:true}}
             className="portfolioClients"
             style={{width:'100%', marginTop:'4rem', display:'flex', justifyContent:'space-evenly', alignItems:'center'}}
           >
