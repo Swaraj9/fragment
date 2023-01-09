@@ -1,19 +1,26 @@
 {
   "files": {
     "main.css": "/fragment/static/css/main.a639330b.css",
-    "main.js": "/fragment/static/js/main.26079ade.js",
+    "main.js": "/fragment/static/js/main.3d132e72.js",
     "static/media/fragment.gif": "/fragment/static/media/fragment.b30e4e451d7fa6c5b768.gif",
+    "static/media/s6.png": "/fragment/static/media/s6.24d29084ada0eac62cc5.png",
+    "static/media/s4.png": "/fragment/static/media/s4.617143ce8f40c30dc907.png",
+    "static/media/s2.png": "/fragment/static/media/s2.f90943f1cde7ffa3924d.png",
+    "static/media/s5.png": "/fragment/static/media/s5.7ff3d88bc9ab61f58eb8.png",
+    "static/media/s3.png": "/fragment/static/media/s3.508dbabe0eaa571283ff.png",
+    "static/media/s7.png": "/fragment/static/media/s7.fcc27a3f1ef4da399e33.png",
     "static/media/opera.png": "/fragment/static/media/opera.97ed3bdd1a08b33208b5.png",
+    "static/media/s1.png": "/fragment/static/media/s1.c9cc47d4f092033db0fb.png",
     "static/media/PPAgrandir-GrandBold.woff": "/fragment/static/media/PPAgrandir-GrandBold.38088b194176562aa0fc.woff",
     "static/media/PPAgrandir-GrandRegular.woff": "/fragment/static/media/PPAgrandir-GrandRegular.970293cb6583b207b1a9.woff",
     "static/media/irl.png": "/fragment/static/media/irl.33a49d280c09e8de4f2f.png",
     "static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png": "/fragment/static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.8b05af233161c22331ca.png",
     "index.html": "/fragment/index.html",
     "main.a639330b.css.map": "/fragment/static/css/main.a639330b.css.map",
-    "main.26079ade.js.map": "/fragment/static/js/main.26079ade.js.map"
+    "main.3d132e72.js.map": "/fragment/static/js/main.3d132e72.js.map"
   },
   "entrypoints": [
     "static/css/main.a639330b.css",
-    "static/js/main.26079ade.js"
+    "static/js/main.3d132e72.js"
   ]
 }
