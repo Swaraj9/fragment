@@ -79,8 +79,8 @@ function App() {
                   {!caseStudy ?
                     <div style={{display:'flex', flexDirection:'column'}}>
                       <Home inHome={inHome} setInHome={setInHome}/>
-                      <Services setCaseStudy={setCaseStudy}/>
-                      <Footer/>
+                      <Services/>
+                      <Footer setCaseStudy={setCaseStudy}/>
                   </div> : <CaseStudy/>}
               </motion.div>
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
