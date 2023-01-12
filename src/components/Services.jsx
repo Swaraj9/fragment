@@ -42,7 +42,7 @@ const Subcard = ({title, text, index})=>{
       className='subCard'
       style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(235, 235, 235,0.3)', backdropFilter:'blur(15px)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(174, 114, 229,0.3)', boxShadow:'0px 0px 5px 5px rgba(174, 114, 229,0.2)', borderRadius:'50%'}}/>{title}</div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )

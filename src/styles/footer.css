@@ -66,8 +66,8 @@
     transition: all 0.5s;
     border-width: 2px;
     border-radius: 10px;
-    background-color: rgb(174, 114, 229,0.3);
-    border-color: rgba(178, 128, 225, 0.1);
+    background-color: rgb(174, 114, 229,0.2);
+    border-color: rgba(255,255,255,0.1);
     backdrop-filter: blur(15px);
     color:white;
 }
