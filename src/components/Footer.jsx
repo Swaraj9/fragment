@@ -42,15 +42,15 @@ const Footer = ({setCaseStudy}) => {
           <input type="submit" value="Submit" className='footerButton' />
         </form>  
       </div>
-      <Button onClick={() => setCaseStudy(true)} style={{marginBottom:'30px', display:'flex', alignItems:'center', fontSize:'20px'}}><AiFillInfoCircle size={20} style={{marginRight:'20px'}}/>Case Studies</Button>
+      <Button onClick={() => setCaseStudy(true)} style={{marginBottom:'30px', display:'flex', alignItems:'center', fontSize:'15px'}}><AiFillInfoCircle size={20} style={{marginRight:'20px'}}/>Case Studies</Button>
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
-        <A className='discordIcon' style={{}} href="https://discord.gg/r2f8FvQA5F" target="blank">
+        <A className='discordIcon' href="https://discord.gg/r2f8FvQA5F" target="blank">
           <FaDiscord/>
         </A>
-        <A className='discordIcon' style={{}} href="https://www.linkedin.com/company/fragment-studios/" target="blank">
+        <A className='discordIcon' href="https://www.linkedin.com/company/fragment-studios/" target="blank">
           <FaLinkedin/>
         </A>
-        <A className='discordIcon' style={{}} href="https://twitter.com/Fragm3ntStudios" target="blank">
+        <A className='discordIcon' href="https://twitter.com/Fragm3ntStudios" target="blank">
           <FaTwitter/>
         </A>
         <A className='discordIcon' style={{marginRight:0}} href="mailto:contact@fragmentstudios.xyz" target="blank">

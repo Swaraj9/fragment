@@ -3,7 +3,7 @@ import {motion, AnimatePresence} from "framer-motion";
 import '../styles/services.css'
 import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
 import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
-import logo3 from '../images/goat-society-logo-2-puy3lol0l5zjr36qn6zgpm5rvoqdhthkl3s4pqg95m.png'
+import logo3 from '../images/gintoken.webp'
 import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
