@@ -8,7 +8,6 @@ import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
 import '../styles/wire.css'
-import { BsCircleFill } from 'react-icons/bs'
 import Curly from './Curly';
 
 const Logo = ({index, src, title, text}) => {
@@ -42,7 +41,16 @@ const Subcard = ({title, text, index})=>{
       className='subCard'
       style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
-      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}><BsCircleFill size='12px' style={{marginRight:'15px', marginLeft:'-30px', color:'rgba(174, 114, 229,0.3)', boxShadow:'0px 0px 5px 5px rgba(174, 114, 229,0.2)', borderRadius:'50%'}}/>{title}</div>
+      <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}>
+        <div style={{marginLeft:'-40px', marginRight:'40px', marginBottom:'20px'}}>
+          <div style={{boxShadow:'0px 0px 10px 4px #8a2be2', display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'50%', position:'absolute', width:'18px', height:'18px', backgroundColor:'#8a2be2'}}>
+            <div style={{display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'50%', position:'absolute', width:'12px', height:'12px', backgroundColor:'#C099E4'}}>
+              <div style={{borderRadius:'50%', position:'absolute', width:'6px', height:'6px', backgroundColor:'#D8CAE6'}}></div>
+            </div>
+          </div>
+        </div>
+        {title}
+      </div>
       <div className='subCardText'>{text}</div>
     </motion.div>
   )
