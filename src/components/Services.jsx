@@ -42,10 +42,10 @@ const Subcard = ({title, text, index})=>{
       style={{marginTop:window.innerWidth >= 870 ?`${index%2===0?0:10}rem` : '0rem'}}
     >
       <div className='subCardTitle' style={{display:'flex', alignItems:'center'}}>
-        <div style={{marginLeft:'-40px', marginRight:'40px', marginBottom:'20px'}}>
+        <div style={{opacity:0.5, marginLeft:'-40px', marginRight:'40px', marginBottom:'20px'}}>
           <div style={{boxShadow:'0px 0px 10px 4px #8a2be2', display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'50%', position:'absolute', width:'18px', height:'18px', backgroundColor:'#8a2be2'}}>
-            <div style={{display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'50%', position:'absolute', width:'12px', height:'12px', backgroundColor:'#C099E4'}}>
-              <div style={{borderRadius:'50%', position:'absolute', width:'6px', height:'6px', backgroundColor:'#D8CAE6'}}></div>
+            <div style={{display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'50%', position:'absolute', width:'12px', height:'12px', backgroundColor:'#8a2be2'}}>
+              <div style={{boxShadow:'0px 0px 10px 3px #ae84d9', borderRadius:'50%', position:'absolute', width:'6px', height:'6px', backgroundColor:'#ae84d9'}}></div>
             </div>
           </div>
         </div>
