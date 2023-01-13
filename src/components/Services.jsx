@@ -172,7 +172,7 @@ const Services = () => {
               <Logo title='Opera GX' text='Opera GX is a unique web browser that is specifically designed for gaming. We worked with one of their subprojects, Club Koala, to grow their social presence within the gaming niche.' index={6} src={logo7}/>
               <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
               <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
-              <Logo title='The GOAT Society' text='The GOAT Society is a pfp NFT collection with hand-drawn goat art. We marketed and managed their Discord community post-mint leading up to the release of their second collection.' index={2} src={logo3}/>
+              <Logo title='Ginoa' text='Ginoa makes it easy for anyone to learn about NFT collections and Metaverse items for free. They provide AI-backed valuation services. And an audited application for buying, selling and bartering.' index={2} src={logo3}/>
             </div>
           </motion.div>
         </div>
