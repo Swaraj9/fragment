@@ -31,7 +31,7 @@ const Footer = ({setCaseStudy}) => {
   }
 
   return (
-    <motion.div initial={{opacity:0, translateY: 200}} whileInView={{opacity:1, translateY: 0}} transition={{duration:0.7}} viewport={{margin:'400px', once:true}} ini id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+    <motion.div initial={{opacity:0, translateY: 200}} whileInView={{opacity:1, translateY: 0}} transition={{duration:1.4}} viewport={{margin:'400px', once:true}} id='footer' style={{height:'80vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
       <div className='footerMain' style={{marginBottom:'14rem', flex:1, width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
         <div className='footerText'>Ready to get started?</div>
         <form ref={form} onSubmit={sendEmail} className='footerDiv'>

@@ -169,9 +169,9 @@ const Services = () => {
             className="portfolioClients"
             style={{width:'100%', marginTop:'4rem', display:'flex', justifyContent:'space-evenly', alignItems:'center'}}
           >
-            <motion.div onViewportEnter={increaseClientsAndUsers}>
+            <motion.div className='changingText' onViewportEnter={increaseClientsAndUsers}>
               <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
-              <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{`${parseInt(users/1000) === 0 ? '' : parseInt(users/1000) + ','}${users%1000 === 0 ? '000' : users%1000},000`}+ User Network</div>
+              <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{`${parseInt(users/1000) === 0 ? '' : parseInt(users/1000) + ','}${users%1000 === 0 ? '000' : users%1000},000`}+<br/>User Network</div>
             </motion.div>
             <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
             <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
