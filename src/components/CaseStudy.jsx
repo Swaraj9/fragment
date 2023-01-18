@@ -6,6 +6,11 @@ import s4 from '../images/s4.png'
 import s5 from '../images/s5.png'
 import s6 from '../images/s6.png'
 import s7 from '../images/s7.png'
+import s8 from '../images/s8.png'
+import s9 from '../images/s9.png'
+import s10 from '../images/s10.png'
+import s11 from '../images/s11.png'
+import s12 from '../images/s12.png'
 
 const CaseStudy = () => {
   return (
@@ -19,6 +24,11 @@ const CaseStudy = () => {
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s5} alt='case study'/>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s6} alt='case study'/>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s7} alt='case study'/>
+            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s8} alt='case study'/>
+            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s9} alt='case study'/>
+            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s10} alt='case study'/>
+            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s11} alt='case study'/>
+            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s12} alt='case study'/>
         </div>
     </div>
   )
