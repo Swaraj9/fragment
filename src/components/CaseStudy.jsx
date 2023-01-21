@@ -18,16 +18,8 @@ const CaseStudy = () => {
         <div style={{fontSize:'3rem', marginBottom:'3rem'}}>Case Study</div>
         <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s1} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s2} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s3} alt='case study'/>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s4} alt='case study'/>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s5} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s6} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s7} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s8} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s9} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s10} alt='case study'/>
-            <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s11} alt='case study'/>
             <img style={{width:'80%', marginBottom:'5rem', borderRadius:'10px'}} src={s12} alt='case study'/>
         </div>
     </div>
