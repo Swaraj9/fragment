@@ -4,8 +4,6 @@ import '../styles/footer.css'
 import A from './A'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
-import Button from './Button'
-import {AiFillInfoCircle} from 'react-icons/ai'
 
 const Footer = ({setCaseStudy}) => {
 
@@ -42,7 +40,7 @@ const Footer = ({setCaseStudy}) => {
           <input type="submit" value="Submit" className='footerButton' />
         </form>  
       </div>
-      <Button onClick={() => setCaseStudy(true)} style={{marginBottom:'30px', display:'flex', alignItems:'center', fontSize:'15px'}}><AiFillInfoCircle size={20} style={{marginRight:'20px'}}/>Case Studies</Button>
+      {/*<Button onClick={() => setCaseStudy(true)} style={{marginBottom:'30px', display:'flex', alignItems:'center', fontSize:'15px'}}><AiFillInfoCircle size={20} style={{marginRight:'20px'}}/>Case Studies</Button>*/}
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
         <A className='discordIcon' href="https://discord.gg/r2f8FvQA5F" target="blank">
           <FaDiscord/>
