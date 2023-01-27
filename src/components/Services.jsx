@@ -16,7 +16,7 @@ const Logo = ({index, src, title, text}) => {
 
   return(
     <div className='logo'>
-      <motion.img whileHover={{scale:1.2}} onHoverStart={() => setActive(true)} onHoverEnd={() => setActive(false)} style={{height:'100%'}} src={src} alt={`Logo ${index}`}/>
+      <motion.img loading='lazy' whileHover={{scale:1.2}} onHoverStart={() => setActive(true)} onHoverEnd={() => setActive(false)} style={{height:'100%'}} src={src} alt={`Logo ${index}`}/>
       <AnimatePresence>
       {active && 
       <motion.div initial={{scale:0.5, opacity: 0}} animate={{scale:1, opacity:1}} className='modal'>
