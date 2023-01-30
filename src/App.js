@@ -15,7 +15,7 @@ import CaseStudy from './components/CaseStudy';
 
 function App() {
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const [inHome, setInHome] = useState(false);
 
@@ -48,7 +48,7 @@ function App() {
   }, [vantaEffect])
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     setTimeout(()=>{
       setLoading(false);
     }, 2500)
