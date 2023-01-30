@@ -49,17 +49,15 @@ function App() {
 
   useEffect(() => {
     setLoading(true)
-    console.log("He")
     setTimeout(()=>{
       setLoading(false);
-      console.log("Llo")
     }, 2500)
   }, [])
 
   return (
     <CursorContextProvider>
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
-        {loading && <motion.div transition={{delay:0.75}} initial={{opacity:1}} animate={{opacity:0}} style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='80%' style={{maxWidth:'800px'}} src={loader} alt="Loader GIF"/></motion.div>}
+        {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='80%' style={{maxWidth:'800px'}} src={loader} alt="Loader GIF"/></div>}
         <div 
           className="App" 
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
