@@ -3,7 +3,6 @@ import {motion, AnimatePresence} from "framer-motion";
 import '../styles/services.css'
 import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
 import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
-import logo3 from '../images/gintoken.webp'
 import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
@@ -67,7 +66,7 @@ const Card = ({main, sub, active, deactive, id}) => {
     >
       <div className='cardTitle'>{main}</div>
       <div className='subcardContainer' style={{display:'flex', width:"100%", justifyContent:'space-evenly', alignItems:'flex-start'}}>
-        {sub.map((item, index) => <Subcard title={item[0]} text={item[1]} index={index}/>)}
+        {sub.map((item, index) => <Subcard key={index} title={item[0]} text={item[1]} index={index}/>)}
       </div>
     </motion.div>
   )

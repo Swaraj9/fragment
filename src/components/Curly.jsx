@@ -35,41 +35,41 @@ const Curly = ({color, prevColor, index}) => {
                 ></motion.div>
             </div>
             <svg width="125" height="409" viewBox="0 0 125 409" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <motion.path viewport={{once:true}} initial={{pathLength:0}} animate={{pathLength:entered?1:0}} transition={{duration:1, delay:0.5, ease:'linear'}} style={{pathLength}} d="M3.00049 0C3.0005 129 11.6005 200.1 90.0005 204.5C2.0005 204.5 3.00049 306.75 3.00049 409" stroke={color} stroke-width="5"/>
+                <motion.path viewport={{once:true}} initial={{pathLength:0}} animate={{pathLength:entered?1:0}} transition={{duration:1, delay:0.5, ease:'linear'}} style={{pathLength}} d="M3.00049 0C3.0005 129 11.6005 200.1 90.0005 204.5C2.0005 204.5 3.00049 306.75 3.00049 409" stroke={color} strokeWidth="5"/>
                 <g filter="url(#filter0_f_3_8)">
                 <circle cx="90.0005" cy="204" r="10" fill="black"/>
-                <circle cx="90.0005" cy="204" r="7.5" stroke={color} stroke-width="5"/>
+                <circle cx="90.0005" cy="204" r="7.5" stroke={color} strokeWidth="5"/>
                 </g>
                 <g filter="url(#filter1_f_3_8)">
                 <circle cx="90.0005" cy="204" r="10" fill="black"/>
-                <circle cx="90.0005" cy="204" r="7.5" stroke={color} stroke-width="5"/>
+                <circle cx="90.0005" cy="204" r="7.5" stroke={color} strokeWidth="5"/>
                 </g>
                 <g filter="url(#filter2_f_3_8)">
                 <circle cx="90.0005" cy="204" r="10" fill="black"/>
-                <circle cx="90.0005" cy="204" r="7.5" stroke={color} stroke-width="5"/>
+                <circle cx="90.0005" cy="204" r="7.5" stroke={color} strokeWidth="5"/>
                 </g>
                 <g filter="url(#filter3_d_3_8)">
                 <circle cx="90.0005" cy="204" r="10" fill="black"/>
-                <circle cx="90.0005" cy="204" r="7.5" stroke={color} stroke-width="5"/>
+                <circle cx="90.0005" cy="204" r="7.5" stroke={color} strokeWidth="5"/>
                 </g>
                 <defs>
-                <filter id="filter0_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter0_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                 <feGaussianBlur stdDeviation="12.5" result="effect1_foregroundBlur_3_8"/>
                 </filter>
-                <filter id="filter1_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter1_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                 <feGaussianBlur stdDeviation="12.5" result="effect1_foregroundBlur_3_8"/>
                 </filter>
-                <filter id="filter2_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter2_f_3_8" x="55.0005" y="169" width="70" height="70" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                 <feGaussianBlur stdDeviation="12.5" result="effect1_foregroundBlur_3_8"/>
                 </filter>
-                <filter id="filter3_d_3_8" x="76.0005" y="194" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter3_d_3_8" x="76.0005" y="194" width="28" height="28" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                 <feOffset dy="4"/>
                 <feGaussianBlur stdDeviation="2"/>

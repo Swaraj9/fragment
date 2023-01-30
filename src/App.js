@@ -49,10 +49,11 @@ function App() {
 
   useEffect(() => {
     setLoading(true)
+    console.log("He")
     setTimeout(()=>{
       setLoading(false);
-    }, 2000)
-
+      console.log("Llo")
+    }, 2500)
   }, [])
 
   return (
