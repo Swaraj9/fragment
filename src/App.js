@@ -57,8 +57,8 @@ function App() {
   return (
     <CursorContextProvider>
       <div style={{width:'100vw', height:'100vh', overflow:'hidden'}}>
-        {loading && <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='80%' style={{maxWidth:'800px'}} src={loader} alt="Loader GIF"/></div>}
-        <div 
+        {loading ? <div style={{backgroundColor:'black', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'100%'}}><img width='80%' style={{maxWidth:'800px'}} src={loader} alt="Loader GIF"/></div>
+        : <div 
           className="App" 
           style={{width:'100%', color:'rgb(235,235,235)', height:'100%', overflow:'hidden'}} 
           ref={vantaRef}
@@ -85,7 +85,7 @@ function App() {
               <motion.div className='scrollBar' style={{scaleY, position:"sticky", top:0, width:'0.25rem', backgroundColor:'rgb(235,235,235)'}}></motion.div>
               <ScrollButton inHome={inHome}/>    
             </div>
-          </div>
+          </div>}
       </div>
     </CursorContextProvider>
   );
