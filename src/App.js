@@ -5,7 +5,7 @@ import Services from "./components/Services";
 import Footer from "./components/Footer";
 import "./styles/app.css";
 import { motion, useScroll } from "framer-motion";
-import loader from "./images/fragment.gif";
+import loader from "./images/fragment.webp";
 import { CursorContextProvider } from "./cursorContext";
 import TOPOLOGY from "vanta/dist/vanta.topology.min";
 import p5 from "p5";
@@ -28,31 +28,29 @@ function App() {
   const vantaRef = useRef(null);
 
   useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        TOPOLOGY({
-          el: vantaRef.current,
-          p5: p5,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          color: 0x8a2be2,
-          backgroundColor: 0x0,
-        })
-      );
-    }
+    setTimeout(() => {
+      setLoading(false);
+      if (!vantaEffect && vantaRef.current) {
+        setVantaEffect(
+          TOPOLOGY({
+            el: vantaRef.current,
+            p5: p5,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            color: 0x8a2be2,
+            backgroundColor: 0x0,
+          })
+        );
+      }
+    }, 2500)
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect, loading]);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  }, []);
+
 
   return (
     <CursorContextProvider>
@@ -69,6 +67,7 @@ function App() {
             }}
           >
             <img
+              loading="eager"
               width="80%"
               style={{ maxWidth: "800px" }}
               src={loader}
@@ -77,7 +76,7 @@ function App() {
           </div>
         }
         
-          <div
+          {!loading && <div
             className="App"
             style={{
               width: "100%",
@@ -131,7 +130,7 @@ function App() {
               ></motion.div>
               <ScrollButton inHome={inHome} />
             </div>
-          </div>
+          </div>}
         
       </div>
     </CursorContextProvider>

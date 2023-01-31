@@ -3,11 +3,6 @@
   src: url(../PPAgrandir-GrandRegular.woff);
 }
 
-@font-face {
-  font-family: siteFontBold;
-  src: url(../PPAgrandir-GrandBold.woff);
-}
-
 body {
   margin: 0;
   font-family: siteFont, 'Space Grotesk', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
