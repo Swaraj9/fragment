@@ -44,7 +44,7 @@ function App() {
           })
         );
       }
-    }, 2500)
+    }, 2700)
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
@@ -55,7 +55,7 @@ function App() {
   return (
     <CursorContextProvider>
       <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
-        {loading && 
+        {loading ?
           <div
             style={{
               backgroundColor: "black",
@@ -74,9 +74,9 @@ function App() {
               alt="Loader GIF"
             />
           </div>
-        }
         
-          {!loading && <div
+        
+          : <div
             className="App"
             style={{
               width: "100%",
