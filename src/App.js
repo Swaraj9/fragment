@@ -28,7 +28,6 @@ function App() {
   const vantaRef = useRef(null);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
       if (!vantaEffect && vantaRef.current) {
@@ -49,7 +48,7 @@ function App() {
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, [vantaEffect]);
+  }, [vantaEffect, loading]);
 
 
 
@@ -75,6 +74,8 @@ function App() {
               alt="Loader GIF"
             />
           </div>
+        
+        
           : <div
             className="App"
             style={{
