@@ -11,21 +11,23 @@ const Footer = ({setCaseStudy}) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
     emailjs.sendForm('service_boiqrjn', 'template_8tedsni', form.current, 'npCONrMQSRL9PaGU0')
-      .then((result) => {
+    .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
-
+      
 
     emailjs.sendForm('service_boiqrjn', 'template_nxzksae', form.current, 'npCONrMQSRL9PaGU0')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
+
+    form.current.reset();
   }
 
   return (
