@@ -6,6 +6,8 @@ import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81yd
 import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
+import logo8 from '../images/Copy of AW.TRADITIONAL.LOGO.png'
+import logo9 from '../images/jyguyuSs_400x400.jpg'
 import '../styles/wire.css'
 import Curly from './Curly';
 
@@ -166,7 +168,7 @@ const Services = () => {
             transition={{duration:0.5}}
             viewport={{once:true}}
             className="portfolioClients"
-            style={{width:'100%', marginTop:'4rem', display:'flex', justifyContent:'space-evenly', alignItems:'center'}}
+            style={{width:'110%', marginTop:'4rem', display:'flex', justifyContent:'space-evenly', alignItems:'center'}}
           >
             <motion.div className='changingText' onViewportEnter={increaseClientsAndUsers}>
               <div style={{fontSize:'1.5rem', width:'15rem', textAlign: 'center'}}>{clients}+ Trusted Clients</div>
@@ -179,6 +181,8 @@ const Services = () => {
               <Logo title='Opera GX' text='Opera GX is a unique web browser that is specifically designed for gaming. We worked with one of their subprojects, Club Koala, to grow their social presence within the gaming niche.' index={6} src={logo7}/>
               <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
               <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
+              <Logo title='Ape Beverages' text='Ape Beverages is the first cool, sustainable water beverage crafted for the Web3 community and beyond. Our team is helping them with their mint strategy & social media management for a smooth rollout of the Water Club Pass.' index={1} src={logo8}/>
+              <Logo title='Lorem Ipsum' text='Lorem Ipsum Dolor' index={1} src={logo9}/>
             </div>
           </motion.div>
         </div>
