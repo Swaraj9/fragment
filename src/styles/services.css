@@ -66,10 +66,15 @@
 }
 
 .modalTitle{
-    font-family: siteFontBold;
+    font-family: siteFont;
     margin-bottom: 1rem;
     color: blueviolet;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.modalText{
+    line-height: 1.5rem;
 }
 
 .subCard{
