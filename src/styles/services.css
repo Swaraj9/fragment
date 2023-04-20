@@ -69,12 +69,13 @@
     font-family: siteFont;
     margin-bottom: 1rem;
     color: blueviolet;
-    font-size: 1.5rem;
+    font-size: 1.2erem;
     font-weight: bolder;
 }
 
 .modalText{
-    line-height: 1.5rem;
+    line-height: 1.3rem;
+    font-size: 0.8rem;
 }
 
 .subCard{

@@ -7,7 +7,7 @@ import logo5 from '../images/warner.png'
 import logo6 from '../images/irl.png'
 import logo7 from '../images/opera.png'
 import logo8 from '../images/Copy of AW.TRADITIONAL.LOGO.png'
-import logo9 from '../images/jyguyuSs_400x400.jpg'
+import logo9 from '../images/rly-logo.png'
 import '../styles/wire.css'
 import Curly from './Curly';
 
@@ -177,7 +177,7 @@ const Services = () => {
             <div className='portfolioLine' style={{width:'0.1rem', height:'7rem', backgroundColor:'rgb(235,235,235)'}}></div>
             <div className='logos' style={{width:'100%', display:'flex', justifyContent:'space-evenly'}}>
               <Logo title='Atlantic Records' text='Atlantic Records is home to some of the largest artists worldwide including notable figures such as Skrillex, Cardi B, Jack Harlow and many more. Our team built out a server for dozens of artists catered to their niche of music and personality, successfully creating a community nurtured to their fanbase.' index={0} src={logo1}/>
-              <Logo title='Warner Music Group (WMG)' text='Warner Music Group, one of the biggest record label conglomerates in the industry, recently teamed up with Sandbox, a metaverse platform, to create a virtual world for their artists. We promoted their Discord community using niche targeted marketing to expand their audience.' index={4} src={logo5}/>
+              <Logo title='Warner Music Group' text='Warner Music Group, one of the biggest record label conglomerates in the industry, recently teamed up with Sandbox, a metaverse platform, to create a virtual world for their artists. We promoted their Discord community using niche targeted marketing to expand their audience.' index={4} src={logo5}/>
               <Logo title='Opera GX' text='Opera GX is a unique web browser that is specifically designed for gaming. We worked with one of their subprojects, Club Koala, to grow their social presence within the gaming niche.' index={6} src={logo7}/>
               <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
               <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
