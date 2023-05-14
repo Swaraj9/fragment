@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/fragment/static/css/main.5225c4bb.css",
-    "main.js": "/fragment/static/js/main.41540c95.js",
-    "static/media/Iconbg.png": "/fragment/static/media/Iconbg.5c86585641aeb6f1a942.png",
+    "main.css": "/fragment/static/css/main.5ec6ae9a.css",
+    "main.js": "/fragment/static/js/main.05f9cf37.js",
     "static/media/fragment.webp": "/fragment/static/media/fragment.e103e2fedcefa68a07bb.webp",
     "static/media/Copy of AW.TRADITIONAL.LOGO.png": "/fragment/static/media/Copy of AW.TRADITIONAL.LOGO.c8f47e1defbcf73e99a4.png",
     "static/media/opera.png": "/fragment/static/media/opera.97ed3bdd1a08b33208b5.png",
@@ -10,12 +9,13 @@
     "static/media/PPAgrandir-GrandRegular.woff": "/fragment/static/media/PPAgrandir-GrandRegular.970293cb6583b207b1a9.woff",
     "static/media/irl.png": "/fragment/static/media/irl.33a49d280c09e8de4f2f.png",
     "static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png": "/fragment/static/media/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.8b05af233161c22331ca.png",
+    "static/media/IconPW.svg": "/fragment/static/media/IconPW.9fc0f7e0f15fb8761b86d25d18ca92b6.svg",
     "index.html": "/fragment/index.html",
-    "main.5225c4bb.css.map": "/fragment/static/css/main.5225c4bb.css.map",
-    "main.41540c95.js.map": "/fragment/static/js/main.41540c95.js.map"
+    "main.5ec6ae9a.css.map": "/fragment/static/css/main.5ec6ae9a.css.map",
+    "main.05f9cf37.js.map": "/fragment/static/js/main.05f9cf37.js.map"
   },
   "entrypoints": [
-    "static/css/main.5225c4bb.css",
-    "static/js/main.41540c95.js"
+    "static/css/main.5ec6ae9a.css",
+    "static/js/main.05f9cf37.js"
   ]
 }
