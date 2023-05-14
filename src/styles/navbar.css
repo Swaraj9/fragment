@@ -19,20 +19,30 @@
     letter-spacing:0.2rem;
 }
 
+.navbarLogo{
+    height:40px;
+    margin-right: 1rem;
+}
 
 @media only screen and (max-width: 600px) {
     .navbar{
         padding: 1rem;
         width:calc(100% - 1rem);
         border-bottom: 1px solid rgba(255,255,255,0.1);
-        background: rgba(235, 235, 235, 0.1);
+        background: rgba(245, 245, 245, 0.2);
     }
     
     .navbarButton{
         margin-right: 20px;
+        font-size: 0.65rem;
     }
     
     .navbarTitle{
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .navbarLogo{
+        height: 25px;
+        margin-right: 0.5rem;
     }
 }
