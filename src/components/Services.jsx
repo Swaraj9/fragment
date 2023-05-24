@@ -86,7 +86,7 @@ const Services = () => {
 
     const clientInterval = setInterval(()=>{
       setClients(clients => {
-        if(clients < 63){
+        if(clients < 71){
           return clients + 1 
         }else{
           clearInterval(clientInterval)
@@ -182,7 +182,7 @@ const Services = () => {
               <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
               <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
               <Logo title='Ape Beverages' text='Ape Beverages is the first cool, sustainable water beverage crafted for the Web3 community and beyond. Our team is helping them with their mint strategy & social media management for a smooth rollout of the Water Club Pass.' index={1} src={logo8}/>
-              <Logo title='RLY Network' text='RLY Network is an ecosystem of on-chain consumer apps' index={1} src={logo9}/>
+              <Logo title='RLY Network' text='RLY Network is an ecosystem of on-chain consumer apps dedicated to allowing developers to flourish in web3' index={1} src={logo9}/>
             </div>
           </motion.div>
         </div>

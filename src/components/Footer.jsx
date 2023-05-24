@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import {FaDiscord, FaEnvelope, FaLinkedin, FaTwitter} from 'react-icons/fa'
+import {FaEnvelope, FaLinkedin, FaTwitter} from 'react-icons/fa'
 import '../styles/footer.css'
 import A from './A'
 import emailjs from '@emailjs/browser'
@@ -44,9 +44,9 @@ const Footer = ({setCaseStudy}) => {
       </div>
       {/*<Button onClick={() => setCaseStudy(true)} style={{marginBottom:'30px', display:'flex', alignItems:'center', fontSize:'15px'}}><AiFillInfoCircle size={20} style={{marginRight:'20px'}}/>Case Studies</Button>*/}
       <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'center'}}>
-        <A className='discordIcon' href="https://discord.gg/r2f8FvQA5F" target="blank">
+        {/* <A className='discordIcon' href="https://discord.gg/r2f8FvQA5F" target="blank">
           <FaDiscord/>
-        </A>
+        </A> */}
         <A className='discordIcon' href="https://www.linkedin.com/company/fragment-studios/" target="blank">
           <FaLinkedin/>
         </A>
