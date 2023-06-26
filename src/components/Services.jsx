@@ -4,7 +4,7 @@ import '../styles/services.css'
 import logo1 from '../images/atlantic-records-logo-puy3lnn7jzsc0ti2vdnm1n98wmc2ap25dd9m5h8s9m.png'
 import logo2 from '../images/chibi-dinos-logo-puy3lnn6c50fuktf2qja1bge8fnfcj81ydwdxdysbs.png'
 import logo5 from '../images/warner.png'
-import logo6 from '../images/irl.png'
+import logo6 from '../images/the-sandbox-sand-logo.png'
 import logo7 from '../images/opera.png'
 import logo8 from '../images/Copy of AW.TRADITIONAL.LOGO.png'
 import logo9 from '../images/rly-logo.png'
@@ -179,7 +179,7 @@ const Services = () => {
               <Logo title='Atlantic Records' text='Atlantic Records is home to some of the largest artists worldwide including notable figures such as Skrillex, Cardi B, Jack Harlow and many more. Our team built out a server for dozens of artists catered to their niche of music and personality, successfully creating a community nurtured to their fanbase.' index={0} src={logo1}/>
               <Logo title='Warner Music Group' text='Warner Music Group, one of the biggest record label conglomerates in the industry, recently teamed up with Sandbox, a metaverse platform, to create a virtual world for their artists. We promoted their Discord community using niche targeted marketing to expand their audience.' index={4} src={logo5}/>
               <Logo title='Opera GX' text='Opera GX is a unique web browser that is specifically designed for gaming. We worked with one of their subprojects, Club Koala, to grow their social presence within the gaming niche.' index={6} src={logo7}/>
-              <Logo title='IRL App' text='IRL is a group messenger application with 20+ million monthly users. We worked with their new application Memix, a meme creation app, to grow and manage a meme centered community and drive traffic to Memix and their meme creator Discord bot.' index={5} src={logo6}/>
+              <Logo title='The Sandbox' text='The Sandbox will work with WMG to develop innovative music experiences taking place on the WMG LAND. These immersive experiences will empower Warner Music artists to engage with their fans.' index={5} src={logo6}/>
               <Logo title='Chibi Dinos' text='Chibi Dinos is a pfp NFT collection with 8 figures of revenue. We marketed their Discord community with niche targeted promotions pre-mint to increase their engagement leading up to mint.' index={1} src={logo2}/>
               <Logo title='Ape Beverages' text='Ape Beverages is the first cool, sustainable water beverage crafted for the Web3 community and beyond. Our team is helping them with their mint strategy & social media management for a smooth rollout of the Water Club Pass.' index={1} src={logo8}/>
               <Logo title='RLY Network' text='RLY Network is an ecosystem of on-chain consumer apps dedicated to allowing developers to flourish in web3' index={1} src={logo9}/>
