@@ -10,14 +10,23 @@ import { CursorContextProvider } from "./cursorContext";
 import TOPOLOGY from "vanta/dist/vanta.topology.min";
 import p5 from "p5";
 import ScrollButton from "./components/ScrollButton";
-import CaseStudy from "./components/CaseStudy";
+import Posts from "./components/Posts";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+const Main = ({inHome, setInHome}) => {
+  return(
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <Home inHome={inHome} setInHome={setInHome} />
+      <Services />
+      <Footer/>
+    </div>
+  )
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   const [inHome, setInHome] = useState(false);
-
-  const [caseStudy, setCaseStudy] = useState(false);
 
   const scrollDiv = useRef(null);
   const { scrollYProgress } = useScroll({ container: scrollDiv });
@@ -50,90 +59,84 @@ function App() {
     };
   }, [vantaEffect, loading]);
 
-
-
   return (
-    <CursorContextProvider>
-      <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
-        {loading ?
-          <div
-            style={{
-              backgroundColor: "black",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <img
-              loading="eager"
-              width="80%"
-              style={{ maxWidth: "800px" }}
-              src={loader}
-              alt="Loader GIF"
-            />
-          </div>
-        
-        
-          : <div
-            className="App"
-            style={{
-              width: "100%",
-              color: "rgb(235,235,235)",
-              height: "100%",
-              overflow: "hidden",
-            }}
-            ref={vantaRef}
-          >
+    <BrowserRouter basename="/">
+      <CursorContextProvider>
+        <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+          {loading ?
             <div
-              ref={scrollDiv}
-              className="main"
               style={{
-                display: loading ? "none" : "flex",
+                backgroundColor: "black",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 width: "100%",
-                transitionProperty: "all",
-                transitionDuration: "1s",
-                scrollBehavior: "smooth",
                 height: "100%",
-                overflowY: "scroll",
-                scrollbarWidth: "none",
-                backgroundColor: "rgb(0,0,0,0.5)",
               }}
             >
-              <motion.div
-                style={{ flex: "1" }}
-                initial={{ opacity: 0, backgroundColor: "black" }}
-                animate={{ opacity: 1, backgroundColor: "transparent" }}
-                transition={{ duration: 4 }}
-              >
-                <Navbar caseStudy={caseStudy} setCaseStudy={setCaseStudy} />
-                {!caseStudy ? (
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <Home inHome={inHome} setInHome={setInHome} />
-                    <Services />
-                    <Footer setCaseStudy={setCaseStudy} />
-                  </div>
-                ) : (
-                  <CaseStudy />
-                )}
-              </motion.div>
-              <motion.div
-                className="scrollBar"
-                style={{
-                  scaleY,
-                  position: "sticky",
-                  top: 0,
-                  width: "0.25rem",
-                  backgroundColor: "rgb(235,235,235)",
-                }}
-              ></motion.div>
-              <ScrollButton inHome={inHome} />
+              <img
+                loading="eager"
+                width="80%"
+                style={{ maxWidth: "800px" }}
+                src={loader}
+                alt="Loader GIF"
+              />
             </div>
-          </div>}
-        
-      </div>
-    </CursorContextProvider>
+          
+          
+            : <div
+              className="App"
+              style={{
+                width: "100%",
+                color: "rgb(235,235,235)",
+                height: "100%",
+                overflow: "hidden",
+              }}
+              ref={vantaRef}
+            >
+              <div
+                ref={scrollDiv}
+                className="main"
+                style={{
+                  display: loading ? "none" : "flex",
+                  width: "100%",
+                  transitionProperty: "all",
+                  transitionDuration: "1s",
+                  scrollBehavior: "smooth",
+                  height: "100%",
+                  overflowY: "scroll",
+                  scrollbarWidth: "none",
+                  backgroundColor: "rgb(0,0,0,0.5)",
+                }}
+              >
+                <motion.div
+                  style={{ flex: "1" }}
+                  initial={{ opacity: 0, backgroundColor: "black" }}
+                  animate={{ opacity: 1, backgroundColor: "transparent" }}
+                  transition={{ duration: 4 }}
+                >
+                  <Navbar/>
+                  <Routes>
+                    <Route path="/blog" element={<Posts/>}/>
+                    <Route path="/" element={<Main inHome={inHome} setInHome={setInHome}/>}/>
+                  </Routes> 
+                </motion.div>
+                <motion.div
+                  className="scrollBar"
+                  style={{
+                    scaleY,
+                    position: "sticky",
+                    top: 0,
+                    width: "0.25rem",
+                    backgroundColor: "rgb(235,235,235)",
+                  }}
+                ></motion.div>
+                <ScrollButton inHome={inHome} />
+              </div>
+            </div>}
+        </div>
+      </CursorContextProvider>
+    </BrowserRouter>
   );
 }
 
