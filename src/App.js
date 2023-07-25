@@ -60,7 +60,7 @@ function App() {
   }, [vantaEffect, loading]);
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/fragment">
       <CursorContextProvider>
         <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
           {loading ?
