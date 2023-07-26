@@ -21,7 +21,7 @@ const Posts = () => {
     const [posts, setPosts] = useState(null)
 
     useEffect(() => {
-      fetch("http://wordpress.fragmentstudios.xyz:8000/wp-json/wp/v2/posts")
+      fetch("https://wordpress.fragmentstudios.xyz/wp-json/wp/v2/posts")
       .then(res => res.json())
       .then(res => {
         setPosts(res)
