@@ -60,7 +60,7 @@ function App() {
   }, [vantaEffect, loading]);
 
   return (
-    <BrowserRouter basename="/fragment">
+    <BrowserRouter>
       <CursorContextProvider>
         <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
           {loading ?
@@ -118,7 +118,7 @@ function App() {
                   <Navbar/>
                   <Routes>
                     <Route path="/blog" element={<Posts/>}/>
-                    <Route path="/" element={<Main inHome={inHome} setInHome={setInHome}/>}/>
+                    <Route path="/*" element={<Main inHome={inHome} setInHome={setInHome}/>}/>
                   </Routes> 
                 </motion.div>
                 <motion.div
