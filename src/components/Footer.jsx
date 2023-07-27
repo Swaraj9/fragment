@@ -4,6 +4,7 @@ import '../styles/footer.css'
 import A from './A'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
+import {Link} from "react-router-dom"
 
 const Footer = ({setCaseStudy}) => {
 
@@ -56,6 +57,7 @@ const Footer = ({setCaseStudy}) => {
         <A className='discordIcon' style={{marginRight:0}} href="mailto:contact@fragmentstudios.xyz" target="blank">
           <FaEnvelope/>
         </A>
+        <Link style={{display:"none"}} to="/blog">Blog Link</Link>
       </div>
     </motion.div>
   )
